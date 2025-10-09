@@ -1,7 +1,8 @@
 @font-face {
-    font-family: 'coca';
-    src: url(./fonts/LOKICOLA.TTF);
-}
+        font-family: 'Roboto'; /* O nome que você vai usar no CSS */
+        src: url('./fonts/Roboto/Roboto-Regular.ttf'); /* Caminho do arquivo da fonte */
+    }
+
 
 :root{
     --primary-color: #eac93b;
@@ -22,7 +23,7 @@
     text-decoration: none;
     box-sizing: border-box;
     transition: 0.2s linear;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
@@ -141,25 +142,25 @@ button{
 /* IMAGENS DOS SLIDES */
 
 .slide1{
-    background-image: url(./img/keegan-houser--Q_t4SCN8c4-unsplash.jpg);
+    background-image: url(./img/1644-min.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .slide2{
-    background-image: url(./img/nikolai-lehmann-05cDX4y2oJ8-unsplash.jpg);
+    background-image: url(./img/1689-min.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .slide3{
-    background-image: url(./img/pexels-karolina-grabowska-4389679.jpg);
+    background-image: url(./img/27748-min.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .slide4{
-    background-image: url(./img/teodor-drobota-uyyRJA2an4o-unsplash.jpg);
+    background-image: url(./img/pexels-abdghat-1631677.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
