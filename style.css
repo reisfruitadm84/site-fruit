@@ -40,7 +40,6 @@ section{
     width: 100%;
     padding: 1rem 2rem;
     margin: 0 auto;
-    max-width: 1200px;
 }
 
 button{
@@ -276,7 +275,8 @@ button{
     padding: 2rem;
     border-radius: 1rem;
     min-height: 350px;
-    
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .about .row .container-image{
@@ -342,27 +342,30 @@ button{
 .title{
     font-size: 4rem;
     color: var(--main-color);
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     margin-bottom: 4rem;
     margin-top: 30px;
+    margin-left: 30px;
+    max-width: 1200px;
+    margin: 30px auto 4rem;
 }
 
 .title span{
-    color: var(--primary-color);
     font-weight: bolder;
     text-transform: uppercase;
+    
 }
 /* END TITLES */
 
 /* SECTION CATALOG */
 .insticucional-values{
     width: 100%;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
 }
 
 .insticucional-values h2{
-    margin-top: 15px;
+    margin-top: 15px;  
 }
 
 .insticucional-values .grid-container{
@@ -373,6 +376,9 @@ button{
     gap: 10px;
     flex-wrap: wrap;
     flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .insticucional-values .grid-container .grid, .insticucional-values .grid-container .grid2{
@@ -428,17 +434,6 @@ button{
 
 .insticucional-values .grid-container .card1{
     background-color: black;
-    background-image: url(./img/hero-banner.png);
-    background-position: center;
-    background-size: 110%;
-    
-}
-
-.insticucional-values .grid-container .card1:hover{
-    background-color: black;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
 }
 
 .insticucional-values .grid-container .card2{
@@ -473,7 +468,7 @@ button{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(570px);
+        transform: translateX(600px);
     }
 }
 
@@ -489,16 +484,13 @@ button{
     transform: scale(1.01);
 }
 /* COLORS CARDS  ------------- */
+/* ABOUT  ------------- */
 
 /* SECTION CATALOG */
-
 .banner-catalog{
-    margin-top: 60px;
-    
-    margin-bottom: 60px;
+    margin: 30px auto 30px auto;
     width: 100%;
     height: auto;
-    /* background-color: #8f293a; */
     background-color: black;
     border-radius: 1rem;
     display: flex;
@@ -509,6 +501,7 @@ button{
     position: relative;
     padding: 10px 15px;
     gap: 15px;
+    max-width: 1200px;
 }
 
 .banner-catalog .container-image-banner{
@@ -538,6 +531,9 @@ button{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .catalog .box-container .box{
@@ -559,7 +555,7 @@ button{
 
 .catalog .box-container .box:hover{
     color: white;
-    animation: moveBox 1s ease forwards;
+    animation: moveBox 0.8s ease forwards;
 }
 
 @keyframes moveBox{
@@ -695,6 +691,7 @@ button{
     border-radius: 50px;
     margin-top: 18px;
     z-index: 1;
+    color: #000;
 }
 
 .catalog .box-container .box .btn:hover{
@@ -710,16 +707,86 @@ button{
 
 /* SECTION REVIEW */
 
+.review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-bottom: 30px;
+}
+
 .review .box-container .box{
-    border: black;
+    box-shadow: 2px 2px 5px rgb(153, 153, 153);
     text-align: center;
     padding: 3rem 2rem;
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+}
+/* SECTION TESTE */
+.review .box-container .box .container-user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review .box-container .box .container-user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 4px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.review .container-assessment{
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
+.review .icon-quote{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.review .box-container .box{
+    min-height: 300px;
+}
+
+.review .box-container .box h3{
+    font-size: 2.2rem;
+    margin-left: 15px;
+}
+
+.review .box-container .box .stars{
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
+
+/* SECTION TESTE ================= */
+
+.review .box-container .box:hover{
+    animation: moveBox 0.8s ease forwards;
 }
 
 .review .box-container .box p{
     font-size: 1.5rem;
-    padding: 2rem 0;
+    padding: 1rem 0;
     line-height: 1.8;
+}
+
+.review .box-container .box .container-message{
+    max-height: 110px;
+    padding: 3px;
+    margin-top: 8px;
+    overflow-y: scroll;
+}
+
+.review .box-container .box .container-message::-webkit-scrollbar{
+    display: none;
 }
 
 .review .box-container .box h3{
@@ -731,6 +798,15 @@ button{
     height: 7rem;
     width: 7rem;
     border-radius: 50%;
+    margin-top: 10px;
+}
+
+.review .box-container .box .stars{
+    margin-top: 5px;
+}
+
+.review .box-container .box .stars i{
+    color: var(--primary-color) !important;
 }
 
 .address {
