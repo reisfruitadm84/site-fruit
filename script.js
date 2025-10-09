@@ -30,7 +30,7 @@ function esconderMenu() {
 }
 
 function verificarJanela(){
-    const larguraMinima = 790;
+    const larguraMinima = 800;
 
     if (window.innerWidth >= larguraMinima){
         esconderMenu();
@@ -38,3 +38,21 @@ function verificarJanela(){
 }
 
 window.addEventListener('resize', verificarJanela);
+
+// ANIMAÇÃO DO CARROSSEL
+let count = 1;
+document.getElementById("radio1").checked = true;
+
+setInterval(function(){
+    nextImage();
+}, 4000);
+
+function nextImage(){
+    count++;
+    if(count>4){
+        count = 1;
+    }
+
+    document.getElementById("radio"+count).checked = true;
+}
+//FIM DA ANIMAÇÃO DO CARROSSEL ========

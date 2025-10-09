@@ -9,6 +9,8 @@
     --text-color: #000;
     --text-color1: #333333;
     --text-color2: #222222;
+    --background-body: #fcfcfc;
+
     font-size: 10px;
 }
 
@@ -21,6 +23,10 @@
     box-sizing: border-box;
     transition: 0.2s linear;
     font-family: "Roboto", sans-serif;
+}
+
+body{
+    background-color: var(--background-body);
 }
 
 html, body{
@@ -118,8 +124,9 @@ button{
     transform: scale(1.07);
 }
 
+/* SECTION BANNER HERO */
+
 .home-container{
-    background-image:url(./img/hero-banner.png);
     background-position: center;
     background-size:cover;   
     max-height: 700px; 
@@ -127,11 +134,130 @@ button{
     display: flex;
     width: 100%;
     align-items: center;
-    padding: 0 15px;
+    align-items: center;
     position: relative;
-    justify-content: flex-end;
 }
 
+/* IMAGENS DOS SLIDES */
+
+.slide1{
+    background-image: url(./img/keegan-houser--Q_t4SCN8c4-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slide2{
+    background-image: url(./img/nikolai-lehmann-05cDX4y2oJ8-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slide3{
+    background-image: url(./img/pexels-karolina-grabowska-4389679.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slide4{
+    background-image: url(./img/teodor-drobota-uyyRJA2an4o-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slider{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides{
+    display: flex;
+    height: 100%;
+    width: 400%;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 1s;
+}
+
+.manual-navigation{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.manual-btn{
+    border: 2px solid#fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.manual-btn:hover{
+    background: #fff;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.nav-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nav-auto{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio2:checked ~ .nav-auto .auto-btn2{
+    background-color: #fff;
+}
+
+#radio3:checked ~ .nav-auto .auto-btn3{
+    background-color: #fff;
+}
+
+#radio4:checked ~ .nav-auto .auto-btn4{
+    background-color: #fff;
+}
+
+
+/* SECTION BANNER HERO  -------------*/
 
 /* SECTION ABOUT*/
 .about{
@@ -301,7 +427,19 @@ button{
 
 .insticucional-values .grid-container .card1{
     background-color: black;
+    background-image: url(./img/hero-banner.png);
+    background-position: center;
+    background-size: 110%;
+    
 }
+
+.insticucional-values .grid-container .card1:hover{
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .insticucional-values .grid-container .card2{
     background-color: var(--primary-color); color: black;
 }
@@ -353,41 +491,94 @@ button{
 
 /* SECTION CATALOG */
 
+.banner-catalog{
+    margin-top: 60px;
+    
+    margin-bottom: 60px;
+    width: 100%;
+    height: auto;
+    /* background-color: #8f293a; */
+    background-color: black;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 3px 3px 10px gray;
+    position: relative;
+    padding: 10px 15px;
+    gap: 15px;
+}
+
+.banner-catalog .container-image-banner{
+    flex: 1;
+    min-width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-catalog img{
+    width:200px;
+    transform: rotate(-15deg);
+    z-index: 0;
+}
+
+.banner-catalog h1{
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex: 2;
+}
+
 .catalog .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 10px;
 }
 
 .catalog .box-container .box{
     text-align: center;
     border: var(--text-color);
-    padding: 3rem;
+    padding: 1.5rem;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 0 8px black;
+    box-shadow: 2px 2px 5px gray;
     border-radius: 2rem;
     min-height: 400px;
     position: relative;
     overflow: hidden;
+    background-color: white;
 }
 
 .catalog .box-container .box:hover{
-    
-    transform: translateY(-20px) translateX(0);
-   color: #fff;
+    color: white;
+    animation: moveBox 1s ease forwards;
 }
+
+@keyframes moveBox{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+         box-shadow: 5px 5px 10px gray;
+        transform: translateY(-20px);
+    }
+}
+
 
 .catalog .box-container .box:hover .box > p{
    color: #fff;
 }
 
 .catalog .box-container .box:hover .btn{
-    background-color: black;
-    color: white;
+    background-color: var(--primary-color);
+    color: black;
 }
 
 .catalog .box-container .box img{
@@ -407,6 +598,7 @@ button{
     height: 100%;
     z-index: 0;
     left: 0;
+    top: 0;
 }
 
 .catalog .box-container .box h3{
@@ -414,6 +606,78 @@ button{
     padding: 1rem 0;
     z-index: 1;
 }
+
+
+/*SECAO DE TESTE  */
+
+.catalog .box-container .box:first-child{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    text-align: left;
+}
+
+.catalog .box-container .box:first-child h3{
+    font-size: 2rem;
+    padding: 2px 1rem;
+    color: white;
+    border-radius: 5px;
+    z-index: 1;
+    background-color: black;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    order: 1;
+}
+
+.catalog .box-container .box:first-child:hover h3{
+    background-color: var(--primary-color);
+    color: #000;
+}
+
+
+.catalog .box-container .box:first-child p{
+    margin-top: 30px;
+    width: 45%;
+    position: absolute;
+    bottom: 40px;
+}
+
+.catalog .box-container .box:first-child img{
+    margin-top: 30px;
+    order: 2;
+    width: 50%;
+    position: absolute;
+    right: 0;
+}
+
+.catalog .box-container .box:first-child:hover img{
+    animation: moveFruta 3s ease-in-out infinite forwards;
+}
+
+.catalog .box-container .box:first-child .btn{
+    margin-top: 30px;
+    order: 3;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+
+@keyframes moveFruta{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/*SECAO DE TESTE  */
+
 
 .catalog .box-container .box p{
     margin-top: 10px;
@@ -433,7 +697,7 @@ button{
 }
 
 .catalog .box-container .box .btn:hover{
-    transform: scale(1.2);
+    transform: scale(1.08);
 }
 
 
@@ -541,7 +805,7 @@ footer .share i:hover{
 
 
 /* RESPONSIVIDADE */
-@media screen and (max-width: 790px){
+@media screen and (max-width: 800px){
     
     .header section{
         justify-content: space-around;
@@ -588,5 +852,7 @@ footer .share i:hover{
     100%{
         transform: translateX(450px);
     }
-}
+    }
+
+    
 }
