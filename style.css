@@ -53,6 +53,7 @@ button{
     align-items: center;
     justify-content: space-between;
     padding: 5px 2rem;
+    max-width: 1280px;
 }
 
 .header section .logo{
@@ -135,25 +136,26 @@ button{
 /* IMAGENS DOS SLIDES */
 
 .slide1{
-    background-image: url(./img/1644-min.jpg);
+    background-image: url(./img/px10.png);
     background-position: center;
-    background-size: cover;
+    background-size:cover;
     background-repeat: no-repeat;
+    background-color: #000;
 }
 .slide2{
-    background-image: url(./img/1689-min.jpg);
+    background-image: url(./img/px7.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .slide3{
-    background-image: url(./img/27748-min.jpg);
+    background-image: url(./img/px1920.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .slide4{
-    background-image: url(./img/pexels-abdghat-1631677.jpg);
+    background-image: url(./img/px9.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -408,10 +410,6 @@ button{
 }
 
 .insticucional-values .grid-container .card p{
-   font-size: 1rem;
-}
-
-.insticucional-values .grid-container .card p{
    font-size: 1.3rem;
 }
 .insticucional-values .grid-container .card-button-cta{
@@ -421,7 +419,7 @@ button{
 
 .insticucional-values .grid-container .card-flex{
     background: black;
-    min-width: 100%;
+    min-width: 70%;
     min-height: 200px;
     border-radius: 10px;
 }
@@ -470,15 +468,6 @@ button{
     animation: moveCar 0.8s ease-in forwards;
 }
 
-@keyframes moveCar{
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(600px);
-    }
-}
-
 .insticucional-values .grid-container .card6{
     background-color: black;
 }
@@ -491,9 +480,10 @@ button{
     transform: scale(1.01);
 }
 /* COLORS CARDS  ------------- */
-/* ABOUT  ------------- */
 
-/* SECTION CATALOG */
+/* ------- FIM ABOUT  ------------- */
+
+/* ------ SECTION CATALOG ----------*/
 .banner-catalog{
     margin: 30px auto 30px auto;
     width: 100%;
@@ -545,6 +535,8 @@ button{
     flex: 2;
 }
 
+/* CARDS */
+
 .catalog .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -556,13 +548,12 @@ button{
 
 .catalog .box-container .box{
     text-align: center;
-    border: var(--text-color);
     padding: 1.5rem;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: start;
     box-shadow: 2px 2px 5px gray;
     border-radius: 2rem;
     min-height: 400px;
@@ -572,36 +563,36 @@ button{
 }
 
 .catalog .box-container .box:hover{
-    color: white;
     animation: moveBox 0.8s ease forwards;
+    color: white;
 }
 
-@keyframes moveBox{
-    0%{
-        transform: translateY(0);
+.catalog .box-container .box:hover .container-name-product{
+    animation: moveAllBox 0.65s ease-in forwards;
+}
+.catalog .box-container .box:hover .container p{
+    animation: moveAllBox 0.7s ease-in forwards;
+}
+.catalog .box-container .box:hover .container img{
+    animation: moveAllBox 0.75s ease-in forwards;
+}
+.catalog .box-container .box:hover .container-button{
+    animation: moveAllBox 0.78s ease-in forwards;
+}
+
+@keyframes moveAllBox {
+     0%{
+        opacity: 0;
+        transform: translateX(-200px);
     }
+
     100%{
-         box-shadow: 5px 5px 10px gray;
-        transform: translateY(-20px);
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
-
-.catalog .box-container .box:hover .box > p{
-   color: #fff;
-}
-
-.catalog .box-container .box:hover .btn{
-    background-color: var(--primary-color);
-    color: black;
-}
-
-.catalog .box-container .box img{
-    width: 120px;
-    z-index: 1;
-}
-
-.overlayer{
+.catalog .box-container .box .overlayer{
     width: 0;
     transition: all 1s ease;
 }
@@ -616,114 +607,59 @@ button{
     top: 0;
 }
 
-.catalog .box-container .box h3{
-    font-size: 2rem;
-    padding: 1rem 0;
-    z-index: 1;
-}
-
-
-/*SECAO DE TESTE  */
-
-.catalog .box-container .box:first-child{
+.catalog .box-container .box .container{
     display: flex;
-    flex-direction: row;
-    position: relative;
-    text-align: left;
-}
-
-.catalog .box-container .box:first-child h3{
-    font-size: 2rem;
-    padding: 2px 1rem;
-    color: white;
-    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
     z-index: 1;
-    background-color: black;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    order: 1;
 }
 
-.catalog .box-container .box:first-child:hover h3{
-    background-color: var(--primary-color);
-    color: #000;
+.catalog .box-container .box .container-name-product{
+    flex: 1;
+    font-size: 1.8rem;
+    z-index: 1;
 }
 
-
-.catalog .box-container .box:first-child p{
-    margin-top: 30px;
-    width: 45%;
-    position: absolute;
-    bottom: 40px;
-}
-
-.catalog .box-container .box:first-child img{
-    margin-top: 30px;
-    order: 2;
-    width: 50%;
-    position: absolute;
-    right: 0;
-}
-
-.catalog .box-container .box:first-child:hover img{
-    animation: moveFruta 3s ease-in-out infinite forwards;
-}
-
-.catalog .box-container .box:first-child .btn{
-    margin-top: 30px;
-    order: 3;
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-}
-
-
-@keyframes moveFruta{
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-15px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-
-/*SECAO DE TESTE  */
-
-
-.catalog .box-container .box p{
+.catalog .box-container .box .container p{
     margin-top: 10px;
     font-size: 1.5rem;
     padding: 1rem 0;
     transition: all 0.4s ease-in-out;
-    z-index: 1;
+    order: 1;
 }
 
-.catalog .box-container .box .btn{
+.catalog .box-container .box .container img{
+    width: 50%;
+}
+
+.catalog .box-container .box:hover .container img{
+    animation: moveFruta 3s ease-in-out infinite forwards;
+}
+
+.catalog .box-container .box .container-button{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalog .box-container .box .container-button .btn{
     font-size: 1.5rem;
     padding: 0.5rem 2rem;
     background-color: var(--primary-color);
     border-radius: 50px;
-    margin-top: 18px;
     z-index: 1;
     color: #000;
 }
 
-.catalog .box-container .box .btn:hover{
+.catalog .box-container .box .container-button .btn:hover{
     transform: scale(1.08);
 }
 
-
-/* .catalog .box-container .box:hover>*{
-  
-} */
-
 /* SECTION CATALOG ------- */
 
-/* SECTION REVIEW */
+/* ------ REVIEW -------- */
 
 .review .box-container{
     display: grid;
@@ -742,7 +678,7 @@ button{
     background-color: #fff;
     position: relative;
 }
-/* SECTION TESTE */
+
 .review .box-container .box .container-user{
     display: flex;
     justify-content: space-between;
@@ -784,8 +720,6 @@ button{
     margin-left: 15px;
 }
 
-/* SECTION TESTE ================= */
-
 .review .box-container .box:hover{
     animation: moveBox 0.8s ease forwards;
 }
@@ -826,6 +760,11 @@ button{
 .review .box-container .box .stars i{
     color: var(--primary-color) !important;
 }
+
+/* ------ FIM REVIEW -------- */
+
+
+/* ------ ADDRESS -------- */
 
 .address {
     display: flex;
@@ -875,6 +814,7 @@ button{
 .address .container-address .container-text .container{
     display: flex;
     width: 100%;
+    height: 100%;
     gap: 10px;
 }
 
@@ -914,6 +854,10 @@ button{
     gap: 5px;
     flex:2;
 }
+
+/* ------ FIM ADDRESS -------- */
+
+/* ---------- FOOTER -------- */
 
 footer{
     text-align: center;
@@ -967,7 +911,6 @@ footer .row .container .container-logo .logo-text h1{
    font-size: 3rem;
 }
 
-
 footer .share{
     padding: 1rem 0;
     display: flex;
@@ -1003,7 +946,9 @@ footer .copyright a{
     font-weight: 800;
 }
 
-/*ANIMAÇÕES*/
+/* ---------- FIM FOOTER -------- */
+
+/* -------- ANIMAÇÕES ----------*/
 @keyframes effectFade{
     from{
         opacity: 0;
@@ -1026,9 +971,43 @@ footer .copyright a{
     }
 }
 
+@keyframes moveFruta{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
 
-/* RESPONSIVIDADE */
-@media screen and (max-width: 800px){
+@keyframes moveBox{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+         box-shadow: 5px 5px 10px gray;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes moveCar{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(1000px);
+    }
+}
+
+/* -------- FIM ANIMAÇÕES ----------*/
+
+/* ---------- RESPONSIVIDADE --------------- */
+
+/* mobile */
+@media screen and (max-width: 768px){
     
     .header section{
         justify-content: space-around;
@@ -1078,4 +1057,18 @@ footer .copyright a{
     }
 
     
+}
+
+/* Laptops */
+@media screen and (min-width: 1024px) {
+  
+}
+
+@media screen and (min-width: 1280px) {
+  
+}
+
+/* Desktop grande */
+@media screen and (min-width: 1440px) {
+  
 }

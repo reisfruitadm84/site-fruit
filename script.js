@@ -30,7 +30,7 @@ function esconderMenu() {
 }
 
 function verificarJanela(){
-    const larguraMinima = 800;
+    const larguraMinima = 768;
 
     if (window.innerWidth >= larguraMinima){
         esconderMenu();
@@ -45,7 +45,7 @@ document.getElementById("radio1").checked = true;
 
 setInterval(function(){
     nextImage();
-}, 4000);
+}, 40000);
 
 function nextImage(){
     count++;
