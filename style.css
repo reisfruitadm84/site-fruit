@@ -517,12 +517,23 @@ button{
     height: 200px;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .banner-catalog img{
     width:200px;
     transform: rotate(-15deg);
     z-index: 0;
+}
+
+.banner-catalog .container-image-banner::before{
+    content: '';
+    width: 100px;
+    height: 100px;    
+    position: absolute;
+    top: 55px;
+    border-radius: 100px;
+    box-shadow: 0 0 50px white;
 }
 
 .banner-catalog h1{
