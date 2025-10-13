@@ -45,7 +45,7 @@ document.getElementById("radio1").checked = true;
 
 setInterval(function(){
     nextImage();
-}, 40000);
+}, 8000);
 
 function nextImage(){
     count++;
@@ -56,3 +56,70 @@ function nextImage(){
     document.getElementById("radio"+count).checked = true;
 }
 //FIM DA ANIMAÇÃO DO CARROSSEL ========
+
+
+// CARDS PARA INSERIR NO CARROSSEL
+const clientes = [
+    {
+        img: "./img/logo.png",
+        nome: "Reis Fruit1",
+    },
+    {
+        img: "./img/logo.png",
+        nome: "Reis Fruit2",
+    },
+    {
+        img: "./img/logo.png",
+        nome: "Reis Fruit3",
+    },
+    {
+        img: "./img/logo.png",
+        nome: "Reis Fruit4",
+    },
+    {
+        img: "./img/logo.png",
+        nome: "Reis Fruit5",
+    },
+    {
+        img: "./img/logo.png",
+        nome: "Reis Fruit6",
+    }
+]
+
+const localCarousel = document.getElementById('container-cards-carousel1');
+const localCarousel2 = document.getElementById('container-cards-carousel2');
+
+function inserirClientes(){
+    
+
+    clientes.forEach((cliente) => {
+        const cards = document.createElement('div');
+        cards.classList.add('card');
+        
+        const templateCliente = `<img src="${cliente.img}" alt="logo-reisfruit">
+                                 <a href="#">${cliente.nome}</a>
+                                `;
+
+        cards.innerHTML = templateCliente;            
+
+        localCarousel.appendChild(cards);        
+    })
+
+    clientes.forEach((cliente) => {
+        const cards = document.createElement('div');
+        cards.classList.add('card');
+        
+        const templateCliente = `<img src="${cliente.img}" alt="logo-reisfruit">
+                                 <a href="#">${cliente.nome}</a>
+                                `;
+
+        cards.innerHTML = templateCliente;            
+
+        localCarousel2.appendChild(cards);        
+    })
+ 
+}
+
+inserirClientes();
+
+// FIM CARDS PARA INSERIR NO CARROSSEL ========

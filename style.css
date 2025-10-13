@@ -40,6 +40,10 @@ button{
     cursor: pointer;
 }
 
+.background-section{
+    background-color: #e4e4e4;
+}
+
 .header{
     width: 100%;
     background-color: #000;
@@ -483,6 +487,85 @@ button{
 
 /* ------- FIM ABOUT  ------------- */
 
+
+/* SECTION PARTNER CUSTOMERS */
+.partner-customers{
+    width: 100%;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-customers .container-carousel{
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    max-height: 200px;
+    height: 200px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.partner-customers .container-carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.partner-customers .container-carousel .group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    animation: spin 20s infinite linear;
+    padding-right: 20px;
+}
+
+.partner-customers .container-carousel:hover .group :not(:hover){
+    transform: scale(0.85);
+    opacity: 0.5;
+}
+
+.partner-customers .container-carousel .group .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex: 0 0 150px;
+    box-shadow: 3px 3px 5px rgb(77, 77, 77);
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+.partner-customers .container-carousel .group .card:hover *{
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.partner-customers .container-carousel .group .card img{
+    flex: 1;
+    width: 100px;
+    max-width: 100px;
+}
+
+.partner-customers .container-carousel .group .card a{
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 5px;
+    color: #000;
+    font-weight: bold;
+}
+
+
+
+/* --------- SECTION PARTNER CUSTOMERS -----------*/
+
+
 /* ------ SECTION CATALOG ----------*/
 .banner-catalog{
     margin: 30px auto 30px auto;
@@ -578,18 +661,6 @@ button{
 }
 .catalog .box-container .box:hover .container-button{
     animation: moveAllBox 0.78s ease-in forwards;
-}
-
-@keyframes moveAllBox {
-     0%{
-        opacity: 0;
-        transform: translateX(-200px);
-    }
-
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 .catalog .box-container .box .overlayer{
@@ -999,6 +1070,27 @@ footer .copyright a{
     }
     100%{
         transform: translateX(1000px);
+    }
+}
+
+@keyframes moveAllBox {
+     0%{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes spin{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
     }
 }
 
