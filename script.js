@@ -97,7 +97,7 @@ function inserirClientes(){
         cards.classList.add('card');
         
         const templateCliente = `<img src="${cliente.img}" alt="logo-reisfruit">
-                                 <a href="#">${cliente.nome}</a>
+                                 <a href="">${cliente.nome}</a>
                                 `;
 
         cards.innerHTML = templateCliente;            
@@ -134,16 +134,25 @@ buttonArrow.forEach((button) =>{
 
     button.addEventListener('click', () => {
         const boxDoubts = button.closest('.box-doubts');
-
-        // document.querySelectorAll('.box-doubts').forEach((element) =>{
-        //     element.classList.remove('active');
-        // })
-
-        boxDoubts.classList.toggle('active');       
         
+        if(!boxDoubts.classList.contains('active')){   
+             document.querySelectorAll('.box-doubts.active').forEach((element) =>{
+                element.classList.remove('active')
+            }) 
+
+            boxDoubts.classList.add('active')
+        } else{
+            document.querySelectorAll('.box-doubts.active').forEach((element) =>{
+                element.classList.remove('active')
+            })
+
+        }
+    
     });
 
 });
+
+
 
 
 // FIM DA ANIMAÇÃO DOS CARDS NA SEÇÃO DE DÚVIDAS =======

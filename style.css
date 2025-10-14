@@ -894,6 +894,11 @@ button{
     font-weight: 100;
 }
 
+.address .container-address .container-map-1{
+    background-color: var(--text-color);
+    color: white;
+}
+
 .address .container-address .container-text{
     padding: 15px;
     flex: 2;
@@ -933,6 +938,10 @@ button{
     width: 80%;
     font-size: 1.5rem;
     color: black;
+}
+
+.address .container-address .container-map-1 .container-text .container a{
+    color: white;
 }
 
 .address .container-address .container-text .container h3{
@@ -984,15 +993,16 @@ button{
     justify-content: center;
     align-items: center;
     gap: 15px;
+    margin: 0 auto;
 }
 
 .doubts .container-box-doubts .box-doubts{
-    background-color: rgb(241, 241, 241);
+    background-color: var(--white);
     width: 90%;
     height: 60px;
     border-radius: 10px;
-    padding: 5px 15px;
-    box-shadow: 3px 0 5px black;
+    box-shadow: 3px 0 5px rgba(59, 59, 59, 0.363);
+    
 }
 
 .doubts .container-box-doubts .box-doubts .container-doubts{
@@ -1000,16 +1010,30 @@ button{
     justify-content: space-between;
     align-items: center;
     padding: 5px 15px;
+    height: 60px;
+    background-color: var(--text-color);
+    border-radius: 10px;
+    color: white;
 }
 
 .doubts .container-box-doubts .box-doubts .container-doubts .container-text{
     flex: 2;
 }
 
-.doubts .container-box-doubts .box-doubts .container-doubts .container-icon img{
+.doubts .container-box-doubts .box-doubts .container-doubts .container-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./img/down-arrow-white.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    height: 60px;
+    width: 30px;
     max-width: 30px;
-    transform: rotate(180deg);
     cursor: pointer;
+    transform: rotate(180deg);
 }
 
 .doubts .container-box-doubts .box-doubts .container-response{
@@ -1019,15 +1043,22 @@ button{
     padding: 0 30px;
     display: none;
     opacity: 0;
+    max-height: 105px;
+    
+    overflow-y: auto;
+    color: black;
 }
 
 /* ANIMAÇÃO DA BOX */
 .doubts .container-box-doubts .active{
-    height: 150px;
+    height: 200px;
+    transform: scale(1.04);
+    transition: 1s;
 }
 
-.doubts .container-box-doubts .active .icon-show{
-   transform: rotate(180deg);
+.doubts .container-box-doubts .active .container-doubts .container-icon{
+   transform: rotate(360deg) scale(1.5);
+
 }
 
 .doubts .container-box-doubts .active .container-response{
@@ -1036,14 +1067,6 @@ button{
    opacity: 1;
 }
 
-@keyframes fadeText {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
 
 /* FIM DA ANIMAÇÃO DA BOX */
 
@@ -1243,6 +1266,15 @@ footer .copyright a{
     }
     100%{
         transform: translateX(-100%);
+    }
+}
+
+@keyframes fadeText {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
 
