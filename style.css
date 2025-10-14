@@ -1061,6 +1061,7 @@ button{
     height: 200px;
     transform: scale(1.04);
     transition: 1s;
+    overflow: hidden;
 }
 
 .doubts .container-box-doubts .active .container-doubts .container-icon{
