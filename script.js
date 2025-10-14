@@ -97,7 +97,7 @@ function inserirClientes(){
         cards.classList.add('card');
         
         const templateCliente = `<img src="${cliente.img}" alt="logo-reisfruit">
-                                 <a href="">${cliente.nome}</a>
+                                 <h2>${cliente.nome}</h2>
                                 `;
 
         cards.innerHTML = templateCliente;            
@@ -110,7 +110,7 @@ function inserirClientes(){
         cards.classList.add('card');
         
         const templateCliente = `<img src="${cliente.img}" alt="logo-reisfruit">
-                                 <a href="#">${cliente.nome}</a>
+                                 <h2>${cliente.nome}</h2>
                                 `;
 
         cards.innerHTML = templateCliente;            

@@ -568,7 +568,7 @@ button{
     max-width: 100px;
 }
 
-.partner-customers .container-carousel .group .card a{
+.partner-customers .container-carousel .group .card h2{
     flex: 1;
     width: 100%;
     text-align: center;
