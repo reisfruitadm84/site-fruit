@@ -974,12 +974,11 @@ button{
     min-height: 700px;
     width: 100%;
 }
-.doubts .container{
+.doubts .container-box-doubts{
     width: 100%;
     height: 90%;
     min-height: 500px;
     max-width: 1200px;
-    background-color: rgb(134, 134, 230);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -987,12 +986,66 @@ button{
     gap: 15px;
 }
 
-.doubts .container .container-doubts{
+.doubts .container-box-doubts .box-doubts{
     background-color: rgb(241, 241, 241);
     width: 90%;
     height: 60px;
     border-radius: 10px;
+    padding: 5px 15px;
+    box-shadow: 3px 0 5px black;
 }
+
+.doubts .container-box-doubts .box-doubts .container-doubts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.doubts .container-box-doubts .box-doubts .container-doubts .container-text{
+    flex: 2;
+}
+
+.doubts .container-box-doubts .box-doubts .container-doubts .container-icon img{
+    max-width: 30px;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.doubts .container-box-doubts .box-doubts .container-response{
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    padding: 0 30px;
+    display: none;
+    opacity: 0;
+}
+
+/* ANIMAÇÃO DA BOX */
+.doubts .container-box-doubts .active{
+    height: 150px;
+}
+
+.doubts .container-box-doubts .active .icon-show{
+   transform: rotate(180deg);
+}
+
+.doubts .container-box-doubts .active .container-response{
+   display: block;
+   animation: fadeText 1.5s ease;
+   opacity: 1;
+}
+
+@keyframes fadeText {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* FIM DA ANIMAÇÃO DA BOX */
 
 /* ---------- END SECTION DOUBTS -------------- */
 

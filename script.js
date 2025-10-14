@@ -123,3 +123,27 @@ function inserirClientes(){
 inserirClientes();
 
 // FIM CARDS PARA INSERIR NO CARROSSEL ========
+
+
+// ANIMAÇÃO DOS CARDS NA SEÇÃO DE DÚVIDAS
+
+const buttonArrow = document.querySelectorAll('.icon-show');
+
+
+buttonArrow.forEach((button) =>{
+
+    button.addEventListener('click', () => {
+        const boxDoubts = button.closest('.box-doubts');
+
+        // document.querySelectorAll('.box-doubts').forEach((element) =>{
+        //     element.classList.remove('active');
+        // })
+
+        boxDoubts.classList.toggle('active');       
+        
+    });
+
+});
+
+
+// FIM DA ANIMAÇÃO DOS CARDS NA SEÇÃO DE DÚVIDAS =======
