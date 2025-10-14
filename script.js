@@ -153,6 +153,21 @@ buttonArrow.forEach((button) =>{
 });
 
 
-
-
 // FIM DA ANIMAÇÃO DOS CARDS NA SEÇÃO DE DÚVIDAS =======
+
+// ANIMAÇÃO PELA ROLAGEM
+
+window.addEventListener('scroll', () => {
+  const elements = document.querySelectorAll('.reveal');
+  const windowHeight = window.innerHeight;
+
+  elements.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+    
+    if (elementTop < windowHeight - 200) { // 100px antes de entrar na tela
+      el.classList.add('show');
+    } else {
+      el.classList.remove('show');
+    }
+  });
+});
