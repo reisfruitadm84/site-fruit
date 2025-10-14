@@ -446,11 +446,12 @@ button{
 }
 
 .insticucional-values .grid-container .card2{
-    background-color: var(--primary-color); color: black;
+    background-color: var(--text-color1);
+    color: white;
+    
 }
 .insticucional-values .grid-container .card2 .card-button-cta{
-    background-color: black;
-    color: white;
+    background-color: var(--primary-color); color: black;
 }
 .insticucional-values .grid-container .card3{
     background-color: var(--text-color1);
@@ -485,7 +486,7 @@ button{
 }
 /* COLORS CARDS  ------------- */
 
-/* ------- FIM ABOUT  ------------- */
+/* ------- END  ABOUT  ------------- */
 
 
 /* SECTION PARTNER CUSTOMERS */
@@ -496,6 +497,11 @@ button{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 700px;
+}
+
+.partner-customers .title{
+    flex: 1;
 }
 
 .partner-customers .container-carousel{
@@ -506,6 +512,11 @@ button{
     height: 200px;
     overflow-x: auto;
     padding: 10px;
+    flex: 2;
+}
+
+.space{
+    flex: 1;
 }
 
 .partner-customers .container-carousel::-webkit-scrollbar{
@@ -532,13 +543,12 @@ button{
     justify-content: center;
     align-items: center;
     height: 100%;
-    flex: 0 0 150px;
+    flex: 0 0 250px;
     box-shadow: 3px 3px 5px rgb(77, 77, 77);
     border-radius: 10px;
     cursor: pointer;
     opacity: 0.8;
 }
-
 
 .partner-customers .container-carousel .group .card:hover *{
     transform: scale(1.05);
@@ -732,6 +742,15 @@ button{
 
 /* ------ REVIEW -------- */
 
+.review{
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .review .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -739,6 +758,9 @@ button{
     margin: 0 auto;
     max-width: 1200px;
     margin-bottom: 30px;
+    margin-top: 60px;
+    width: 90%;
+    flex: 1;
 }
 
 .review .box-container .box{
@@ -832,7 +854,7 @@ button{
     color: var(--primary-color) !important;
 }
 
-/* ------ FIM REVIEW -------- */
+/* ------ END REVIEW -------- */
 
 
 /* ------ ADDRESS -------- */
@@ -895,6 +917,24 @@ button{
     font-size: 20px;
 }
 
+.address .container-address .container-text .container .container-icon{
+    width: 20%;
+    align-self: center;
+    text-align: center;
+}
+
+.address .container-address .container-text .container .container-icon img{
+    max-width: 25px;
+    align-self: center;
+    text-align: center;
+}
+
+.address .container-address .container-text .container a{
+    width: 80%;
+    font-size: 1.5rem;
+    color: black;
+}
+
 .address .container-address .container-text .container h3{
     width: 80%;
     font-size: 1.5rem;
@@ -926,7 +966,35 @@ button{
     flex:2;
 }
 
-/* ------ FIM ADDRESS -------- */
+/* ------ END ADDRESS -------- */
+
+/* ---------- SECTION DOUBTS -------------- */
+
+.doubts{
+    min-height: 700px;
+    width: 100%;
+}
+.doubts .container{
+    width: 100%;
+    height: 90%;
+    min-height: 500px;
+    max-width: 1200px;
+    background-color: rgb(134, 134, 230);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.doubts .container .container-doubts{
+    background-color: rgb(241, 241, 241);
+    width: 90%;
+    height: 60px;
+    border-radius: 10px;
+}
+
+/* ---------- END SECTION DOUBTS -------------- */
 
 /* ---------- FOOTER -------- */
 
@@ -982,6 +1050,37 @@ footer .row .container .container-logo .logo-text h1{
    font-size: 3rem;
 }
 
+footer .row .container2{
+    flex: 1;
+    display: flex;
+    padding-top: 20px;
+}
+
+footer .row .container2 .useful-links{
+    flex: 1;
+    width: 100%;
+    text-align: left;
+}
+
+footer .row .container2 .useful-links h1{
+    color: white;
+    font-size: 2.5rem;
+}
+
+footer .row .container2 .useful-links ul{
+    list-style: none;
+    margin-top: 30px;
+}
+
+footer .row .container2 .useful-links ul li{
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+footer .row .container2 .useful-links ul li a{
+    color: white;
+}
+
 footer .share{
     padding: 1rem 0;
     display: flex;
@@ -1017,7 +1116,7 @@ footer .copyright a{
     font-weight: 800;
 }
 
-/* ---------- FIM FOOTER -------- */
+/* ---------- END FOOTER -------- */
 
 /* -------- ANIMAÇÕES ----------*/
 @keyframes effectFade{
@@ -1094,7 +1193,7 @@ footer .copyright a{
     }
 }
 
-/* -------- FIM ANIMAÇÕES ----------*/
+/* -------- END ANIMAÇÕES ----------*/
 
 /* ---------- RESPONSIVIDADE --------------- */
 
