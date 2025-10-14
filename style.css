@@ -34,6 +34,7 @@ section{
     width: 100%;
     padding: 1rem 2rem;
     margin: 0 auto;
+    min-width: 300px;
 }
 
 button{
@@ -42,6 +43,12 @@ button{
 
 .background-section{
     background-color: #e4e4e4;
+    width: 100%;
+}
+
+.minwidth{
+    min-width: 300px;
+    width: 100%;
 }
 
 .header{
@@ -1087,6 +1094,7 @@ footer .row{
     height: 100%;
     gap: 10px;
     padding: 15px;
+    flex-wrap: wrap;
 }
 
 footer .row .container{
@@ -1321,6 +1329,10 @@ footer .copyright a{
     .header #navbar-mobile ul li a{
         font-size: 1.5rem;
         color: #fff;
+    }
+
+    footer .row .container .container-logo .logo-text h1{
+        font-size: 2.6rem;
     }
 
     @keyframes moveCar{
