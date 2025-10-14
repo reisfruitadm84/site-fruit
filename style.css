@@ -1085,7 +1085,7 @@ button{
 footer{
     text-align: center;
     width: 100%;
-    height: 300px;
+    min-height: 300px;
     background-color: #000;
 }
 
@@ -1101,6 +1101,7 @@ footer .row{
 footer .row .container{
     display: flex;
     flex: 1;
+    min-width: 200px;
 }
 
 footer .row .container .container-logo{
@@ -1139,6 +1140,7 @@ footer .row .container2{
     flex: 1;
     display: flex;
     padding-top: 20px;
+    min-width: 200px;
 }
 
 footer .row .container2 .useful-links{
@@ -1188,12 +1190,15 @@ footer .share i:hover{
 
 footer .copyright{
     width: 100%;
-    height: 40px;
+    min-height: 50px;
     color: white;
-    background-color: #000;
     font-size: 1.2rem;
     text-align: right;
     padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-end;
 }
 
 footer .copyright a{
