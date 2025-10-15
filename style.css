@@ -48,13 +48,13 @@ button{
 
 .reveal {
   opacity: 0;
-  transform: translateY(60px);
   transition: all 0.6s ease;
+  transform: translateX(-150px);
 }
 
 .reveal.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 .minwidth{
@@ -295,6 +295,19 @@ button{
     min-height: 350px;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+}
+
+.about .background-image{
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/pack/elemento\ planta\ 3\ png.png);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute;
+    opacity: 0.2;
+    filter: blur(5px);
 }
 
 .about .row .container-image{
@@ -303,6 +316,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .about .row .container-image img{
@@ -514,12 +528,8 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     min-height: 700px;
-}
-
-.partner-customers .title{
-    flex: 1;
 }
 
 .partner-customers .container-carousel{
@@ -530,11 +540,6 @@ button{
     height: 200px;
     overflow-x: auto;
     padding: 10px;
-    flex: 2;
-}
-
-.space{
-    flex: 1;
 }
 
 .partner-customers .container-carousel::-webkit-scrollbar{
@@ -655,6 +660,7 @@ button{
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 30px;
+    margin-top: 60px;
 }
 
 .catalog .box-container .box{
@@ -788,6 +794,8 @@ button{
     border-radius: 10px;
     background-color: #fff;
     position: relative;
+    max-height: 300px;
+    min-height: 300px;
 }
 
 .review .box-container .box .container-user{
@@ -815,10 +823,6 @@ button{
     position: absolute;
     right: 10px;
     bottom: 10px;
-}
-
-.review .box-container .box{
-    min-height: 300px;
 }
 
 .review .box-container .box h3{

@@ -157,17 +157,45 @@ buttonArrow.forEach((button) =>{
 
 // ANIMAÇÃO PELA ROLAGEM
 
-window.addEventListener('scroll', () => {
-  const elements = document.querySelectorAll('.reveal');
-  const windowHeight = window.innerHeight;
+// window.addEventListener('scroll', () => {
+//   const elements = document.querySelectorAll('.reveal');
+//   const windowHeight = window.innerHeight;
 
-  elements.forEach(el => {
-    const elementTop = el.getBoundingClientRect().top;
+//   elements.forEach(el => {
+//     const elementTop = el.getBoundingClientRect().top;
+//     const elementBottom = el.getBoundingClientRect().bottom;
     
-    if (elementTop < windowHeight - 200) { // 100px antes de entrar na tela
-      el.classList.add('show');
-    } else {
-      el.classList.remove('show');
-    }
-  });
-});
+//     if (elementTop < windowHeight - 200) { // 100px antes de entrar na tela
+//       el.classList.add('show');
+//     } else{
+//         el.classList.remove('show');
+//     }
+
+//     // if (elementBottom < windowHeight + 200){
+//     //   el.classList.remove('show');
+
+//     console.log(innerHeight)
+//   });
+// });
+
+const section = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry=> 
+    {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show')
+        } else{
+            entry.target.classList.remove('show')
+        }
+
+        console.log(entry)
+    })
+     
+
+}, 
+{ 
+ threshold: 0.5
+})
+
+
+section.forEach(div=>observer.observe(div));
