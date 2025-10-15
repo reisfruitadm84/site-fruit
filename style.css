@@ -619,7 +619,7 @@ button{
 
 /* ------ SECTION CATALOG ----------*/
 
-.catalog {
+/* .catalog {
     position: relative;
     background-image: url(./img/pack/elemento\ planta\ png.png);
     background-position:center;
@@ -639,7 +639,7 @@ button{
     top: 0;
     left: 0;
     opacity: 0.7;
-}
+} */
 
 .banner-catalog{
     margin: 30px auto 30px auto;
