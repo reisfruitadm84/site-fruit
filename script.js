@@ -184,18 +184,14 @@ const observer = new IntersectionObserver((entries) => {
     {
         if(entry.isIntersecting){
             entry.target.classList.add('show')
+            // observer.unobserve(entry.target);
         } else{
             entry.target.classList.remove('show')
         }
-
-        console.log(entry)
     })
-     
-
 }, 
 { 
  threshold: 0.5
 })
-
 
 section.forEach(div=>observer.observe(div));
