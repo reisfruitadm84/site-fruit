@@ -195,3 +195,22 @@ const observer = new IntersectionObserver((entries) => {
 })
 
 section.forEach(div=>observer.observe(div));
+
+// ANIMAÇÃO DO SLIDER DE PRODUTOS
+
+let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.catalog-slide .item')
+    document.querySelector('.catalog-slide').appendChild(items[0])
+    items[2].classList.add('show')
+    items[0].classList.toggle('show')
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.catalog-slide').prepend(items[items.length - 1]) // here the length of items = 6
+    items[0].classList.remove('show')
+    items[2].classList.toggle('show')
+})
