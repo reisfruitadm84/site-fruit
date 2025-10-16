@@ -821,9 +821,12 @@ button{
     justify-content: center;
 }
 
+.catalog-test .title{
+    flex: 1;
+}
+
 .catalogo-test .container{
     width: 100%;
-    height: 500px;
     min-height: 500px;
     display: flex;
     flex-direction: column;
@@ -839,11 +842,15 @@ button{
     flex: 1;
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .catalogo-test .container .catalog-slide .item{
     width: 100px;
     min-width: 70px;
+    max-width: 1200px;
     height: 120px;
     border-radius: 20px;
     box-shadow: 0 5px 3px #0c0c0c56;
@@ -864,7 +871,7 @@ button{
     display: flex;
     height: auto;
     padding: 15px;
-    min-height: 600px;
+    position: initial;
 }
 
 .catalogo-test .item .content{
@@ -872,7 +879,8 @@ button{
 }
 
 .catalogo-test .item.show .content{
-    min-width: 300px;
+    width: 50%;
+    min-width: 250px;
     max-width: 400px;
     text-align: left;
     color: black;
@@ -886,14 +894,15 @@ button{
 }
 
 .catalogo-test .item.show .container-image{
-    width: 600px;
-    min-width: 350px;
-    max-width: 600px;
-    height: 400px;
+    width: 50%;
+    min-width: 300px;
+    max-width: 400px;
+    height: 350px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 80%;  
+    background-size: cover;  
     flex: 1;
+   
 }
 
 .catalog-test .container-image{
@@ -907,7 +916,7 @@ button{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    opacity: 0;
+
 }
 
 .catalogo-test .catalog-slide .item:nth-child(1) .content{
@@ -934,8 +943,6 @@ button{
     font-size: 1.5rem;
     opacity: 0;
     animation: animate 0.3s ease-in-out 0.3s 1 forwards;
-    min-height: 120px;
-    max-height: 120px;
     overflow-y: auto;
 }
 
@@ -1014,6 +1021,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
 }
 
 .catalogo-test .button button{
