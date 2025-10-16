@@ -479,26 +479,37 @@ button{
 }
 /* COLORS CARDS */
 
-.insticucional-values .grid-container .card1{
-    background-color: black;
-    background-image: url(./img/1644-min.jpg);
+.insticucional-values .grid-container .card{
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 110%;
+    background-size: 120%;
+    background-size: cover;
+    position: relative;
 }
 
-.insticucional-values .grid-container .card1:hover{
-    background-color: black;
-    background-image: url(./img/1644-min.jpg);
-    background-repeat: no-repeat;
+.insticucional-values .grid-container .card:hover{
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
+}
+
+.insticucional-values .grid-container .card .background-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.insticucional-values .grid-container .card1{
+    background-image: url(./img/1644-min.jpg);
 }
 
 .insticucional-values .grid-container .card2{
     background-color: var(--text-color1);
     color: white;
-    
+    background-image: url(./img/pack/elemento\ planta\ 3\ png.png);
 }
 .insticucional-values .grid-container .card2 .card-button-cta{
     background-color: var(--primary-color); color: black;
@@ -507,18 +518,7 @@ button{
     background-color: var(--text-color1);
 }
 .insticucional-values .grid-container .card4{
-    background-color: var(--text-color1);
-}
-.insticucional-values .grid-container .card5{
     background-color: var(--primary-color); color: black;
-}
-
-.insticucional-values .grid-container .card6{
-    background-color: black;
-}
-
-.insticucional-values .grid-container .card6 .card-button-cta{
-    background-color: var(--primary-color);
 }
 
 .insticucional-values .grid-container .card-button-cta:hover{
@@ -854,8 +854,8 @@ button{
     height: 120px;
     border-radius: 20px;
     box-shadow: 0 5px 3px #0c0c0c56;
-    background-position: 20% 10%;
-    background-size:200%;
+    background-position: center;
+    background-size:contain;
     background-repeat: no-repeat;
     display: none;
     justify-content: center;
@@ -907,8 +907,8 @@ button{
 }
 
 .catalog-test .item .container-image{
-    width: 150px;
-    height: 200px;
+    width: 50px;
+    height: 50px;
     display: none;
     border-radius: 20px;
     background-position: 50% 50%;
@@ -987,21 +987,24 @@ button{
     height: 100%;
     box-shadow: none;
 }
+.catalogo-test .container .catalog-slide .item:nth-child(2):hover, .catalogo-test .container .catalog-slide .item:nth-child(3):hover, .catalogo-test .container .catalog-slide .item:nth-child(4):hover{
+    transform: translate(-100px, -20px);
+}
 .catalogo-test .catalog-slide .item:nth-child(2){
-    right: calc(20% - 20px);
+    right: 20%;
     bottom: 20px;
     display: flex; 
     position: absolute;
     
 }
 .catalogo-test .catalog-slide .item:nth-child(3){
-    right: calc(20% - 50px);
+    right: calc(20% - 90px);
     bottom: 20px;
     display: flex;
     position: absolute; 
 }
 .catalogo-test .catalog-slide .item:nth-child(4){
-    right: calc(20% - 80px);
+    right: calc(20% - 180px);
     bottom: 20px;
     display: flex;
     position: absolute; 
