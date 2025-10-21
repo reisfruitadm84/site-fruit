@@ -281,7 +281,7 @@ button{
 /* SECTION ABOUT*/
 .about{
     width: 100%;
-    background-image: url(./img/pack/fundo\ floral\ 2\ png.png);
+    background-image: url(./img/pack/fundo\ floral\ 2-min.jpg);
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -319,7 +319,7 @@ button{
 .about .background-image{
     width: 100%;
     height: 100%;
-    background-image: url(./img/pack/elemento\ planta\ 3\ png.png);
+    background-image: url(./img/pack/fundo\ floral\ 2-min.jpg);
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -439,7 +439,6 @@ button{
 }
 
 .insticucional-values .grid-container .card{
-    background: black;
     min-width: 230px;
     min-height: 200px;
     border-radius: 10px;
@@ -452,6 +451,7 @@ button{
     gap: 8px;
     overflow: hidden;
     box-shadow: rgba(153, 153, 153, 0.747) 0px 2px 8px 0px;
+    position: relative;
 }
 
 .insticucional-values .grid-container .card:hover{
@@ -472,19 +472,14 @@ button{
 }
 
 .insticucional-values .grid-container .card-flex{
-    background: black;
     min-width: 70%;
     min-height: 200px;
     border-radius: 10px;
 }
 /* COLORS CARDS */
 
-.insticucional-values .grid-container .card{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 120%;
-    background-size: cover;
-    position: relative;
+.insticucional-values .grid-container .card *{
+    z-index: 1;
 }
 
 .insticucional-values .grid-container .card:hover{
@@ -498,23 +493,32 @@ button{
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #000;
-    opacity: 0;
+    opacity: 0.12;
+    z-index: 0;
+    background-image: url(./img/pack/fundo\ floral\ 2-min.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200%;
+}
+
+.insticucional-values .grid-container .card-flex .background-card{
+    background-image: url(./img/pack/fundo\ floral\ 3\ png-min.png);
+    opacity: 0.2;
 }
 
 .insticucional-values .grid-container .card1{
-    background-image: url(./img/1644-min.jpg);
+    background-color: var(--primary-color);
 }
 
 .insticucional-values .grid-container .card2{
-    background-color: var(--text-color1);
+    background-color: black;
     color: white;
 }
 .insticucional-values .grid-container .card2 .card-button-cta{
     background-color: var(--primary-color); color: black;
 }
 .insticucional-values .grid-container .card3{
-    background-color: var(--text-color1);
+    background-color: black;
 }
 .insticucional-values .grid-container .card4{
     background-color: var(--primary-color); color: black;
@@ -822,6 +826,29 @@ button{
 
 .catalog-test .title{
     flex: 1;
+}
+
+.catalogo-test .catalog-categories{
+    width: 100%;
+    max-width: 1200px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+}
+.catalogo-test .catalog-category{
+    width: 150px;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: 2px solid black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.catalogo-test .catalog-category.active, .catalogo-test .catalog-category:hover{
+    background-color: var(--primary-color);  
 }
 
 .catalogo-test .container{

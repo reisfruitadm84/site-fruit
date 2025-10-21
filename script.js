@@ -55,7 +55,7 @@ window.addEventListener("resize", verificarJanela);
 //FIM DA ANIMAÇÃO DO CARROSSEL ========
 
 
-// CARDS PARA O CARROSSEL DE CLIENTES
+// ================ CARDS PARA O CARROSSEL DE CLIENTES ================
 
     // INSERIR IMAGENS DO CARROSSEL DE CLIENTES
     const clientes = [
@@ -118,13 +118,13 @@ window.addEventListener("resize", verificarJanela);
 
     inserirClientes();
 
-// FIM CARDS PARA INSERIR NO CARROSSEL ========
+// ================ FIM CARDS PARA INSERIR NO CARROSSEL ===============
 
 
-// INSERIR CATALOGO DE PRODUTOS
-    // CARDS PARA O CARROSSEL DE CLIENTES
+// =============== INSERIR CATALOGO DE PRODUTOS =================
+    // CARDS PARA O OS PRODUTOS
 
-    // INSERIR IMAGENS DO CARROSSEL DE CLIENTES
+    // INSERIR IMAGENS DOS PRODUTOS
     const produtosCatalogo = [
     {
         img: "Morango",  //Imagem do Produto
@@ -162,7 +162,7 @@ window.addEventListener("resize", verificarJanela);
     const localCarouselG = document.getElementById("");
     const localCarousel2G = document.getElementById("");
 
-    function inserirClientes() {
+    function inserirProdutos() {
     clientes.forEach((cliente) => {
         const cards = document.createElement("div");
         cards.classList.add("card");
@@ -190,11 +190,10 @@ window.addEventListener("resize", verificarJanela);
     });
     }
 
-    inserirClientes();
+    inserirProdutos();
 
-// FIM CARDS PARA INSERIR NO CARROSSEL ========
+// =============== INSERIR CATALOGO DE PRODUTOS =================
 
-// FIM - INSERIR CATALOGO DE PRODUTOS
 
 
 // ANIMAÇÃO DOS CARDS NA SEÇÃO DE DÚVIDAS
