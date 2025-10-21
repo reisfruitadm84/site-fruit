@@ -125,69 +125,161 @@ window.addEventListener("resize", verificarJanela);
     // CARDS PARA O OS PRODUTOS
 
     // INSERIR IMAGENS DOS PRODUTOS
-    const produtosCatalogo = [
-    {
-        img: "Morango",  //Imagem do Produto
+    const frutasCongeladasCatalogo = [
+    { // MORANGO
+        img: "./img/morango.png",  //Imagem do Produto
         nome: "Morango",    //Nome do Produto
         descricao: "O Morango Reis Fruit traz o equilíbrio perfeito entre doçura e acidez. Colhido fresco e congelado logo após a colheita, mantém cor vibrante e sabor intenso. Perfeito para vitaminas, sobremesas e drinks.", //Descrição do Produto
-        link:"",
     },
-    {
-        img: "",  //Imagem do Produto
-        nome: "Reis Fruit2",    //Nome do Produto
-        descricao: "texto aqui" //Descrição do Produto
+    { // ABACAXI
+        img: "./img/abacaxi.png",  //Imagem do Produto
+        nome: "Abacaxi",    //Nome do Produto
+        descricao: "Refrescante e naturalmente doce, o Abacaxi Reis Fruit é selecionado no ponto ideal de maturação e congelado rapidamente para preservar sabor e nutrientes. Ideal para sucos, sobremesas e preparos culinários que pedem um toque tropical." //Descrição do Produto
     },
-    {
-        img: "",  //Imagem do Produto
-        nome: "Reis Fruit3",    //Nome do Produto
-        descricao: "texto aqui" //Descrição do Produto
+    { // CAJÁ
+        img: "./img/caja.png",  //Imagem do Produto
+        nome: "Cajá",    //Nome do Produto
+        descricao: "Com sabor marcante e levemente ácido, o Cajá Reis Fruit é a escolha ideal para sucos, geleias e coquetéis. Rico em vitamina C, leva o frescor do Nordeste direto para sua mesa." //Descrição do Produto
     },
-    {
-        img: "",  //Imagem do Produto
-        nome: "Reis Fruit4",    //Nome do Produto
-        descricao: "texto aqui" //Descrição do Produto
+    { // FRUTAS VERMELHAS
+        img: "./img/frutas_vermelhas.png",  //Imagem do Produto
+        nome: "Frutas Vermelhas",    //Nome do Produto
+        descricao: "O Mix de Frutas Vermelhas Reis Fruit reúne framboesa, morango, mirtilo e amora em uma combinação perfeita de cores, aromas e sabores. Rico em antioxidantes, é ideal para sucos, sobremesas, iogurtes, caldas e até drinks especiais." //Descrição do Produto
     },
-    {
-        img: "",  //Imagem do Produto
-        nome: "Reis Fruit5",    //Nome do Produto
-        descricao: "texto aqui" //Descrição do Produto
+    { // KIWI
+        img: "./img/kiwi.png",  //Imagem do Produto
+        nome: "Kiwi",    //Nome do Produto
+        descricao: "Exótico e refrescante, o Kiwi Reis Fruit tem sabor suave e leve acidez. Rico em vitamina C e fibras, é perfeito para compor bowls, sobremesas e sucos funcionais." //Descrição do Produto
     },
-    {
-        img: "",  //Imagem do Produto
-        nome: "Reis Fruit6",    //Nome do Produto
-        descricao: "texto aqui" //Descrição do Produto
+    { // MARACUJÁ
+        img: "./img/maracuja.png",  //Imagem do Produto
+        nome: "Maracujá",    //Nome do Produto
+        descricao: "O Maracujá Reis Fruit é sinônimo de frescor e praticidade. Polpa pura, com sabor intenso e aroma marcante. Ideal para sucos naturais, sobremesas e caldas, sem perder nada do sabor original da fruta." //Descrição do Produto
     },
     ];
 
-    const localCarouselG = document.getElementById("");
-    const localCarousel2G = document.getElementById("");
+    const legumesCongeladosCatalogo = [
+    { // MORANGO
+        img: "./img/legumes/brocolis.png",  //Imagem do Produto
+        nome: "Brocolis",    //Nome do Produto
+        descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+    },
+    { // ABACAXI
+        img: "./img/legumes/cenoura em cubos",  //Imagem do Produto
+        nome: "Cenoura em Cubos",    //Nome do Produto
+        descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+    },
+    { // CAJÁ
+        img: "./img/legumes/ervilha.png",  //Imagem do Produto
+        nome: "Ervilha",    //Nome do Produto
+        descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+    },
+    { // FRUTAS VERMELHAS
+        img: "./img/legumes/macaxeira.png",  //Imagem do Produto
+        nome: "Macaxeira",    //Nome do Produto
+        descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+    },
+    { // KIWI
+        img: "./img/legumes/milho.png",  //Imagem do Produto
+        nome: "Milho",    //Nome do Produto
+        descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+    },
+    { // MARACUJÁ
+        img: "./img/legumes/vagem.png",  //Imagem do Produto
+        nome: "Vagem",    //Nome do Produto
+        descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+    },
+    ];
 
+    let category = "Frutas Congeladas";
+
+    const localCatalog = document.getElementById("catalog-slide");
+
+    // PEGANDO OS BOTÕES DAS CATEGORIAS
+    const btnCategory1 = document.getElementById('btn-category1');
+    const btnCategory2 = document.getElementById('btn-category2');
+    const btnCategory3 = document.getElementById('btn-category3');
+
+    btnCategory1.addEventListener(('click'), () => {
+      category = "Frutas Congeladas";
+      console.log(category);
+      inserirProdutos();
+    });
+
+    btnCategory2.addEventListener(('click'), () => {
+      category = "Legumes Congelados";
+      console.log(category);
+      inserirProdutos();
+    });
+
+    btnCategory3.addEventListener(('click'), () => {
+      category = "Frutas Naturais";
+      console.log(category);
+      inserirProdutos();
+    });
+    
+
+    // INSERINDO OS PRODUTOS
     function inserirProdutos() {
-    clientes.forEach((cliente) => {
-        const cards = document.createElement("div");
-        cards.classList.add("card");
+    
+    if(category == "Frutas Congeladas"){
+      frutasCongeladasCatalogo.forEach((produto, index) => {
+        const cards = document.createElement("div") ;
+        cards.classList.add("item");
+        cards.setAttribute("style", `background-image: url(${produto.img})`);     
 
-        const templateCliente = `<img src="${cliente.img}" alt="logo-reisfruit">
-                                    <h2>${cliente.nome}</h2>
-                                    `;
+        if(index == 0){
+          cards.classList.add("show");
+        }
 
-        cards.innerHTML = templateCliente;
 
-        localCarousel.appendChild(cards);
-    });
+        const templateProdutos = `
+            <div class="content">
+                <div class="name">${produto.nome}</div>
+                <div class="des">${produto.descricao}</div>
+                <button>See More</button>
+            </div>
 
-    clientes.forEach((cliente) => {
-        const cards = document.createElement("div");
-        cards.classList.add("card");
+            <div class="container-image" style="background-image: url(${produto.img});">
+            
+            </div>            
+        `;
 
-        const templateCliente = `<img src="${cliente.img}" alt="logo-reisfruit">
-                                    <h2>${cliente.nome}</h2>
-                                    `;
+        cards.innerHTML = templateProdutos;
 
-        cards.innerHTML = templateCliente;
+        localCatalog.appendChild(cards);
+      });
+    }
 
-        localCarousel2.appendChild(cards);
-    });
+    if(category == "Legumes Congelados"){
+      legumesCongeladosCatalogo.forEach((produto, index) => {
+        const cards = document.createElement("div") ;
+        cards.classList.add("item");
+        cards.setAttribute("style", `background-image: url(${produto.img})`);     
+
+        if(index == 0){
+          cards.classList.add("show");
+        }
+
+
+        const templateProdutos = `
+            <div class="content">
+                <div class="name">${produto.nome}</div>
+                <div class="des">${produto.descricao}</div>
+                <button>See More</button>
+            </div>
+
+            <div class="container-image" style="background-image: url(${produto.img});">
+            
+            </div>            
+        `;
+
+        cards.innerHTML = templateProdutos;
+
+        localCatalog.appendChild(cards);
+      });
+    }
+     
     }
 
     inserirProdutos();
