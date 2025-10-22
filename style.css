@@ -822,6 +822,7 @@ button{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 40px;
 }
 
 .catalog-test .title{
@@ -1013,9 +1014,7 @@ button{
     height: 100%;
     box-shadow: none;
 }
-.catalogo-test .container .catalog-slide .item:nth-child(2):hover, .catalogo-test .container .catalog-slide .item:nth-child(3):hover, .catalogo-test .container .catalog-slide .item:nth-child(4):hover{
-    transform: translate(-100px, -20px);
-}
+
 .catalogo-test .catalog-slide .item:nth-child(2){
     right: 20%;
     bottom: 20px;
@@ -1056,30 +1055,21 @@ button{
 
 .catalogo-test .button button{
     width: 40px;
-    height: 35px;
-    border-radius: 8px;
+    height: 40px;
+    border-radius: 40px;
+    color: white;
     border: none;
     cursor: pointer;
     margin: 0 5px;
     transition: 0.3s;
-    background-color: var(--primary-color);
+    background-color: var(--text-color);
 }
 
 .catalogo-test .button button:hover{
     opacity: 0.8;
 }
 
-
-
-
-
 /* SECAO DE PRODUTOS TESTE */
-
-
-
-
-
-
 
 
 /* ------ REVIEW -------- */
@@ -1671,27 +1661,29 @@ footer .copyright a{
     }
 
     /* SEÇÃO DE CATALOGO TESTE */
-     /* .catalogo-test .item .content{
-        order: 2;
+    .catalogo-test .content{
+        margin-top: 30px;
     }
 
-    .catalogo-test .item .container-image{
-        order: 1;
-        min-width:300px; */
-    }
-    /*
-    .catalogo-test .item.show .name{
-        margin-top: 60px;
+    .catalogo-test .container .catalog-slide .item{
+        width: 70px;
+        min-width: 70px;
+        max-width: 1200px;
+        height: 80px;
     }
 
-    
-    .catalogo-test .container .button{
-        align-self: right;
+    .catalogo-test .catalog-slide .item:nth-child(2){
+        right: 20%;
+        bottom: 20px;
     }
-
-    .review{
-        margin-top: 60px;
-    } */
+    .catalogo-test .catalog-slide .item:nth-child(3){
+        right: calc(20% - 40px);
+        bottom: 20px; 
+    }
+    .catalogo-test .catalog-slide .item:nth-child(4){
+        right: calc(20% - 80px);
+        bottom: 20px; 
+    }
     /* FIM DA SEÇÃO DE CATALOGO TESTE */
 
 
@@ -1699,6 +1691,7 @@ footer .copyright a{
         font-size: 2.6rem;
     }
     
+}
 
 /* Laptops */
 @media screen and (min-width: 1024px) {
@@ -1712,4 +1705,4 @@ footer .copyright a{
 /* Desktop grande */
 @media screen and (min-width: 1440px) {
   
-} 
+}
