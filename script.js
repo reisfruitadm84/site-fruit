@@ -500,11 +500,11 @@ slider.addEventListener('touchend', (e) => {
  
   let verif = startX - scrollOut;         //Calcula a diferença do scrollOut e o startX
 
-  if(scrollOut < startX & verif > 100){   // compara se scrollOut é menor que startX  e se a diferença é maior que 100
+  if(scrollOut < startX & verif > 50){   // compara se scrollOut é menor que startX  e se a diferença é maior que 100
     pullTheNextOne();
   }
 
-  if(scrollOut > startX & verif < -100){   // compara se scrollOut é maior que startX  e se a diferença é menor que 100
+  if(scrollOut > startX & verif < -50){   // compara se scrollOut é maior que startX  e se a diferença é menor que 100
     pullThePreviousOne();
   }
 
