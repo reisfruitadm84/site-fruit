@@ -466,11 +466,11 @@ function pullThePreviousOne(){
 }
 
 next.addEventListener("click", function () {
-  //pullTheNextOne();
+  pullTheNextOne();
 });
 
 prev.addEventListener("click", function () {
-  //pullThePreviousOne();
+  pullThePreviousOne();
 });
 
 // FIM ANIMAÇÃO DO SLIDER DE PRODUTOS
