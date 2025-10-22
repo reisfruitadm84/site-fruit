@@ -489,14 +489,12 @@ let scrollOut;        // posição final do scroll quando solta o mouse
 slider.addEventListener('touchstart', (e) => {
   isDown = true;                     // marca que o arraste começou
   startX = e.touches[0].pageX - slider.offsetLeft;  // calcula a posição do clique (relativa ao slider)
-  console.log(startX + " posição atual");
 });
 
 // Quando o usuário tira o dedo da tela
 slider.addEventListener('touchend', (e) => {
   isDown = false;                    // encerra o arraste
  scrollOut = e.changedTouches[0].pageX - slider.offsetLeft; // calcula a posição do clique 
-  console.log(scrollOut + " scroll saiu");
  
   let verif = startX - scrollOut;         //Calcula a diferença do scrollOut e o startX
 
