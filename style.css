@@ -875,9 +875,7 @@ button{
 }
 
 .catalogo-test .container .catalog-slide .item{
-    width: 100px;
-    min-width: 70px;
-    max-width: 1200px;
+    width: 100%;
     height: 120px;
     border-radius: 20px;
     box-shadow: 0 5px 3px #0c0c0c56;
@@ -890,8 +888,7 @@ button{
     flex-wrap: wrap;
     transition: 0.5s; 
     background-color: white;
-    
-    transform: translateX(-100%);
+      
 }
 
 .catalogo-test .container .catalog-slide .item.show{
@@ -1020,19 +1017,21 @@ button{
     bottom: 20px;
     display: flex; 
     position: absolute;
-    
+    width: 100px;
 }
 .catalogo-test .catalog-slide .item:nth-child(3){
     right: calc(20% - 90px);
     bottom: 20px;
     display: flex;
     position: absolute; 
+    width: 100px;
 }
 .catalogo-test .catalog-slide .item:nth-child(4){
     right: calc(20% - 180px);
     bottom: 20px;
     display: flex;
     position: absolute; 
+    width: 100px;
 }
 
 /* here n = 0, 1, 2, 3,... */
@@ -1665,8 +1664,9 @@ footer .copyright a{
         margin-top: 30px;
     }
 
+
     .catalogo-test .container .catalog-slide .item{
-        width: 70px;
+        width: 100%;
         min-width: 70px;
         max-width: 1200px;
         height: 80px;
@@ -1675,14 +1675,21 @@ footer .copyright a{
     .catalogo-test .catalog-slide .item:nth-child(2){
         right: 20%;
         bottom: 20px;
+        width: 70px;
     }
     .catalogo-test .catalog-slide .item:nth-child(3){
         right: calc(20% - 40px);
-        bottom: 20px; 
+        bottom: 20px;
+        width: 70px; 
     }
     .catalogo-test .catalog-slide .item:nth-child(4){
         right: calc(20% - 80px);
-        bottom: 20px; 
+        bottom: 20px;
+        width: 70px; 
+    }
+
+    .catalogo-test .button{
+        display: none;
     }
     /* FIM DA SEÇÃO DE CATALOGO TESTE */
 

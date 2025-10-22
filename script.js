@@ -226,7 +226,7 @@ window.addEventListener("resize", verificarJanela);
       },
       { // CENOURA BABY
           img: "./img/legumes/cenoura_baby.png",  //Imagem do Produto
-          nome: "Cenoura em Cubos",    //Nome do Produto
+          nome: "Cenoura Baby",    //Nome do Produto
           descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
       },
       { // ERVILHA
@@ -284,7 +284,7 @@ window.addEventListener("resize", verificarJanela);
 
     btnCategory1.addEventListener(('click'), () => {
       btnCategories.forEach(element => {
-        element.classList.remove("active");
+        element.classList.remove("active"); 
       })
 
       btnCategory1.classList.add("active");
@@ -331,63 +331,63 @@ window.addEventListener("resize", verificarJanela);
     // INSERINDO OS PRODUTOS
     function inserirProdutos() {
     
-    if(category == "Frutas Congeladas"){
-      frutasCongeladasCatalogo.forEach((produto, index) => {
-        const cards = document.createElement("div") ;
-        cards.classList.add("item");
-        cards.setAttribute("style", `background-image: url(${produto.img})`);     
+      if(category == "Frutas Congeladas"){
+        frutasCongeladasCatalogo.forEach((produto, index) => {
+          const cards = document.createElement("div") ;
+          cards.classList.add("item");
+          cards.setAttribute("style", `background-image: url(${produto.img})`);     
 
-        if(index == 0){
-          cards.classList.add("show");
-        }
-
-
-        const templateProdutos = `
-            <div class="content">
-                <div class="name">${produto.nome}</div>
-                <div class="des">${produto.descricao}</div>
-                <button>See More</button>
-            </div>
-
-            <div class="container-image" style="background-image: url(${produto.img});">
-            
-            </div>            
-        `;
-
-        cards.innerHTML = templateProdutos;
-
-        localCatalog.appendChild(cards);
-      });
-    }
-
-    if(category == "Legumes Congelados"){
-      legumesCongeladosCatalogo.forEach((produto, index) => {
-        const cards = document.createElement("div") ;
-        cards.classList.add("item");
-        cards.setAttribute("style", `background-image: url(${produto.img})`);     
-
-        if(index == 0){
-          cards.classList.add("show");
-        }
+          if(index == 0){
+            cards.classList.add("show");
+          }
 
 
-        const templateProdutos = `
-            <div class="content">
-                <div class="name">${produto.nome}</div>
-                <div class="des">${produto.descricao}</div>
-                <button>See More</button>
-            </div>
+          const templateProdutos = `
+              <div class="content">
+                  <div class="name">${produto.nome}</div>
+                  <div class="des">${produto.descricao}</div>
+                  <button>See More</button>
+              </div>
 
-            <div class="container-image" style="background-image: url(${produto.img});">
-            
-            </div>            
-        `;
+              <div class="container-image" style="background-image: url(${produto.img});">
+              
+              </div>            
+          `;
 
-        cards.innerHTML = templateProdutos;
+          cards.innerHTML = templateProdutos;
 
-        localCatalog.appendChild(cards);
-      });
-    }
+          localCatalog.appendChild(cards);
+        });
+      }
+
+      if(category == "Legumes Congelados"){
+        legumesCongeladosCatalogo.forEach((produto, index) => {
+          const cards = document.createElement("div") ;
+          cards.classList.add("item");
+          cards.setAttribute("style", `background-image: url(${produto.img})`);     
+
+          if(index == 0){
+            cards.classList.add("show");
+          }
+
+
+          const templateProdutos = `
+              <div class="content">
+                  <div class="name">${produto.nome}</div>
+                  <div class="des">${produto.descricao}</div>
+                  <button>See More</button>
+              </div>
+
+              <div class="container-image" style="background-image: url(${produto.img});">
+              
+              </div>            
+          `;
+
+          cards.innerHTML = templateProdutos;
+
+          localCatalog.appendChild(cards);
+        });
+      }
      
     }
 
@@ -447,25 +447,70 @@ section.forEach((div) => observer.observe(div));
 let next = document.querySelector(".next");
 let prev = document.querySelector(".prev");
 
-next.addEventListener("click", function () {
+
+function pullTheNextOne(){
   let items = document.querySelectorAll(".catalog-slide .item");
 
   document.querySelector(".catalog-slide").appendChild(items[0]);
 
   items[1].classList.add("show");
   items[0].classList.remove("show");
-});
+}
 
-prev.addEventListener("click", function () {
+function pullThePreviousOne(){
   let items = document.querySelectorAll(".item");
   document.querySelector(".catalog-slide").prepend(items[items.length - 1]); // here the length of items = 6
-
-  // items.forEach((element, index), () =>{
-  //   console.log(index); 
-  // })
-  
   
   items[0].classList.remove("show");
   items[items.length -1].classList.add("show");
+}
+
+next.addEventListener("click", function () {
+  //pullTheNextOne();
 });
+
+prev.addEventListener("click", function () {
+  //pullThePreviousOne();
+});
+
 // FIM ANIMAÇÃO DO SLIDER DE PRODUTOS
+
+// Seleciona o contêiner principal do slider
+const slider = document.querySelector('.catalog-slide');
+
+// Variáveis de controle do estado do "arrastar"
+let isDown = false;   // controla se o botão/tela está sendo pressionado
+let startX;           // posição inicial do clique/toque
+let scrollOut;        // posição final do scroll quando solta o mouse
+
+// --- EVENTOS PARA TOUCH (celulares / tablets) ---
+
+// Quando o usuário toca na tela
+slider.addEventListener('touchstart', (e) => {
+  isDown = true;                     // marca que o arraste começou
+  startX = e.touches[0].pageX - slider.offsetLeft;  // calcula a posição do clique (relativa ao slider)
+  console.log(startX + " posição atual");
+});
+
+// Quando o usuário tira o dedo da tela
+slider.addEventListener('touchend', (e) => {
+  isDown = false;                    // encerra o arraste
+ scrollOut = e.changedTouches[0].pageX - slider.offsetLeft; // calcula a posição do clique 
+  console.log(scrollOut + " scroll saiu");
+ 
+  let verif = startX - scrollOut;         //Calcula a diferença do scrollOut e o startX
+
+  if(scrollOut < startX & verif > 100){   // compara se scrollOut é menor que startX  e se a diferença é maior que 100
+    pullTheNextOne();
+  }
+
+  if(scrollOut > startX & verif < -100){   // compara se scrollOut é maior que startX  e se a diferença é menor que 100
+    pullThePreviousOne();
+  }
+
+});
+
+// Quando o usuário move o dedo na tela
+slider.addEventListener('touchmove', (e) => {
+  if (!isDown) return;               // se não estiver tocando, não faz nada
+});
