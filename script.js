@@ -444,8 +444,8 @@ section.forEach((div) => observer.observe(div));
 
 // ANIMAÇÃO DO SLIDER DE PRODUTOS
 
-let next = document.querySelector(".next");
-let prev = document.querySelector(".prev");
+let next = document.querySelector('.next');
+let prev = document.querySelector('.prev');
 
 
 function pullTheNextOne(){
@@ -465,11 +465,11 @@ function pullThePreviousOne(){
   items[items.length -1].classList.add("show");
 }
 
-next.addEventListener("click", function () {
+next.addEventListener('click', () => {
   pullTheNextOne();
 });
 
-prev.addEventListener("click", function () {
+prev.addEventListener('click', () => {
   pullThePreviousOne();
 });
 
