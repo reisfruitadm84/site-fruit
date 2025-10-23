@@ -659,21 +659,6 @@ button{
     cursor: pointer;
 }
 
-.catalog1-category{
-    width: 150px;
-    padding: 2px 5px;
-    border-radius: 10px;
-    font-size: 14px;
-    border: 2px solid black;
-    text-align: center;
-    cursor: pointer;
-}
-
-.catalog1-category.active,.catalog1-category:hover{
-    background-color: var(--primary-color);  
-}
-
-
 .container-catalogs{
  width: 100%;
  max-width: 1200px;
@@ -702,12 +687,11 @@ button{
     cursor: pointer;
 }
 
-
 .catalog .catalog-category{
-    width: 150px;
+    width: 120px;
     padding: 2px 5px;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 12px;
     border: 2px solid black;
     text-align: center;
     cursor: pointer;
