@@ -531,6 +531,14 @@ button{
 
 /* ------- END  ABOUT  ------------- */
 
+.background-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
 
 /* SECTION PARTNER CUSTOMERS */
 .partner-customers{
@@ -541,11 +549,17 @@ button{
     align-items: center;
     justify-content: space-between;
     min-height: 900px;
+    position: relative;    
 }
 
-.partner-customers .title{
-    height: 20%;
+.partner-customers .background-image{
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
 }
+
 
 .partner-customers .container-carousel-customers{
     width: 100%;
@@ -594,6 +608,7 @@ button{
     border-radius: 10px;
     cursor: pointer;
     opacity: 0.8;
+    background-color: white;
 }
 
 .partner-customers .container-carousel .group .card:hover *{
