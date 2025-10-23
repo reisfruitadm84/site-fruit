@@ -130,81 +130,98 @@ window.addEventListener("resize", verificarJanela);
           img: "./img/frutas/morango.png",  //Imagem do Produto
           nome: "Morango",    //Nome do Produto
           descricao: "O Morango Reis Fruit traz o equilíbrio perfeito entre doçura e acidez. Colhido fresco e congelado logo após a colheita, mantém cor vibrante e sabor intenso. Perfeito para vitaminas, sobremesas e drinks.", //Descrição do Produto
+          alt: "morango congelado",
       },
       { // ABACAXI
           img: "./img/frutas/abacaxi.png",  //Imagem do Produto
           nome: "Abacaxi",    //Nome do Produto
-          descricao: "Refrescante e naturalmente doce, o Abacaxi Reis Fruit é selecionado no ponto ideal de maturação e congelado rapidamente para preservar sabor e nutrientes. Ideal para sucos, sobremesas e preparos culinários que pedem um toque tropical." //Descrição do Produto
+          descricao: "Refrescante e naturalmente doce, o Abacaxi Reis Fruit é selecionado no ponto ideal de maturação e congelado rapidamente para preservar sabor e nutrientes. Ideal para sucos, sobremesas e preparos culinários que pedem um toque tropical.", //Descrição do Produto
+          alt: "Abacaxi congelado",
       },
       { // CAJÁ
           img: "./img/frutas/caja.png",  //Imagem do Produto
           nome: "Cajá",    //Nome do Produto
-          descricao: "Com sabor marcante e levemente ácido, o Cajá Reis Fruit é a escolha ideal para sucos, geleias e coquetéis. Rico em vitamina C, leva o frescor do Nordeste direto para sua mesa." //Descrição do Produto
+          descricao: "Com sabor marcante e levemente ácido, o Cajá Reis Fruit é a escolha ideal para sucos, geleias e coquetéis. Rico em vitamina C, leva o frescor do Nordeste direto para sua mesa.", //Descrição do Produto
+          alt: "Cajá congelado",
       },
       { // FRUTAS VERMELHAS
           img: "./img/frutas/frutas_vermelhas.png",  //Imagem do Produto
           nome: "Frutas Vermelhas",    //Nome do Produto
-          descricao: "O Mix de Frutas Vermelhas Reis Fruit reúne framboesa, morango, mirtilo e amora em uma combinação perfeita de cores, aromas e sabores. Rico em antioxidantes, é ideal para sucos, sobremesas, iogurtes, caldas e até drinks especiais." //Descrição do Produto
+          descricao: "O Mix de Frutas Vermelhas Reis Fruit reúne framboesa, morango, mirtilo e amora em uma combinação perfeita de cores, aromas e sabores. Rico em antioxidantes, é ideal para sucos, sobremesas, iogurtes, caldas e até drinks especiais.", //Descrição do Produto
+          alt: "frutas vermelhas congelada",
       },
       { // KIWI
           img: "./img/frutas/kiwi.png",  //Imagem do Produto
           nome: "Kiwi",    //Nome do Produto
-          descricao: "Exótico e refrescante, o Kiwi Reis Fruit tem sabor suave e leve acidez. Rico em vitamina C e fibras, é perfeito para compor bowls, sobremesas e sucos funcionais." //Descrição do Produto
+          descricao: "Exótico e refrescante, o Kiwi Reis Fruit tem sabor suave e leve acidez. Rico em vitamina C e fibras, é perfeito para compor bowls, sobremesas e sucos funcionais.", //Descrição do Produto
+          alt: "Kiwi congelado",
       },
       { // MARACUJÁ
           img: "./img/frutas/maracuja.png",  //Imagem do Produto
           nome: "Maracujá",    //Nome do Produto
-          descricao: "O Maracujá Reis Fruit é sinônimo de frescor e praticidade. Polpa pura, com sabor intenso e aroma marcante. Ideal para sucos naturais, sobremesas e caldas, sem perder nada do sabor original da fruta." //Descrição do Produto
+          descricao: "O Maracujá Reis Fruit é sinônimo de frescor e praticidade. Polpa pura, com sabor intenso e aroma marcante. Ideal para sucos naturais, sobremesas e caldas, sem perder nada do sabor original da fruta.", //Descrição do Produto
+          alt: "Maracujá congelado",
+          
       },
       { // ACEROLA
           img: "./img/frutas/acerola.png",  //Imagem do Produto
           nome: "Acerola",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "Acerola congelado",
       },
       { // AMORA
           img: "./img/frutas/amora.png",  //Imagem do Produto
           nome: "Amora",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "Amora congelado",
       },
       { // COCO
           img: "./img/frutas/coco.png",  //Imagem do Produto
           nome: "Coco",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "Coco congelado",
       },
       { // GOIABA
           img: "./img/frutas/goiaba.png",  //Imagem do Produto
           nome: "Goiaba",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "goiaba congelado",
       },
       { // MANGA
           img: "./img/frutas/manga.png",  //Imagem do Produto
           nome: "Manga",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "Manga congelado",
       },
       { // MIRTILO
           img: "./img/frutas/mirtilo.png",  //Imagem do Produto
           nome: "Mirtilo",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "Mirtilo congelado",
       },
       { // UVA ISABEL
           img: "./img/frutas/uva_isabel.png",  //Imagem do Produto
           nome: "Uva Isabel",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "Uva isabel congelada",
       },
       { // UVA VITÓRIA
           img: "./img/frutas/uva_vitoria.png",  //Imagem do Produto
           nome: "Uva Vitória",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "Uva vitoria congelado",
       },
       { // SERIGUELA
           img: "./img/frutas/seriguela.png",  //Imagem do Produto
           nome: "Seriguela",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "Seriguela congelada",
       },
       { // FRAMBOESA
           img: "./img/frutas/framboesa.png",  //Imagem do Produto
           nome: "Framboesa",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "Framboesa congelada",
       },
     ];
 
@@ -213,67 +230,81 @@ window.addEventListener("resize", verificarJanela);
           img: "./img/legumes/brocolis.png",  //Imagem do Produto
           nome: "Brocolis",    //Nome do Produto
           descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "brocolis congelado",
       },
       { // BATATA
           img: "./img/legumes/batata.png",  //Imagem do Produto
           nome: "Batata",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "Batata congelada",
       },
       { // CENOURA CUBO
           img: "./img/legumes/cenoura_cubo.png",  //Imagem do Produto
           nome: "Cenoura em Cubos",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "Cenoura cubos congelada",
       },
       { // CENOURA BABY
           img: "./img/legumes/cenoura_baby.png",  //Imagem do Produto
           nome: "Cenoura Baby",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "Cenoura baby congelada",
       },
       { // ERVILHA
           img: "./img/legumes/ervilha.png",  //Imagem do Produto
           nome: "Ervilha",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "Ervilha congelada",
       },
       { // MACAXEIRA
           img: "./img/legumes/macaxeira.png",  //Imagem do Produto
           nome: "Macaxeira",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "macaxeira congelada",
       },
       { // MILHO
           img: "./img/legumes/milho.png",  //Imagem do Produto
           nome: "Milho",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "milho congelado",
       },
       { // VAGEM
           img: "./img/legumes/vagem.png",  //Imagem do Produto
           nome: "Vagem",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "vagem congelada",
       },
       { // ESPINAFRE
           img: "./img/legumes/espinafre.png",  //Imagem do Produto
           nome: "Espinafre",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "espinafre congelada",
       },
       { // SELETA PRIMAVERA
           img: "./img/legumes/seleta_primavera.png",  //Imagem do Produto
           nome: "Seleta Primavera",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "seleta primavera congelada",
       },
       { // COUVE FLOR
           img: "./img/legumes/couve_flor.png",  //Imagem do Produto
           nome: "Couve Flor",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "couve flor congelada",
       },
       { // JARDINEIRA
           img: "./img/legumes/jardineira.png",  //Imagem do Produto
           nome: "Jardineira",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" //Descrição do Produto
+          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          alt: "jardineira congelada",
       },
     ];
 
     let category = "Frutas Congeladas";
 
     const localCatalog = document.getElementById("catalog-slide");
+
+    const localCatalog1 = document.querySelector(".container-catalog2 .box-container-products");
 
     // PEGANDO OS BOTÕES DAS CATEGORIAS
     const btnCategory1 = document.getElementById('btn-category1');
@@ -290,8 +321,10 @@ window.addEventListener("resize", verificarJanela);
       btnCategory1.classList.add("active");
       
       category = "Frutas Congeladas";
-      deletarItemsCatalog();
-      inserirProdutos();
+      deletarItemsCatalog1();
+      inserirProdutosCatalog1();
+      deletarItemsCatalog2();
+      inserirProdutosCatalog2();
     });
 
     btnCategory2.addEventListener(('click'), () => {
@@ -302,8 +335,10 @@ window.addEventListener("resize", verificarJanela);
       btnCategory2.classList.add("active");
       
       category = "Legumes Congelados";
-      deletarItemsCatalog();
-      inserirProdutos();
+      deletarItemsCatalog1();
+      inserirProdutosCatalog1();
+      deletarItemsCatalog2();
+      inserirProdutosCatalog2();
     });
 
     btnCategory3.addEventListener(('click'), () => {
@@ -315,22 +350,32 @@ window.addEventListener("resize", verificarJanela);
       
       category = "Frutas Naturais";
     
-      deletarItemsCatalog();      
-      inserirProdutos();
+      deletarItemsCatalog1();      
+      inserirProdutosCatalog1();
+      deletarItemsCatalog2();      
+      inserirProdutosCatalog2();
     });
 
-    function deletarItemsCatalog(){
+    function deletarItemsCatalog1(){
       let listaProdutosExistentes = document.querySelectorAll('.item');
 
       listaProdutosExistentes.forEach(element => {
         element.remove();
       });
     }
-    
+    function deletarItemsCatalog2(){
+      let listaProdutosExistentes1 = document.querySelectorAll('.box-products');
 
-    // INSERINDO OS PRODUTOS
-    function inserirProdutos() {
+      listaProdutosExistentes1.forEach(element => {
+        element.remove();
+      });
     
+    }
+
+    // INSERIR OS PRODUTOS DO CATALOGO 1
+    function inserirProdutosCatalog1() {
+      console.log(category);
+
       if(category == "Frutas Congeladas"){
         frutasCongeladasCatalogo.forEach((produto, index) => {
           const cards = document.createElement("div") ;
@@ -390,11 +435,116 @@ window.addEventListener("resize", verificarJanela);
       }
      
     }
+    
+    // INSERIR OS PRODUTOS DO CATALOGO 2
+    function inserirProdutosCatalog2() 
+    {
+      console.log(category);
+      if(category == "Frutas Congeladas")
+      {
+        frutasCongeladasCatalogo.forEach((produto, index) => {
+          const cards = document.createElement("div") ;
+          cards.classList.add("box-products");
+          cards.classList.add("reveal");
 
-    inserirProdutos();
+          const templateProdutos = `
+               <div class="overlayer"></div>
+                <div class="container-name-product">
+                    <h3>${produto.nome}</h3>
+                </div>
+                
+                <div class="container">
+                    <img src="${produto.img}" alt="${produto.alt}">
+                    <p class="details-product">${produto.descricao}</p>
+                </div>
+                <div class="container-button">
+                    <a class="btn" href="#">Ver Detalhes</a>
+                </div>         
+          `;
 
-// =============== INSERIR CATALOGO DE PRODUTOS =================
+          cards.innerHTML = templateProdutos;
 
+          localCatalog1.appendChild(cards);
+        });
+      }
+      if(category == "Legumes Congelados")
+      {
+        legumesCongeladosCatalogo.forEach((produto, index) => {
+          const cards = document.createElement("div") ;
+          cards.classList.add("box-products");
+          cards.classList.add("reveal");
+
+          const templateProdutos = `
+               <div class="overlayer"></div>
+                <div class="container-name-product">
+                    <h3>${produto.nome}</h3>
+                </div>
+                
+                <div class="container">
+                    <img src="${produto.img}" alt="${produto.alt}">
+                    <p class="details-product">${produto.descricao}</p>
+                </div>
+                <div class="container-button">
+                    <a class="btn" href="#">Ver Detalhes</a>
+                </div>         
+          `;
+
+          cards.innerHTML = templateProdutos;
+
+          localCatalog1.appendChild(cards);
+        });
+      }
+    }
+
+    inserirProdutosCatalog1();
+
+    inserirProdutosCatalog2();
+
+// ===============================
+
+
+// ========== TROCAR LAYOUT DO CATÁLOGO ==========
+const btnShowCatalogScreen = document.querySelector('.icon-screen');
+const btnShowCatalogGrid = document.querySelector('.icon-grid');
+
+
+
+btnShowCatalogGrid.addEventListener('click', exchangeCatalog);
+btnShowCatalogScreen.addEventListener('click', exchangeCatalog);
+
+
+function exchangeCatalog(){
+  let catalog1 = document.querySelector('.container-catalog1');
+  let catalog2 = document.querySelector('.container-catalog2');
+
+  if(catalog1.style.display == "none" ){ // SE O CATÁLOGO INVISÍVEL
+    btnShowCatalogGrid.style.display = "block";
+    btnShowCatalogScreen.style.display = "none";
+
+    catalog1.style.display = "block";
+    catalog2.style.display = "none";
+    
+    deletarItemsCatalog2();
+    inserirProdutosCatalog2();
+    observed();
+    
+  } else { // SE O CATÁLOGO VISÍVEL
+    btnShowCatalogGrid.style.display = "none";
+    btnShowCatalogScreen.style.display = "block";
+    
+    catalog1.style.display = "none";
+    catalog2.style.display = "block";
+    
+    deletarItemsCatalog1();
+    inserirProdutosCatalog1();
+    observed();
+    
+  }
+    
+  console.log(category)
+}
+
+// ===============================
 
 
 // ANIMAÇÃO DOS CARDS NA SEÇÃO DE DÚVIDAS
@@ -419,10 +569,15 @@ buttonArrow.forEach((button) => {
   });
 });
 
-// FIM DA ANIMAÇÃO DOS CARDS NA SEÇÃO DE DÚVIDAS =======
+// ==============================
 
-const section = document.querySelectorAll(".reveal");
-const observer = new IntersectionObserver(
+
+// ANIMAÇÃO DAS SEÇÕES PELA ROLAGEM DO SCROLL
+
+function observed(){
+  let section = document.querySelectorAll(".reveal");
+
+  let observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -431,15 +586,19 @@ const observer = new IntersectionObserver(
       } else {
         entry.target.classList.remove("show");
       }
+
     });
   },
   {
     threshold: 0.5,
   }
-);
+  );
 
-section.forEach((div) => observer.observe(div));
+  section.forEach((div) => observer.observe(div));
+}
 
+observed();
+// ===============================
 
 
 // ANIMAÇÃO DO SLIDER DE PRODUTOS
@@ -473,7 +632,9 @@ prev.addEventListener('click', () => {
   pullThePreviousOne();
 });
 
-// FIM ANIMAÇÃO DO SLIDER DE PRODUTOS
+// ===============================
+
+
 
 // Seleciona o contêiner principal do slider
 const slider = document.querySelector('.catalog-slide');

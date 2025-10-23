@@ -610,214 +610,12 @@ button{
 /* --------- SECTION PARTNER CUSTOMERS -----------*/
 
 
-/* ------ SECTION CATALOG ----------*/
-
-/* .catalog {
-    position: relative;
-    background-image: url(./img/pack/elemento\ planta\ png.png);
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    background-attachment: fixed;
-
-}
-
-.catalog::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: var(--primary-color);
-    top: 0;
-    left: 0;
-    opacity: 0.7;
-} */
-
-.catalog {
-    display: none;
-}
-
-.banner-catalog{
-    margin: 30px auto 30px auto;
-    width: 100%;
-    height: auto;
-    background-color: black;
-    border-radius: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    box-shadow: 3px 3px 10px gray;
-    position: relative;
-    padding: 10px 15px;
-    gap: 15px;
-    max-width: 1200px;
-}
-
-.banner-catalog .container-image-banner{
-    flex: 1;
-    min-width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.banner-catalog img{
-    width:200px;
-    transform: rotate(-15deg);
-    z-index: 0;
-}
-
-.banner-catalog .container-image-banner::before{
-    content: '';
-    width: 100px;
-    height: 100px;    
-    position: absolute;
-    top: 55px;
-    border-radius: 100px;
-    box-shadow: 0 0 50px white;
-}
-
-.banner-catalog h1{
-    font-size: 5rem;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex: 2;
-}
-
-/* CARDS */
-
-
-.catalog .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    margin-top: 60px;
-}
-
-.catalog .box-container .box{
-    text-align: center;
-    padding: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    box-shadow: 2px 2px 5px gray;
-    border-radius: 2rem;
-    min-height: 400px;
-    max-height: 400px;
-    position: relative;
-    overflow: hidden;
-    background-color: white;
-    /* min-width: 350px; */
-}
-
-.catalog .box-container .box:hover{
-    animation: moveBox 0.8s ease forwards;
-    color: white;
-}
-
-.catalog .box-container .box:hover .container-name-product{
-    animation: moveAllBox 0.65s ease-in forwards;
-}
-.catalog .box-container .box:hover .container p{
-    animation: moveAllBox 0.7s ease-in forwards;
-}
-.catalog .box-container .box:hover .container img{
-    animation: moveAllBox 0.75s ease-in forwards;
-}
-.catalog .box-container .box:hover .container-button{
-    animation: moveAllBox 0.78s ease-in forwards;
-}
-
-.catalog .box-container .box .overlayer{
-    width: 0;
-    transition: all 1s ease;
-}
-
-.catalog .box-container .box:hover .overlayer{
-    position: absolute;
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    left: 0;
-    top: 0;
-}
-
-.catalog .box-container .box .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    z-index: 1;
-}
-
-.catalog .box-container .box .container-name-product{
-    flex: 1;
-    font-size: 1.8rem;
-    z-index: 1;
-}
-
-.catalog .box-container .box .container p{
-    margin-top: 10px;
-    font-size: 1.5rem;
-    padding: 1rem 0;
-    transition: all 0.4s ease-in-out;
-    order: 1;
-    min-width: 100px;
-}
-
-.catalog .box-container .box .container img{
-    width: 65%;
-    min-width: 60%;
-}
-
-.catalog .box-container .box:hover .container img{
-    animation: moveFruta 3s ease-in-out infinite forwards;
-}
-
-.catalog .box-container .box .container-button{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.catalog .box-container .box .container-button .btn{
-    font-size: 1.5rem;
-    padding: 0.5rem 2rem;
-    background-color: var(--primary-color);
-    border-radius: 50px;
-    z-index: 1;
-    color: #000;
-}
-
-.catalog .box-container .box .container-button .btn:hover{
-    transform: scale(1.08);
-}
-
-/* SECTION CATALOG ------- */
-
-
-
-
-
 /* SECAO DE PRODUTOS TESTE */
 
-.catalogo-test{
+.catalog{
     width: 100%;
     height: auto;
     min-height: 700px;
-    max-height: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -825,20 +623,43 @@ button{
     padding-bottom: 40px;
 }
 
-.catalog-test .title{
+.catalog .title{
     flex: 1;
 }
 
-.catalogo-test .catalog-categories{
+
+.catalog-categories{
     width: 100%;
     max-width: 1200px;
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.catalog-categories .row{
+    display: flex;
     gap: 10px;
 }
-.catalogo-test .catalog-category{
+.catalog-categories .row .visualization-catalog{
+    display: flex;
+    font-size: 1.3rem;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalog-categories .row .icon-screen{
+    width: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.catalog1-category{
     width: 150px;
     padding: 2px 5px;
     border-radius: 10px;
@@ -848,11 +669,63 @@ button{
     cursor: pointer;
 }
 
-.catalogo-test .catalog-category.active, .catalogo-test .catalog-category:hover{
+.catalog1-category.active,.catalog1-category:hover{
     background-color: var(--primary-color);  
 }
 
-.catalogo-test .container{
+
+.container-catalogs{
+ width: 100%;
+ max-width: 1200px;
+}
+
+.container-catalog1{
+ width: 100%;
+}
+
+.catalog  .catalog-categories{
+    width: 100%;
+    max-width: 1200px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.catalog-categories .row .icon-grid{
+    width: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.catalog .catalog-category{
+    width: 150px;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: 2px solid black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.catalog .catalog-category.active,.catalog-category:hover{
+    background-color: var(--primary-color);  
+}
+
+/* ESTILIZAÇÃO DA SEÇÃO DO CATALOGO */
+
+/* ========== CATALOGO 1 ======= */
+.catalog .container-catalogs{
+   width: 100%;
+   max-width: 1200px;
+}
+
+.catalog .container-catalog1 .container{
     width: 100%;
     min-height: 500px;
     display: flex;
@@ -864,7 +737,7 @@ button{
     flex: 1;
 }
 
-.catalogo-test .container .catalog-slide{
+.catalog .container-catalog1 .container .catalog-slide{
     width: 100%;
     flex: 1;
     position: relative;
@@ -874,7 +747,7 @@ button{
     align-items: center;
 }
 
-.catalogo-test .container .catalog-slide .item{
+.catalog .container-catalog1 .container .catalog-slide .item{
     width: 100%;
     height: 120px;
     border-radius: 20px;
@@ -891,7 +764,7 @@ button{
       
 }
 
-.catalogo-test .container .catalog-slide .item.show{
+.catalog .container-catalog1 .container .catalog-slide .item.show{
     background-image: none !important;
     background-color: transparent;
     display: flex;
@@ -900,11 +773,11 @@ button{
     position: initial;
 }
 
-.catalogo-test .item .content{
+.catalog .item .content{
     display: none; 
 }
 
-.catalogo-test .item.show .content{
+.catalog .item.show .content{
     width: 50%;
     min-width: 250px;
     max-width: 400px;
@@ -919,7 +792,7 @@ button{
     align-items: flex-start;
 }
 
-.catalogo-test .item.show .container-image{
+.catalog .item.show .container-image{
     width: 50%;
     min-width: 300px;
     max-width: 400px;
@@ -943,15 +816,15 @@ button{
     flex-wrap: wrap;
 }
 
-.catalogo-test .catalog-slide .item:nth-child(1) .content{
+.catalog .catalog-slide .item:nth-child(1) .content{
     display: flex;
 }
-.catalogo-test .catalog-slide .item:nth-child(1) .container-image{
+.catalog .catalog-slide .item:nth-child(1) .container-image{
     display: flex;
 }
 
 
-.catalogo-test .content .name{
+.catalog .content .name{
     font-size: 40px;
     width: 100%;
     text-transform: uppercase;
@@ -961,7 +834,7 @@ button{
     text-align: left;
 }
 
-.catalogo-test .content .des{
+.catalog .content .des{
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 1.5rem;
@@ -971,11 +844,11 @@ button{
     max-height: 80px;
 }
 
-.catalogo-test .content .des::-webkit-scrollbar{
+.catalog .content .des::-webkit-scrollbar{
     display: none;
 }
 
-.catalogo-test .content button{
+.catalog .content button{
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -1001,7 +874,7 @@ button{
 }
 
 
-.catalogo-test .catalog-slide .item:nth-child(1){
+.catalog .container-catalog1 .catalog-slide .item:nth-child(1){
     top: 0;
     left: 0;
     position: absolute;
@@ -1012,21 +885,21 @@ button{
     box-shadow: none;
 }
 
-.catalogo-test .catalog-slide .item:nth-child(2){
+.catalog .container-catalog1 .catalog-slide .item:nth-child(2){
     right: 20%;
     bottom: 20px;
     display: flex; 
     position: absolute;
     width: 100px;
 }
-.catalogo-test .catalog-slide .item:nth-child(3){
+.catalog .container-catalog1 .catalog-slide .item:nth-child(3){
     right: calc(20% - 90px);
     bottom: 20px;
     display: flex;
     position: absolute; 
     width: 100px;
 }
-.catalogo-test .catalog-slide .item:nth-child(4){
+.catalog .container-catalog1 .catalog-slide .item:nth-child(4){
     right: calc(20% - 180px);
     bottom: 20px;
     display: flex;
@@ -1035,14 +908,14 @@ button{
 }
 
 /* here n = 0, 1, 2, 3,... */
-.catalogo-test .catalog-slide .item:nth-child(n + 5){
+.catalog .container-catalog1 .catalog-slide .item:nth-child(n + 5){
     opacity: 1;
     position: absolute;
     right: 0;
     bottom: 20px;
 }
 
-.catalogo-test .button{
+.catalog .container-catalog1 .button{
     width: 100%;
     height: 50px;
     text-align: center;
@@ -1052,7 +925,7 @@ button{
     flex: 1;
 }
 
-.catalogo-test .button button{
+.catalog .container-catalog1 .button button{
     width: 40px;
     height: 40px;
     border-radius: 40px;
@@ -1064,11 +937,136 @@ button{
     background-color: var(--text-color);
 }
 
-.catalogo-test .button button:hover{
+.catalog .container-catalog1 .button button:hover{
     opacity: 0.8;
 }
 
 /* SECAO DE PRODUTOS TESTE */
+
+
+/* ------ SECTION CATALOG 2 ----------*/
+
+
+/* CARDS */
+
+
+.catalog .box-container-products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+
+.catalog .box-container-products .box-products{
+    text-align: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 2rem;
+    min-height: 400px;
+    max-height: 400px;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    /* min-width: 350px; */
+}
+
+.catalog .box-container-products .box-products:hover{
+    animation: moveBox 0.8s ease forwards;
+    color: white;
+}
+
+.catalog .box-container-products .box-products:hover .container-name-product{
+    animation: moveAllBox 0.65s ease-in forwards;
+}
+.catalog .box-container-products .box-products:hover .container p{
+    animation: moveAllBox 0.7s ease-in forwards;
+}
+.catalog .box-container-products .box-products:hover .container img{
+    animation: moveAllBox 0.75s ease-in forwards;
+}
+.catalog .box-container-products .box-products:hover .container-button{
+    animation: moveAllBox 0.78s ease-in forwards;
+}
+
+.catalog .box-container-products .box-products .overlayer{
+    width: 0;
+    transition: all 1s ease;
+}
+
+.catalog .box-container-products .box-products:hover .overlayer{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    left: 0;
+    top: 0;
+}
+
+.catalog .box-container-products .box-products .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    z-index: 1;
+}
+
+.catalog .box-container-products .box-products .container-name-product{
+    flex: 1;
+    font-size: 1.8rem;
+    z-index: 1;
+}
+
+.catalog .box-container-products .box-products .container p{
+    margin-top: 10px;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    transition: all 0.4s ease-in-out;
+    order: 1;
+    min-width: 100px;
+}
+
+.catalog .box-container-products .box-products .container img{
+    width: 65%;
+    min-width: 60%;
+}
+
+.catalog .box-container-products .box-products:hover .container img{
+    animation: moveFruta 3s ease-in-out infinite forwards;
+}
+
+.catalog .box-container-products .box-products .container-button{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalog .box-container-products .box-products .container-button .btn{
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    background-color: var(--primary-color);
+    border-radius: 50px;
+    z-index: 1;
+    color: #000;
+}
+
+.catalog .box-container-products .box-products .container-button .btn:hover{
+    transform: scale(1.08);
+}
+
+/* SECTION CATALOG ------- */
+
+
+
 
 
 /* ------ REVIEW -------- */
@@ -1660,35 +1658,35 @@ footer .copyright a{
     }
 
     /* SEÇÃO DE CATALOGO TESTE */
-    .catalogo-test .content{
+    .catalog .content{
         margin-top: 30px;
     }
 
 
-    .catalogo-test .container .catalog-slide .item{
+    .catalog .container .catalog-slide .item{
         width: 100%;
         min-width: 70px;
         max-width: 1200px;
         height: 80px;
     }
 
-    .catalogo-test .catalog-slide .item:nth-child(2){
+    .catalog .catalog-slide .item:nth-child(2){
         right: 20%;
         bottom: 20px;
         width: 70px;
     }
-    .catalogo-test .catalog-slide .item:nth-child(3){
+    .catalog .catalog-slide .item:nth-child(3){
         right: calc(20% - 40px);
         bottom: 20px;
         width: 70px; 
     }
-    .catalogo-test .catalog-slide .item:nth-child(4){
+    .catalog .catalog-slide .item:nth-child(4){
         right: calc(20% - 80px);
         bottom: 20px;
         width: 70px; 
     }
 
-    /* .catalogo-test .button{
+    /* .catalog .button{
         display: none;
     } */
     /* FIM DA SEÇÃO DE CATALOGO TESTE */
