@@ -1043,6 +1043,7 @@ button{
     transition: all 0.4s ease-in-out;
     order: 1;
     min-width: 100px;
+    max-height: 100%;
 }
 
 .catalog .box-container-products .box-products .container img{
