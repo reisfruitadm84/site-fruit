@@ -159,26 +159,26 @@ button{
 /* IMAGENS DOS SLIDES */
 
 .slide1{
-    background-image: url(./img/px10.png);
+    background-image: url(./img/banner.jpg);
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
     background-color: #000;
 }
 .slide2{
-    background-image: url(./img/px7.png);
+    background-image: url(./img/banner.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .slide3{
-    background-image: url(./img/px1920.png);
+    background-image: url(./img/banner.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .slide4{
-    background-image: url(./img/px9.png);
+    background-image: url(./img/banner.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -205,6 +205,24 @@ button{
     width: 25%;
     position: relative;
     transition: 1s;
+}
+
+.slide .btn-banner-catalog{
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-size: 20px;
+}
+
+.slide .btn-banner-catalog:hover{
+    transform: scale(1.05);
+}
+
+.slide .btn-banner-catalog a{
+    color: black;
 }
 
 .manual-navigation{
@@ -1043,7 +1061,12 @@ button{
     transition: all 0.4s ease-in-out;
     order: 1;
     min-width: 100px;
-    max-height: 100%;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.catalog .box-container-products .box-products .container p::-webkit-scrollbar{
+  display: none;
 }
 
 .catalog .box-container-products .box-products .container img{
