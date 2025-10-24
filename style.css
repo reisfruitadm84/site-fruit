@@ -1692,6 +1692,19 @@ footer .copyright a{
         width: 100% ;
     }
 
+    .slide1{
+    background-image: url(./img/banner768.jpg);
+    }
+    .slide2{
+        background-image: url(./img/banner768.jpg);
+    }
+    .slide3{
+        background-image: url(./img/banner768.jpg);
+    }
+    .slide4{
+        background-image: url(./img/banner768.jpg);
+    }
+
     /* SEÇÃO DE CATALOGO TESTE */
     .catalog .content{
         margin-top: 30px;
@@ -1734,12 +1747,36 @@ footer .copyright a{
 }
 
 /* Laptops */
-@media screen and (min-width: 1024px) {
-  
+@media screen and (max-width: 1024px) {
+    .slide1{
+    background-image: url(./img/banner1080.jpg);
+    }
+    .slide2{
+        background-image: url(./img/banner1080.jpg);
+    }
+    .slide3{
+        background-image: url(./img/banner1080.jpg);
+    }
+    .slide4{
+        background-image: url(./img/banner1080.jpg);
+    }
+ 
 }
 
-@media screen and (min-width: 1280px) {
-  
+@media screen and (max-width: 1280px) {
+    .slide1{
+    background-image: url(./img/banner1280.jpg);
+    }
+    .slide2{
+        background-image: url(./img/banner1280.jpg);
+    }
+    .slide3{
+        background-image: url(./img/banner1280.jpg);
+    }
+    .slide4{
+        background-image: url(./img/banner1280.jpg);
+    }
+
 }
 
 /* Desktop grande */
