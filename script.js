@@ -321,10 +321,7 @@ window.addEventListener("resize", verificarJanela);
       btnCategory1.classList.add("active");
       
       category = "Frutas Congeladas";
-      deletarItemsCatalog1();
-      inserirProdutosCatalog1();
-      deletarItemsCatalog2();
-      inserirProdutosCatalog2();
+      trocarCatalogo();
     });
 
     btnCategory2.addEventListener(('click'), () => {
@@ -335,10 +332,7 @@ window.addEventListener("resize", verificarJanela);
       btnCategory2.classList.add("active");
       
       category = "Legumes Congelados";
-      deletarItemsCatalog1();
-      inserirProdutosCatalog1();
-      deletarItemsCatalog2();
-      inserirProdutosCatalog2();
+      trocarCatalogo();
     });
 
     btnCategory3.addEventListener(('click'), () => {
@@ -349,12 +343,17 @@ window.addEventListener("resize", verificarJanela);
       btnCategory3.classList.add("active");
       
       category = "Frutas Naturais";
-    
+      trocarCatalogo();
+      
+    });
+
+    function trocarCatalogo(){
       deletarItemsCatalog1();      
       inserirProdutosCatalog1();
       deletarItemsCatalog2();      
       inserirProdutosCatalog2();
-    });
+      observed();
+    }
 
     function deletarItemsCatalog1(){
       let listaProdutosExistentes = document.querySelectorAll('.item');
@@ -507,11 +506,8 @@ window.addEventListener("resize", verificarJanela);
 const btnShowCatalogScreen = document.querySelector('.icon-screen');
 const btnShowCatalogGrid = document.querySelector('.icon-grid');
 
-
-
 btnShowCatalogGrid.addEventListener('click', exchangeCatalog);
 btnShowCatalogScreen.addEventListener('click', exchangeCatalog);
-
 
 function exchangeCatalog(){
   let catalog1 = document.querySelector('.container-catalog1');
@@ -525,9 +521,7 @@ function exchangeCatalog(){
     catalog2.style.display = "none";
     
     deletarItemsCatalog2();
-    inserirProdutosCatalog2();
-    observed();
-    
+    inserirProdutosCatalog2();  
   } else { // SE O CATÁLOGO VISÍVEL
     btnShowCatalogGrid.style.display = "none";
     btnShowCatalogScreen.style.display = "block";
@@ -537,8 +531,6 @@ function exchangeCatalog(){
     
     deletarItemsCatalog1();
     inserirProdutosCatalog1();
-    observed();
-    
   }
     
   console.log(category)
