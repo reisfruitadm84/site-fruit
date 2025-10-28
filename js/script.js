@@ -1,8 +1,8 @@
 import { exchangeCatalog } from './replaceCatalog.js';
 
-const btnIconMobile = document.querySelector(".icon-menu-list");
-const menuList = document.getElementById("navbar-mobile");
-const navLinks = document.querySelectorAll(".list");
+const btnIconMobile = document.querySelector('.icon-menu-list');
+const menuList = document.getElementById('navbar-mobile');
+const navLinks = document.querySelectorAll('.list');
 
 btnIconMobile.addEventListener("click", () => {
   if (menuList.style.display == "none") {
