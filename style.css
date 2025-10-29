@@ -573,6 +573,10 @@ button{
     position: relative;    
     
     box-shadow: 0 0 5px var(--white);
+    background-image: url(./img/folha-de-palmeira-verde-vibrante.png);
+    background-position: 5% 180%;
+    background-size: 25%;
+    background-repeat: no-repeat;
 }
 
 .partner-customers .container-carousel-customers{
@@ -621,7 +625,7 @@ button{
     box-shadow: 3px 3px 5px rgb(77, 77, 77);
     border-radius: 10px;
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.95;
     background-color: white;
 }
 
@@ -689,6 +693,7 @@ button{
     max-width: 1200px;
     height: 100%;
     width: 100%;
+    
 }
 
 .catalog-categories{
