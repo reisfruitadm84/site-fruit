@@ -53,7 +53,6 @@ window.addEventListener("resize", verificarJanela);
     }
 // #endregion
 
-
 // #region CARDS PARA O CARROSSEL DE CLIENTES =========
 
     // INSERIR IMAGENS DO CARROSSEL DE CLIENTES
@@ -323,7 +322,6 @@ window.addEventListener("resize", verificarJanela);
 
 // #endregion
   
-
 // #region TROCAR LAYOUT DO CATÁLOGO ==========
 export const btnShowCatalogScreen = document.querySelector('.icon-screen');
 export const btnShowCatalogGrid = document.querySelector('.icon-grid');
@@ -332,7 +330,6 @@ btnShowCatalogGrid.addEventListener('click', exchangeCatalog);
 btnShowCatalogScreen.addEventListener('click', exchangeCatalog);
 
 // #endregion
-
 
 // #region ANIMAÇÃO DOS CARDS NA SEÇÃO DE DÚVIDAS ========
 
@@ -357,7 +354,6 @@ buttonArrow.forEach((button) => {
 });
 
 // #endregion
-
 
 // #region ANIMAÇÃO DAS SEÇÕES PELA ROLAGEM DO SCROLL ========
 
@@ -386,7 +382,6 @@ function observed(){
 
 observed();
 // #endregion
-
 
 // #region ANIMAÇÃO DO SLIDER DE PRODUTOS =========
 

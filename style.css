@@ -72,6 +72,27 @@ button{
     z-index: 0;
 }
 
+/* SECTION TITLES */
+.title{
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: left;
+    width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    margin-top: 30px;
+    margin-left: 30px;
+    max-width: 1200px;
+    margin: 30px auto 4rem;
+}
+
+.title span{
+    font-weight: 800;
+    text-transform: uppercase;
+    
+}
+/* END TITLES */
+
 /* #region header */
 
 .header{
@@ -416,27 +437,6 @@ button{
     width: 150px;
 }
 
-/* SECTION TITLES */
-.title{
-    font-size: 4rem;
-    color: var(--main-color);
-    text-align: left;
-    width: 100%;
-    text-transform: uppercase;
-    margin-bottom: 4rem;
-    margin-top: 30px;
-    margin-left: 30px;
-    max-width: 1200px;
-    margin: 30px auto 4rem;
-}
-
-.title span{
-    font-weight: 800;
-    text-transform: uppercase;
-    
-}
-/* END TITLES */
-
 /* #region institucional */
 .insticucional-values{
     width: 100%;
@@ -571,16 +571,9 @@ button{
     justify-content: space-between;
     min-height: 900px;
     position: relative;    
-}
-
-.partner-customers .background-image{
     
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.5;
+    box-shadow: 0 0 5px var(--white);
 }
-
 
 .partner-customers .container-carousel-customers{
     width: 100%;
@@ -665,7 +658,6 @@ button{
     align-items: center;
     justify-content: center;
     padding-bottom: 40px;
-    position: relative;
     overflow: hidden;
 }
 
@@ -689,7 +681,14 @@ button{
     transform: rotate(45deg);
     z-index: 0;
     top: 0%;
-    left: 95%;
+    left: 65%;
+}
+
+.background-marcation{
+    position: relative;
+    max-width: 1200px;
+    height: 100%;
+    width: 100%;
 }
 
 .catalog-categories{
@@ -767,7 +766,7 @@ button{
 
 /* ESTILIZAÇÃO DA SEÇÃO DO CATALOGO */
 
-/* ========== CATALOGO 1 ======= */
+/* #region Catálogo 1 */
 .catalog .container-catalogs{
    width: 100%;
    max-width: 1200px;
@@ -871,7 +870,6 @@ button{
     display: flex;
 }
 
-
 .catalog .content .name{
     font-size: 40px;
     width: 100%;
@@ -906,21 +904,6 @@ button{
     border-radius: 40px;
     animation: animate 0.3s ease-in-out 0.6s 1 forwards;
 }
-
-@keyframes animate {
-    from{
-        opacity: 0;
-        transform: translate(0, 100px);
-        filter: blur(20px);
-    }
-
-    to{
-        opacity: 1;
-        transform: translate(0);
-        filter: blur(0);
-    }
-}
-
 
 .catalog .container-catalog1 .catalog-slide .item:nth-child(1){
     top: 0;
@@ -989,25 +972,23 @@ button{
     opacity: 0.8;
 }
 
-/* SECAO DE PRODUTOS TESTE */
+/* #endregion */
 
 
-/* ------ SECTION CATALOG 2 ----------*/
-
-
-/* CARDS */
+/* #region Catálogo 2*/
 
 
 .catalog .box-container-products{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px;
+    gap: 5px;
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 30px;
     margin-top: 60px;
     max-height: 550px;
     overflow-y: scroll;
+    padding: 4px;
 }
 
 .catalog .box-container-products .box-products{
@@ -1121,6 +1102,8 @@ button{
 
 /* #endregion */
 
+/* #endregion */
+
 /* #region Review */
 
 .review{
@@ -1130,6 +1113,21 @@ button{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+.review *{
+    z-index: 1;
+}
+
+.review .background-image{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.08;
+    background-image: url(./img/pack/elemento-amarelo1.png);
+    background-attachment: fixed;
+    z-index: 0;
 }
 
 .review .box-container{
@@ -1362,6 +1360,12 @@ button{
     min-height: 700px;
     width: 100%;
 }
+.doubts h3.title{
+    font-size: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
 .doubts .container-box-doubts{
     width: 100%;
     height: 90%;
@@ -1381,7 +1385,12 @@ button{
     height: 60px;
     border-radius: 10px;
     box-shadow: 3px 0 5px rgba(59, 59, 59, 0.363);
-    
+    position: relative;
+    overflow: hidden;
+}
+
+.doubts .container-box-doubts .box-doubts *{
+    z-index: 2;
 }
 
 .doubts .container-box-doubts .box-doubts .container-doubts{
@@ -1393,6 +1402,28 @@ button{
     background-color: var(--text-color);
     border-radius: 10px;
     color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.doubts .container-box-doubts .box-doubts .container-doubts *{
+    z-index: 1;
+}
+
+.doubts .container-box-doubts .box-doubts .container-doubts::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: url(./img/pack/fundo\ floral\ 3\ png-min.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 0;
+    opacity: 0.3;
 }
 
 .doubts .container-box-doubts .box-doubts .container-doubts .container-text{
@@ -1426,6 +1457,7 @@ button{
     
     overflow-y: auto;
     color: black;
+    z-index: 2;
 }
 
 /* ANIMAÇÃO DA BOX */
@@ -1434,6 +1466,23 @@ button{
     transform: scale(1.04);
     transition: 1s;
     overflow: hidden;
+}
+
+.doubts .container-box-doubts .box-doubts::before{
+    content: '';
+    width: 15%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    right: 2%; 
+    background-image: url(./img/pack/elemento-amarelo1.png);
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center;
+   
+    transform: rotate(30deg);
+    z-index: -1;
+    opacity: 0.4;
 }
 
 .doubts .container-box-doubts .active .container-doubts .container-icon{
@@ -1446,6 +1495,7 @@ button{
    animation: fadeText 1.5s ease;
    opacity: 1;
 }
+
 
 
 /* FIM DA ANIMAÇÃO DA BOX */
@@ -1652,6 +1702,20 @@ footer .copyright a{
     }
     to{
         opacity: 1;
+    }
+}
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
     }
 }
 
