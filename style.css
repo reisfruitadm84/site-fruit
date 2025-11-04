@@ -1890,7 +1890,9 @@ footer .copyright a{
         background-color: #000;
     }
     .home-container .slide1 .content{
+        max-width: 95%;
         transform: translateY(15%);
+        left: 2%;
     }
 
     .home-container .slide1 .content h1{
