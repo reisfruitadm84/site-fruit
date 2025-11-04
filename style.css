@@ -192,13 +192,12 @@ button{
 
 /* #region slide 1 */
 .slide1{
-    background-image: url(./img/banners/bannerb.jpg);
+    background-image: url(./img/banners/banner1920.jpg);
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
     background-color: #000;
 }
-
 
 .home-container .slide1 .content{
     max-width: 650px;
@@ -1826,7 +1825,13 @@ footer .copyright a{
 
 /* mobile */
 @media screen and (max-width: 480px){
-}
+    .home-container .slide1{
+        background-image: url(./img/banners/banner480b.jpg) !important;
+    }
+    .home-container .slider .slide1 .content h1{
+        font-size: 8.5vw;
+    }
+} 
 
 @media screen and (max-width: 768px){
     /* #region Header */
@@ -1876,15 +1881,15 @@ footer .copyright a{
     
     
     /* #region slide 1 */
-    .slide1{
-        background-image: url(./img/banners/banner480b.jpg);
+    .home-container .slider .slide1{
+        background-image: url(./img/banners/banner768.jpg) ;
         background-position: center;
         background-size:cover;
         background-repeat: no-repeat;
         background-color: #000;
     }
     .home-container .slide1 .content{
-        transform: translateY(8%);
+        transform: translateY(15%);
     }
 
     .home-container .slide1 .content h1{
@@ -1893,8 +1898,7 @@ footer .copyright a{
     }
 
     .home-container .slide1 .content p{
-        font-size: 2vh;
-        max-width: 480px;
+        max-width: 550px;
         margin-top: 5px;
     }
 
@@ -1965,18 +1969,28 @@ footer .copyright a{
 
 /* Laptops */
 @media screen and (max-width: 1024px) {
- 
+    
  
 }
 
 @media screen and (max-width: 1280px) {
-
-
+    
+    .home-container .slide1{
+        background-image: url(./img/banners/banner1024.jpg);
+        
+    }
 }
 
 /* Desktop grande */
-@media screen and (min-width: 1440px) {
-  
+@media screen and (max-width: 1440px) {
+  /* #region slide 1 */
+    .slide1{
+        background-image: url(./img/banners/banner1440.jpg);
+        
+    }
+    
+    /* #endregion */
+
 }
 
 /* #endregion */
