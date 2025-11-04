@@ -93,7 +93,7 @@ button{
 }
 /* END TITLES */
 
-/* #region header */
+/* #region Header */
 
 .header{
     width: 100%;
@@ -189,31 +189,122 @@ button{
 }
 
 /* #region Slide*/
+
+/* #region slide 1 */
 .slide1{
-    background-image: url(./img/banner.jpg);
+    background-image: url(./img/banners/bannerb.jpg);
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
     background-color: #000;
 }
+
+
+.home-container .slide1 .content{
+    max-width: 650px;
+    height: auto;
+    padding: 5px 0;
+    position: absolute;
+    top: 0;
+    transform: translateY(20%);
+    left: 5%;
+    color: white;
+}
+
+.home-container .slide1 .content h1{
+    font-size: 60px;
+}
+
+.home-container .slide1 .content p{
+    font-size: 18px;
+    max-width: 480px;
+    margin-top: 5px;
+}
+
+.home-container .slide1 .content a{
+    display: block;
+    width: 280px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    font-weight: bold;
+    font-size: 1.9rem;
+    color: black;
+}
+
+.home-container .slide1 .content a:hover{
+    transform: scale(1.05);
+}
+
+/* #endregion */
+
+/* #region slide 2 */
 .slide2{
-    background-image: url(./img/banner.jpg);
+    background-image: url(./img/banners/banner1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
+.home-container .slide2 .content{
+    max-width: 650px;
+    height: auto;
+    padding: 5px 0;
+    position: absolute;
+    top: 0;
+    transform: translateY(20%);
+    left: 5%;
+}
+
+.home-container .slide2 .content h1{
+    font-size: 60px;
+}
+
+.home-container .slide2 .content p{
+    font-size: 18px;
+    max-width: 480px;
+    margin-top: 5px;
+}
+
+.home-container .slide2 .content a{
+    display: block;
+    width: 280px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    font-weight: bold;
+    font-size: 1.9rem;
+    color: black;
+}
+
+.home-container .slide2 .content a:hover{
+    transform: scale(1.05);
+}
+/* #endregion */
+
+/* #region slide 3 */
 .slide3{
-    background-image: url(./img/banner.jpg);
+    background-image: url(./img/banners/banner1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
+/* #endregion */
+
+/* #region slide 4 */
 .slide4{
-    background-image: url(./img/banner.jpg);
+    background-image: url(./img/banners/banner1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
+/* #endregion */
+
 .slider{
     margin: 0 auto;
     width: 100%;
@@ -238,23 +329,6 @@ button{
     transition: 1s;
 }
 
-.slide .btn-banner-catalog{
-    position: absolute;
-    bottom: 40px;
-    left: 50px;
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    padding: 5px 15px;
-    font-size: 20px;
-}
-
-.slide .btn-banner-catalog:hover{
-    transform: scale(1.05);
-}
-
-.slide .btn-banner-catalog a{
-    color: black;
-}
 /* #endregion */
 
 .manual-navigation{
@@ -327,7 +401,7 @@ button{
 
 /* #endregion */
 
-/* #region ABOUT*/
+/* #region About*/
 
 .about{
     width: 100%;
@@ -561,7 +635,7 @@ button{
 
 /* #endregion */
 
-/* #region partner */
+/* #region Partner */
 .partner-customers{
     width: 100%;
     padding: 30px 15px;
@@ -660,7 +734,7 @@ button{
 
 /* #endregion */
 
-/* #region catalog */
+/* #region Catalog */
 .catalog{
     width: 100%;
     height: auto;
@@ -1243,7 +1317,7 @@ button{
 
 /* #endregion */
 
-/* #region address */
+/* #region Address */
 
 .address {
     display: flex;
@@ -1364,7 +1438,7 @@ button{
 
 /* #endregion */
 
-/* #region doubts */
+/* #region Doubts */
 
 .doubts{
     min-height: 700px;
@@ -1512,7 +1586,7 @@ button{
 
 /* #endregion */
 
-/* #region footer */
+/* #region Footer */
 
 footer{
     text-align: center;
@@ -1752,11 +1826,10 @@ footer .copyright a{
 
 /* mobile */
 @media screen and (max-width: 480px){
-  
 }
 
 @media screen and (max-width: 768px){
-    
+    /* #region Header */
     .header section{
         padding: 5px 3.5rem;
     }
@@ -1799,32 +1872,72 @@ footer .copyright a{
         width: 100% ;
     }
 
+    /* #endregion */
+    
+    
+    /* #region slide 1 */
     .slide1{
-    background-image: url(./img/banner768.jpg);
+        background-image: url(./img/banners/banner480b.jpg);
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-color: #000;
     }
-    .slide2{
-        background-image: url(./img/banner768.jpg);
-    }
-    .slide3{
-        background-image: url(./img/banner768.jpg);
-    }
-    .slide4{
-        background-image: url(./img/banner768.jpg);
+    .home-container .slide1 .content{
+        transform: translateY(8%);
     }
 
-    /* SEÇÃO DE CATALOGO TESTE */
+    .home-container .slide1 .content h1{
+        font-size: 8vw;
+        min-width: 250px;
+    }
+
+    .home-container .slide1 .content p{
+        font-size: 2vh;
+        max-width: 480px;
+        margin-top: 5px;
+    }
+
+    .home-container .slide1 .content a{
+        display: block;
+        width: 280px;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: #fff;
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        
+        font-weight: bold;
+        font-size: 1.9rem;
+        color: black;
+    }
+
+    .home-container .slide1 .content a:hover{
+        transform: scale(1.05);
+    }
+
+    /* #endregion */
+    .slide2{
+        background-image: url(./img/banners/banner480.jpg);
+    }
+    .slide3{
+        background-image: url(./img/banners/banner480.jpg);
+    }
+    .slide4{
+        background-image: url(./img/banners/banner480.jpg);
+    }
+  
+
+    /* #region Catalog */
     .catalog .content{
         margin-top: 30px;
     }
-
-
     .catalog .container .catalog-slide .item{
         width: 100%;
         min-width: 70px;
         max-width: 1200px;
         height: 80px;
     }
-
     .catalog .catalog-slide .item:nth-child(2){
         right: 20%;
         bottom: 20px;
@@ -1841,10 +1954,7 @@ footer .copyright a{
         width: 70px; 
     }
 
-    /* .catalog .button{
-        display: none;
-    } */
-    /* FIM DA SEÇÃO DE CATALOGO TESTE */
+    /* #endregion */
 
 
     footer .row .container .container-logo .logo-text h1{
@@ -1855,34 +1965,12 @@ footer .copyright a{
 
 /* Laptops */
 @media screen and (max-width: 1024px) {
-    .slide1{
-    background-image: url(./img/banner1080.jpg);
-    }
-    .slide2{
-        background-image: url(./img/banner1080.jpg);
-    }
-    .slide3{
-        background-image: url(./img/banner1080.jpg);
-    }
-    .slide4{
-        background-image: url(./img/banner1080.jpg);
-    }
+ 
  
 }
 
 @media screen and (max-width: 1280px) {
-    .slide1{
-    background-image: url(./img/banner1280.jpg);
-    }
-    .slide2{
-        background-image: url(./img/banner1280.jpg);
-    }
-    .slide3{
-        background-image: url(./img/banner1280.jpg);
-    }
-    .slide4{
-        background-image: url(./img/banner1280.jpg);
-    }
+
 
 }
 

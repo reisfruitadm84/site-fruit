@@ -40,8 +40,8 @@ window.addEventListener("resize", verificarJanela);
     document.getElementById("radio1").checked = true;
 
     setInterval(function () {
-    nextImage();
-    }, 8000);
+    //nextImage();
+    }, 80000);
 
     function nextImage() {
     count++;
