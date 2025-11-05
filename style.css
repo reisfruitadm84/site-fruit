@@ -742,7 +742,7 @@ button{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 40px;
+    padding:0 8px 40px 8px;
     overflow: hidden;
 }
 
@@ -1074,6 +1074,10 @@ button{
     padding: 4px;
 }
 
+.catalog .box-container-products::-webkit-scrollbar{
+    display: none;
+}
+
 .catalog .box-container-products .box-products{
     text-align: center;
     padding: 1.5rem;
@@ -1218,6 +1222,7 @@ button{
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 10px;
     margin: 0 auto;
+    min-width: 300px;
     max-width: 1200px;
     margin-bottom: 30px;
     margin-top: 60px;
@@ -1442,11 +1447,6 @@ button{
 .doubts{
     min-height: 700px;
     width: 100%;
-}
-.doubts h3.title{
-    font-size: 3rem;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
 }
 
 .doubts .container-box-doubts{
@@ -1831,18 +1831,33 @@ footer .copyright a{
     .home-container .slider .slide1 .content h1{
         font-size: 8.5vw;
     }
+
+    .catalog-categories .row:nth-child(1) {
+        overflow-x: scroll;
+        gap: 3px;
+    }
+    .catalog-categories .row:nth-child(1)::-webkit-scrollbar {
+        display: none;
+    }
+
+    footer .copyright {
+        padding-right: 20px;
+    }
 } 
 
 /* Tabletes */
 @media screen and (max-width: 768px){
     /* #region Header */
     .header section{
-        padding: 5px 3.5rem;
+        padding: 5px 0;
     }
 
     .header section .icon-menu-list{
         display: block;
         transition: all 0.2s ease-in-out;
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
     }
 
     .header section .navbar ul{

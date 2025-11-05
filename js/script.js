@@ -314,6 +314,7 @@ window.addEventListener("resize", verificarJanela);
           localCatalog1.appendChild(cards);
         });
       }
+      
     }
 
     inserirProdutosCatalog1();
@@ -357,7 +358,7 @@ buttonArrow.forEach((button) => {
 
 // #region ANIMAÇÃO DAS SEÇÕES PELA ROLAGEM DO SCROLL ========
 
-function observed(){
+export let observed = () => {
   let section = document.querySelectorAll(".reveal");
 
   let observer = new IntersectionObserver(

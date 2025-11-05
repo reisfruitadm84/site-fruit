@@ -1,4 +1,4 @@
-import { inserirProdutosCatalog1, inserirProdutosCatalog2, deletarItemsCatalog1,deletarItemsCatalog2, btnShowCatalogScreen, btnShowCatalogGrid
+import { inserirProdutosCatalog1, inserirProdutosCatalog2, deletarItemsCatalog1,deletarItemsCatalog2, btnShowCatalogScreen, btnShowCatalogGrid, observed
  } from './script.js';
 
 export let exchangeCatalog = () => {
@@ -14,6 +14,7 @@ export let exchangeCatalog = () => {
     
     deletarItemsCatalog2();
     inserirProdutosCatalog2();  
+    observed();
   } else { // SE O CATÁLOGO VISÍVEL
     btnShowCatalogGrid.style.display = "none";
     btnShowCatalogScreen.style.display = "block";
@@ -23,6 +24,7 @@ export let exchangeCatalog = () => {
     
     deletarItemsCatalog1();
     inserirProdutosCatalog1();
+    observed();
   }
   
 }
