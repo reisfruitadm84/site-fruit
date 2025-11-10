@@ -14,9 +14,8 @@ btnIconMobile.addEventListener("click", () => {
       }s`;
     });
 
-   // navLinks.style.backgroundColor = "red!important";
   } else {
-    menuList.style.display = "none";
+    fecharMenuList();
 
     navLinks.forEach((link, index) => {
       link.style = "none";
@@ -29,11 +28,16 @@ function verificarJanela() {
   const larguraMinima = 768;
 
   if (window.innerWidth >= larguraMinima) {
-    menuList.style.display = "none";
+    fecharMenuList();
   }
 }
 
+function fecharMenuList(){
+  menuList.style.display = "none";
+}
+
 window.addEventListener("resize", verificarJanela);
+menuList.addEventListener("click", fecharMenuList);
 
 // #region ANIMAÇÃO DO CARROSSEL ========
     let count = 1;
@@ -213,12 +217,9 @@ window.addEventListener("resize", verificarJanela);
               <div class="content">
                   <div class="name">${produto.nome}</div>
                   <div class="des">${produto.descricao}</div>
-                  <button>See More</button>
               </div>
 
-              <div class="container-image" style="background-image: url(${produto.img});">
-              
-              </div>            
+              <div class="container-image" style="background-image: url(${produto.img})"></div>            
           `;
 
           cards.innerHTML = templateProdutos;

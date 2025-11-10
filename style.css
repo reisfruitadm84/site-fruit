@@ -622,7 +622,12 @@ button{
     color: white;
 }
 .insticucional-values .grid-container .card2 .card-button-cta{
-    background-color: var(--primary-color); color: black;
+    background-color: var(--primary-color); 
+    color: black;
+}
+
+.insticucional-values .grid-container .card2 .card-button-cta a{
+    font-size: 1.5rem;
 }
 .insticucional-values .grid-container .card3{
     background-color: black;
@@ -1911,18 +1916,19 @@ footer .copyright a{
     }
 
      .header #navbar-mobile ul{
-        text-align: center;
+        text-align: left;
         padding: 5px;
     }
   
     .header #navbar-mobile ul li{
-       height: 40px;
+        height: 40px;
         list-style: none;
         cursor: pointer;
         transform: translateX(-350px);
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-left: 10px;
     }
     .header #navbar-mobile ul li:hover{
         background-color: var(--primary-color);
@@ -1930,6 +1936,7 @@ footer .copyright a{
     .header #navbar-mobile ul li:hover a{
         color: #000;
         font-weight: 600;
+        padding-left: 15px;
     }
 
     .header #navbar-mobile ul li a{
