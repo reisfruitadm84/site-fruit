@@ -1959,6 +1959,8 @@ footer .copyright a{
         max-width: 95%;
         transform: translateY(15%);
         left: 2%;
+        margin-top: 50px;
+        padding: 0 10px;
     }
 
     .home-container .slide1 .content h1{
