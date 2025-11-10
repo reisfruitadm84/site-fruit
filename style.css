@@ -222,7 +222,7 @@ button{
 }
 
 .home-container .slide1 .content a{
-    display: inline-flex;        /* evita quebra no Safari */
+    display: block;        /* evita quebra no Safari */
     min-width: 280px;
     width: max-content;
     margin-top: 10px;
@@ -1880,6 +1880,10 @@ footer .copyright a{
         display: none;
     }
 
+    .catalog .catalog-category h2{
+        font-size: 15px;
+    }
+
     footer .copyright {
         padding-right: 20px;
     }
@@ -1962,8 +1966,6 @@ footer .copyright a{
     }
 
     .home-container .slide1 .content a{
-        display: block;
-        width: 280px;
         margin-top: 10px;
         padding: 10px 15px;
         background-color: #fff;
