@@ -205,9 +205,10 @@ button{
     padding: 5px 0;
     position: absolute;
     top: 0;
-    transform: translateY(20%);
+    transform: translateY(20%);    
     left: 5%;
     color: white;
+    
 }
 
 .home-container .slide1 .content h1{
@@ -221,8 +222,9 @@ button{
 }
 
 .home-container .slide1 .content a{
-    display: block;
-    width: 280px;
+    display: inline-flex;        /* evita quebra no Safari */
+    min-width: 280px;
+    width: max-content;
     margin-top: 10px;
     padding: 10px 15px;
     background-color: #fff;
@@ -232,6 +234,7 @@ button{
     font-weight: bold;
     font-size: 1.9rem;
     color: black;
+    flex-wrap: nowrap;
 }
 
 .home-container .slide1 .content a:hover{
@@ -537,14 +540,14 @@ button{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 8px;
 }
 
 .insticucional-values .grid-container .card{
-    min-width: 230px;
+    
     min-height: 200px;
     border-radius: 10px;
-    flex: 1;
+    flex: 1 1 230px;
     color: white;
     padding: 1rem;
     display: flex;
@@ -554,6 +557,8 @@ button{
     overflow: hidden;
     box-shadow: rgba(153, 153, 153, 0.747) 0px 2px 8px 0px;
     position: relative;
+    margin: 0 8px 8px 0; /* fallback caso o gap não funcione */
+    transition: transform 0.4s ease-in-out;
 }
 
 .insticucional-values .grid-container .card:hover{
@@ -676,6 +681,8 @@ button{
     height: 200px;
     overflow-x: hidden;
     padding: 10px;
+    scrollbar-width: none;
+    white-space: nowrap;
 }
 
 .partner-customers .container-carousel::-webkit-scrollbar{
@@ -688,7 +695,17 @@ button{
     align-items: center;
     gap: 20px;
     animation: spin 20s infinite linear;
+    -webkit-animation: spin 20s infinite linear;
     padding-right: 20px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* fallback para Safari < 14.1 */
+@supports not (gap: 20px) {
+    .partner-customers .container-carousel .group > * {
+        margin-right: 20px;
+    }
 }
 
 .partner-customers .container-carousel:hover .group :not(:hover){
@@ -708,6 +725,7 @@ button{
     cursor: pointer;
     opacity: 0.95;
     background-color: white;
+    min-width: 250px;
 }
 
 .partner-customers .container-carousel .group .card:hover *{
@@ -971,6 +989,8 @@ button{
     animation: animate 0.3s ease-in-out 0.3s 1 forwards;
     overflow-y: auto;
     max-height: 80px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .catalog .content .des::-webkit-scrollbar{
@@ -1293,6 +1313,8 @@ button{
     padding: 3px;
     margin-top: 8px;
     overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .review .box-container .box .container-message::-webkit-scrollbar{
@@ -1836,6 +1858,24 @@ footer .copyright a{
         overflow-x: scroll;
         gap: 3px;
     }
+     .catalog-categories .row:nth-child(1){
+        scrollbar-width: none;
+        -ms-overflow-style: none; 
+        -webkit-overflow-scrolling: touch;
+         scroll-snap-type: x mandatory;
+    }
+
+    @supports not (gap: 1px) {
+        .catalog-categories .row:nth-child(1) {
+            overflow-x: scroll;
+            gap: 3px;
+        }
+
+        .catalog-categories .row:nth-child(1) > *:last-child {
+            margin-right: 0;
+        }
+    }
+
     .catalog-categories .row:nth-child(1)::-webkit-scrollbar {
         display: none;
     }
@@ -1858,6 +1898,7 @@ footer .copyright a{
         min-width: 80px;
         max-width: 80px;
         text-align: center;
+        
     }
 
     .header section .navbar ul{

@@ -14,7 +14,7 @@ btnIconMobile.addEventListener("click", () => {
       }s`;
     });
 
-    navLinks.style.backgroundColor = "red";
+   // navLinks.style.backgroundColor = "red!important";
   } else {
     menuList.style.display = "none";
 
