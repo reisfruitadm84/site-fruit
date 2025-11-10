@@ -243,7 +243,6 @@ menuList.addEventListener("click", fecharMenuList);
               <div class="content">
                   <div class="name">${produto.nome}</div>
                   <div class="des">${produto.descricao}</div>
-                  <button>See More</button>
               </div>
 
               <div class="container-image" style="background-image: url(${produto.img});">
@@ -278,9 +277,7 @@ menuList.addEventListener("click", fecharMenuList);
                     <img src="${produto.img}" alt="${produto.alt}">
                     <p class="details-product">${produto.descricao}</p>
                 </div>
-                <div class="container-button">
-                    <a class="btn" href="#">Ver Detalhes</a>
-                </div>         
+                         
           `;
 
           cards.innerHTML = templateProdutos;
@@ -304,10 +301,7 @@ menuList.addEventListener("click", fecharMenuList);
                 <div class="container">
                     <img src="${produto.img}" alt="${produto.alt}">
                     <p class="details-product">${produto.descricao}</p>
-                </div>
-                <div class="container-button">
-                    <a class="btn" href="#">Ver Detalhes</a>
-                </div>         
+                </div>        
           `;
 
           cards.innerHTML = templateProdutos;

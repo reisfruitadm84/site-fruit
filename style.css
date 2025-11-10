@@ -208,11 +208,11 @@ button{
     transform: translateY(20%);    
     left: 5%;
     color: white;
-    
 }
 
 .home-container .slide1 .content h1{
     font-size: 60px;
+    white-space: nowrap;
 }
 
 .home-container .slide1 .content p{
@@ -222,7 +222,7 @@ button{
 }
 
 .home-container .slide1 .content a{
-    display: block;        /* evita quebra no Safari */
+    display: flex;        /* evita quebra no Safari */
     min-width: 280px;
     width: max-content;
     margin-top: 10px;
@@ -235,6 +235,7 @@ button{
     font-size: 1.9rem;
     color: black;
     flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .home-container .slide1 .content a:hover{
@@ -624,11 +625,10 @@ button{
 .insticucional-values .grid-container .card2 .card-button-cta{
     background-color: var(--primary-color); 
     color: black;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
-.insticucional-values .grid-container .card2 .card-button-cta a{
-    font-size: 1.5rem;
-}
 .insticucional-values .grid-container .card3{
     background-color: black;
 }
@@ -773,7 +773,6 @@ button{
     z-index: 1;
 }
 
-
 .catalog .background-image{
     width: 150px;
     height: 1500px;
@@ -793,8 +792,7 @@ button{
     position: relative;
     max-width: 1200px;
     height: 100%;
-    width: 100%;
-    
+    width: 100%; 
 }
 
 .catalog-categories{
@@ -1096,7 +1094,9 @@ button{
     margin-top: 60px;
     max-height: 550px;
     overflow-y: scroll;
-    padding: 4px;
+    padding: 15px 15px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .catalog .box-container-products::-webkit-scrollbar{
@@ -1117,39 +1117,43 @@ button{
     max-height: 400px;
     position: relative;
     overflow: hidden;
-    background-color: white;
     /* min-width: 350px; */
 }
 
 .catalog .box-container-products .box-products:hover{
     animation: moveBox 0.8s ease forwards;
-    color: white;
+    color: black;
 }
 
 .catalog .box-container-products .box-products:hover .container-name-product{
     animation: moveAllBox 0.65s ease-in forwards;
 }
 .catalog .box-container-products .box-products:hover .container p{
-    animation: moveAllBox 0.7s ease-in forwards;
+    display: block;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    transition: all 0.4s ease-in-out;
+    order: 1;
+    min-width: 100px;
+    max-height: 200px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 .catalog .box-container-products .box-products:hover .container img{
-    animation: moveAllBox 0.75s ease-in forwards;
+   
 }
 .catalog .box-container-products .box-products:hover .container-button{
     animation: moveAllBox 0.78s ease-in forwards;
 }
 
 .catalog .box-container-products .box-products .overlayer{
-    width: 0;
-    transition: all 1s ease;
-}
-
-.catalog .box-container-products .box-products:hover .overlayer{
     position: absolute;
-    background-color: black;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    transition: all 1s ease;
+    background-color: #fff;
     left: 0;
     top: 0;
 }
@@ -1163,20 +1167,13 @@ button{
 }
 
 .catalog .box-container-products .box-products .container-name-product{
-    flex: 1;
     font-size: 1.8rem;
     z-index: 1;
+    width: 100%;
 }
 
 .catalog .box-container-products .box-products .container p{
-    margin-top: 10px;
-    font-size: 1.5rem;
-    padding: 1rem 0;
-    transition: all 0.4s ease-in-out;
-    order: 1;
-    min-width: 100px;
-    max-height: 200px;
-    overflow-y: scroll;
+    display: none;
 }
 
 .catalog .box-container-products .box-products .container p::-webkit-scrollbar{
@@ -1184,12 +1181,15 @@ button{
 }
 
 .catalog .box-container-products .box-products .container img{
-    width: 65%;
+    width: 85%;
     min-width: 60%;
+    animation: moveFruta 3s ease-in-out infinite forwards;
 }
 
 .catalog .box-container-products .box-products:hover .container img{
-    animation: moveFruta 3s ease-in-out infinite forwards;
+    position: absolute;
+    opacity: 0.1;
+    width: 90%;
 }
 
 .catalog .box-container-products .box-products .container-button{
@@ -1197,6 +1197,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .catalog .box-container-products .box-products .container-button .btn{
@@ -1798,7 +1799,7 @@ footer .copyright a{
     }
     100%{
          box-shadow: 5px 5px 10px gray;
-        transform: translateY(-20px);
+        transform: translateY(-10px);
     }
 }
 
