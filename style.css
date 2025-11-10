@@ -222,8 +222,7 @@ button{
 }
 
 .home-container .slide1 .content a{
-    display: flex;        /* evita quebra no Safari */
-    min-width: 280px;
+    display: flex;
     width: max-content;
     margin-top: 10px;
     padding: 10px 15px;
@@ -1141,9 +1140,7 @@ button{
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
-.catalog .box-container-products .box-products:hover .container img{
-   
-}
+
 .catalog .box-container-products .box-products:hover .container-button{
     animation: moveAllBox 0.78s ease-in forwards;
 }
@@ -1857,7 +1854,8 @@ footer .copyright a{
         background-image: url(./img/banners/banner480b.jpg) !important;
     }
     .home-container .slider .slide1 .content h1{
-        font-size: 8.5vw;
+        font-size: clamp(25px, 6.5vw, 45px); /* responsivo sem quebrar */
+        white-space: nowrap;               /* evita quebra do texto */
     }
 
     .catalog-categories .row:nth-child(1) {
@@ -1964,24 +1962,25 @@ footer .copyright a{
     }
 
     .home-container .slide1 .content h1{
-        font-size: 8vw;
+        font-size: clamp(28px, 8vw, 60px); /* responsivo sem quebrar */
+        white-space: nowrap;               /* evita quebra do texto */
         min-width: 250px;
     }
 
     .home-container .slide1 .content p{
         max-width: 550px;
-        margin-top: 5px;
+        margin-top: 15px;
+        font-size: clamp(14px, 3.1vw, 18px);
     }
 
     .home-container .slide1 .content a{
-        margin-top: 10px;
+        margin-top: 20px;
         padding: 10px 15px;
         background-color: #fff;
         border-radius: 50px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        
         font-weight: bold;
-        font-size: 1.9rem;
+        font-size: clamp(2px, 5.5vw, 20px);
         color: black;
     }
 
