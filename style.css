@@ -985,14 +985,9 @@ button{
 
 .catalog .content .des{
     margin-top: 10px;
-    margin-bottom: 20px;
     font-size: 1.5rem;
     opacity: 0;
     animation: animate 0.3s ease-in-out 0.3s 1 forwards;
-    overflow-y: auto;
-    max-height: 80px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
 }
 
 .catalog .content .des::-webkit-scrollbar{
@@ -1091,7 +1086,6 @@ button{
     margin: 0 auto;
     margin-bottom: 30px;
     margin-top: 60px;
-    max-height: 550px;
     overflow-y: scroll;
     padding: 15px 15px;
     scrollbar-width: none;
@@ -1126,6 +1120,8 @@ button{
 
 .catalog .box-container-products .box-products:hover .container-name-product{
     animation: moveAllBox 0.65s ease-in forwards;
+    color: white;
+    margin-bottom: 20px;
 }
 .catalog .box-container-products .box-products:hover .container p{
     display: block;
@@ -1139,6 +1135,11 @@ button{
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    color: white;
+}
+
+.catalog .box-container-products .box-products:hover .overlayer{
+    background-color: var(--text-color1);
 }
 
 .catalog .box-container-products .box-products:hover .container-button{
@@ -1159,8 +1160,8 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
     z-index: 1;
+    width: 100%;
 }
 
 .catalog .box-container-products .box-products .container-name-product{
@@ -1179,6 +1180,7 @@ button{
 
 .catalog .box-container-products .box-products .container img{
     width: 85%;
+    max-width: 300px;
     min-width: 60%;
     animation: moveFruta 3s ease-in-out infinite forwards;
 }
@@ -1187,6 +1189,7 @@ button{
     position: absolute;
     opacity: 0.1;
     width: 90%;
+    animation: moveFruta 5s ease-in-out infinite forwards;
 }
 
 .catalog .box-container-products .box-products .container-button{
@@ -2012,7 +2015,12 @@ footer .copyright a{
     .catalog .item.show .content {
         width: 90%;
         padding: 0 0;
-    
+    }
+    .catalog .content .des{
+        overflow-y: auto;
+        max-height: 80px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
     .catalog .container .catalog-slide .item{
         width: 100%;

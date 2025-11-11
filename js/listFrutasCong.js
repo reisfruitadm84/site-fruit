@@ -51,7 +51,7 @@ export const frutasCongeladasCatalogo = [
       { // COCO
           img: "./img/frutas/coco.png",  //Imagem do Produto
           nome: "Coco",    //Nome do Produto
-          descricao: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make", //Descrição do Produto
+          descricao: "O Coco Ralado Congelado Reis Fruit é 100% natural, sem adição de conservantes e pronto para uso. Mantém a umidade, o sabor autêntico e o frescor do coco recém-aberto, ideal para sobremesas, bolos, tapiocas e receitas tradicionais. Praticidade, pureza e qualidade garantidas do início ao fim.", //Descrição do Produto
           alt: "Coco congelado",
       },
       { // GOIABA
