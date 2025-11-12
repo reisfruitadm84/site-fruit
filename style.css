@@ -1613,6 +1613,134 @@ button{
 
 /* #endregion */
 
+/* #region contact */
+.contact{
+    width: 100%;
+    min-height: 600px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    
+}
+
+.contact .container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .container .row{
+    flex-grow: 1;
+}
+
+.contact .container .content{
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact .container .content h1{
+    font-size: 3rem;
+    max-width: 400px;
+}
+.contact .container .content p{
+    margin-top: 20px;
+    font-size: 17px;
+    max-width: 400px;
+}
+
+.contact .container .content div:nth-child(2){
+    display: flex;
+    align-items: center;
+}
+
+.contact .container .content i{
+    font-size: 20px;
+}
+.contact .container .content a{
+    font-size: 20px;
+    color: white;
+}
+
+/* #region formulario */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #888;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn-enviar {
+  background-color: #f3c536; /* cor dourada da Reis Fruit */
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.btn-enviar:hover {
+  transform: scale(1.05);
+  background-color: #ffdb5a;
+}
+/* #endregion */
+
+
+
+
+
+
+/* #endregion */
+
 /* #region Footer */
 
 footer{
