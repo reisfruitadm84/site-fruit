@@ -5,7 +5,7 @@
     --text-color1: #333333;
     --text-color2: #222222;
     --background-body: #fcfcfc;
-    --background: #f5f3f3;
+    --background: #f9f9f9;
 
     font-size: 10px;
 }
@@ -407,12 +407,7 @@ button{
 
 .about{
     width: 100%;
-    background-image: url(./img/pack/fundo\ floral\ 2-min.jpg);
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
-    background-attachment: fixed;
 }
 
 .about::before {
@@ -420,10 +415,14 @@ button{
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: var(--background);
     top: 0;
     left: 0;
-    opacity: 0.8;
+    opacity: 0.4;
+    background-image: url(./img/pack/fundo\ floral\ 2-min.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
 }
 
 .about .row{
@@ -557,7 +556,7 @@ button{
     overflow: hidden;
     box-shadow: rgba(153, 153, 153, 0.747) 0px 2px 8px 0px;
     position: relative;
-    margin: 0 8px 8px 0; /* fallback caso o gap não funcione */
+    margin: 0 0 8px 0; /* fallback caso o gap não funcione */
     transition: transform 0.4s ease-in-out;
 }
 
@@ -602,19 +601,20 @@ button{
     left: 0;
     opacity: 0.12;
     z-index: 0;
-    background-image: url(./img/pack/fundo\ floral\ 2-min.jpg);
+    /* background-image: url(./img/pack/fundo\ floral\ 2-min.jpg); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: 200%;
 }
 
 .insticucional-values .grid-container .card-flex .background-card{
-    background-image: url(./img/pack/fundo\ floral\ 3\ png-min.png);
+    /* background-image: url(./img/pack/fundo\ floral\ 3\ png-min.png); */
     opacity: 0.2;
 }
 
 .insticucional-values .grid-container .card1{
     background-color: var(--primary-color);
+    color: black;
 }
 
 .insticucional-values .grid-container .card2{
@@ -766,6 +766,8 @@ button{
     justify-content: center;
     padding:0 8px 40px 8px;
     overflow: hidden;
+    background-color: #000;
+    color: white;
 }
 
 .catalog *{
@@ -844,11 +846,13 @@ button{
     gap: 10px;
     margin: 0 auto;
     flex-wrap: wrap;
+    color: white;
 }
 
 .catalog-categories .row .icon-grid{
     width: 40px;
-    border: 2px solid black;
+    height: 40px;
+    border: 2px solid white;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -858,13 +862,18 @@ button{
     padding: 2px 5px;
     border-radius: 10px;
     font-size: 12px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    box-shadow: 0px 1px 3px white;
     text-align: center;
     cursor: pointer;
+    color: black;
+    background-color: white;
 }
 
 .catalog .catalog-category.active,.catalog-category:hover{
     background-color: var(--primary-color);  
+    color: black;
+    box-shadow: none;
 }
 
 /* ESTILIZAÇÃO DA SEÇÃO DO CATALOGO */
@@ -940,6 +949,8 @@ button{
     flex: 1;
     justify-content: center;
     align-items: flex-start;
+    
+    color: white !important;
 }
 
 .catalog .item.show .container-image{
@@ -1060,12 +1071,12 @@ button{
     width: 40px;
     height: 40px;
     border-radius: 40px;
-    color: white;
+    color: black;
     border: none;
     cursor: pointer;
     margin: 0 5px;
     transition: 0.3s;
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
 }
 
 .catalog .container-catalog1 .button button:hover{
@@ -1238,7 +1249,7 @@ button{
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.08;
-    background-image: url(./img/pack/elemento-amarelo1.png);
+    
     background-attachment: fixed;
     z-index: 0;
 }
