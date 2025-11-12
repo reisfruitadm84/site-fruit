@@ -766,8 +766,6 @@ button{
     justify-content: center;
     padding:0 8px 40px 8px;
     overflow: hidden;
-    background-color: #000;
-    color: white;
 }
 
 .catalog *{
@@ -846,13 +844,11 @@ button{
     gap: 10px;
     margin: 0 auto;
     flex-wrap: wrap;
-    color: white;
 }
 
 .catalog-categories .row .icon-grid{
     width: 40px;
-    height: 40px;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -862,18 +858,13 @@ button{
     padding: 2px 5px;
     border-radius: 10px;
     font-size: 12px;
-    /* border: 2px solid black; */
-    box-shadow: 0px 1px 3px white;
+    border: 2px solid black;
     text-align: center;
     cursor: pointer;
-    color: black;
-    background-color: white;
 }
 
 .catalog .catalog-category.active,.catalog-category:hover{
     background-color: var(--primary-color);  
-    color: black;
-    box-shadow: none;
 }
 
 /* ESTILIZAÇÃO DA SEÇÃO DO CATALOGO */
@@ -949,8 +940,6 @@ button{
     flex: 1;
     justify-content: center;
     align-items: flex-start;
-    
-    color: white !important;
 }
 
 .catalog .item.show .container-image{
@@ -1071,12 +1060,12 @@ button{
     width: 40px;
     height: 40px;
     border-radius: 40px;
-    color: black;
+    color: white;
     border: none;
     cursor: pointer;
     margin: 0 5px;
     transition: 0.3s;
-    background-color: var(--primary-color);
+    background-color: var(--text-color);
 }
 
 .catalog .container-catalog1 .button button:hover{
