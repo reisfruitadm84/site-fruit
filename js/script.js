@@ -450,3 +450,34 @@ slider.addEventListener('touchmove', (e) => {
 });
 
 // #endregion
+
+// #region VALIDAÇÃO E MÁSCARAS ========
+  document.addEventListener("DOMContentLoaded", function () {
+    const telefone = document.getElementById("telefone");
+    const cnpj = document.getElementById("cnpj");
+
+    // --- Máscara de telefone ---
+    telefone.addEventListener("input", (e) => {
+      let valor = e.target.value.replace(/\D/g, "");
+      if (valor.length > 11) valor = valor.slice(0, 11);
+
+      if (valor.length <= 10) {
+        e.target.value = valor.replace(/(\d{2})(\d{4})(\d{0,4})/, "($1) $2-$3");
+      } else {
+        e.target.value = valor.replace(/(\d{2})(\d{5})(\d{0,4})/, "($1) $2-$3");
+      }
+    });
+
+    // --- Máscara de CNPJ ---
+    cnpj.addEventListener("input", (e) => {
+      let valor = e.target.value.replace(/\D/g, "");
+      if (valor.length > 14) valor = valor.slice(0, 14);
+
+      e.target.value = valor.replace(
+        /^(\d{2})(\d{3})(\d{3})(\d{4})(\d{0,2}).*/,
+        "$1.$2.$3/$4-$5"
+      );
+    })
+  });
+
+// #endregion

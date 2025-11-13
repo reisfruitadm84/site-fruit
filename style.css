@@ -2174,6 +2174,16 @@ footer .copyright a{
 
     /* #endregion */
 
+    /* #region contact */
+    .contact .container .content {
+        align-items: center;
+    }
+    .contact .container .row{
+        display: flex;
+        justify-content: center;
+    }
+
+    /* #endregion */
 
     footer .row .container .container-logo .logo-text h1{
         font-size: 2.6rem;
