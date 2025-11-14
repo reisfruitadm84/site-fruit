@@ -1701,7 +1701,7 @@ input, textarea {
   border: none;
   border-radius: 8px;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #333;
   background-color: #fff;
   outline: none;
@@ -1734,7 +1734,10 @@ textarea {
 }
 /* #endregion */
 
-
+.form-alert {
+    font-size: 18px;
+    text-align: right;
+}
 
 
 
@@ -2122,16 +2125,23 @@ footer .copyright a{
     }
 
     /* #endregion */
+    /* #region slide 2 */
     .slide2{
         background-image: url(./img/banners/banner480.jpg);
     }
+    /* #endregion */
+
+    /* #region slide 3 */
     .slide3{
         background-image: url(./img/banners/banner480.jpg);
     }
+    /* #endregion */
+
+    /* #region slide 4 */
     .slide4{
         background-image: url(./img/banners/banner480.jpg);
     }
-  
+    /* #endregion */
 
     /* #region Catalog */
     .catalog .content{

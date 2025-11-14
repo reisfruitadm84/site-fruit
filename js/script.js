@@ -452,6 +452,7 @@ slider.addEventListener('touchmove', (e) => {
 // #endregion
 
 // #region VALIDAÇÃO E MÁSCARAS ========
+
   document.addEventListener("DOMContentLoaded", function () {
     const telefone = document.getElementById("telefone");
     const cnpj = document.getElementById("cnpj");
@@ -478,6 +479,50 @@ slider.addEventListener('touchmove', (e) => {
         "$1.$2.$3/$4-$5"
       );
     })
+
+    // mostrar showAlert do formulário
+  const form = document.getElementById("form");
+  const alertBox = document.getElementById("form-alert");
+
+  form.addEventListener("submit", async (e) => 
+    {
+      e.preventDefault(); // impede o redirecionamento
+
+      const formData = new FormData(form);
+
+      formData.append("access_key", "aa2cd0cc-7095-435b-905d-bc54c3ecd604");
+
+
+      try {
+        // Envia para o FormSubmit manualmente
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success === true) {
+          showAlert("Mensagem enviada com sucesso! Entraremos em contato em breve.", "success");
+          form.reset();
+        } else {
+          showAlert("Ocorreu um erro ao enviar. Tente novamente mais tarde.", "error");
+        }
+         
+      } catch {
+        showAlert("Falha de conexão. Verifique sua internet e tente novamente.", "error");
+      }
+    });
+
+    function showAlert(message, type) {
+      alertBox.textContent = message;
+      alertBox.style.display = "block";
+      alertBox.className = "form-alert " + type;
+      setTimeout(() => (alertBox.style.display = "none"), 4000);
+    }
+
+
   });
 
 // #endregion
+

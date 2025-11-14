@@ -459,6 +459,70 @@
         
     </section>
 
+    
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="element-overlayer"></div>
+            <div class="row content">
+                <div>
+                    <h1>Quer comprar nossos produtos para sua empresa?</h1>
+                    <p>Preencha o formulário e nossa equipe comercial enviará o catálogo e as condições de compra.</p>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-instagram"></i>
+                    <a href="https://www.instagram.com/reisfruit/">@reisfruit</a>
+                </div>
+            </div>
+
+            <div class="row container-form">
+                <form class="form" id="form">
+                    <input type="hidden" name="access_key" value="">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu Nome" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone">Telefone:</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="Digite seu Telefone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cnpj">CNPJ:</label>
+                        <input type="text" id="cnpj" name="cnpj" placeholder="Digite o CNPJ da empresa">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Mensagem..." rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar</button>
+
+                    <!-- #region configurações extras do formsubmit -->
+                       <!-- <input type="hidden" name="_captcha" value="false">
+                       <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://reisfruitadm84.github.io/site-fruit/"> -->
+
+
+                    <!-- <input type="hidden" name="_autoresponse" value="Recebemos seu e-mail, em breve entraremos em contato"> -->
+                    <!-- #endregion -->
+
+                    <div id="form-alert" class="form-alert" style="display:none;"></div>
+                </form>
+            </div>
+        </div>    
+    </section>
+
+
     <section class="doubts minwidth">
         <h2 id="doubts" class="title reveal">Dúvidas <span>Frequentes</span></h2>
         
@@ -522,62 +586,6 @@
                 </div>
             </div> 
         </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="element-overlayer"></div>
-            <div class="row content">
-                <div>
-                    <h1>Quer comprar nossos produtos para sua empresa?</h1>
-                    <p>Preencha o formulário e nossa equipe comercial enviará o catálogo e as condições de compra.</p>
-                </div>
-
-                <div>
-                    <i class="fa-brands fa-instagram"></i>
-                    <a href="https://www.instagram.com/reisfruit/">@reisfruit</a>
-                </div>
-            </div>
-
-            <div class="row container-form">
-                <form class="form" action="https://formsubmit.co/f2b222a68a4b4bd71f900ec8a2dbf66a" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="nome">Nome:</label>
-                            <input type="text" id="nome" name="nome" placeholder="Digite seu Nome" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="telefone">Telefone:</label>
-                            <input type="tel" id="telefone" name="telefone" placeholder="Digite seu Telefone" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Digite seu Email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="cnpj">CNPJ:</label>
-                        <input type="text" id="cnpj" name="cnpj" placeholder="Digite o CNPJ da empresa">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem" placeholder="Mensagem..." rows="4" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-enviar">Enviar</button>
-
-                    <!-- #region configurações extras do formsubmit -->
-                       <input type="hidden" name="_captcha" value="false">
-                       <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.htm">
-                    <!-- #endregion -->
-                </form>
-            </div>
-        </div>    
     </section>
 
     <footer class="minwidth">
