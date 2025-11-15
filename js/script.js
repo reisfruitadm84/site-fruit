@@ -488,6 +488,8 @@ slider.addEventListener('touchmove', (e) => {
     {
       e.preventDefault(); // impede o redirecionamento
 
+      showAlert("Por favor aguarde...");
+
       const formData = new FormData(form);
 
       formData.append("access_key", "aa2cd0cc-7095-435b-905d-bc54c3ecd604");

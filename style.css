@@ -1626,7 +1626,7 @@ button{
     
 }
 
-.contact .container{
+.contact > .container{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -1636,36 +1636,50 @@ button{
     align-items: center;
 }
 
-.contact .container .row{
+.contact > .container .row{
     flex-grow: 1;
 }
 
-.contact .container .content{
+.contact > .container .container-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact > .container .content{
     min-height: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 30px;
 }
 
-.contact .container .content h1{
+.contact > .container .content h1{
     font-size: 3rem;
     max-width: 400px;
 }
-.contact .container .content p{
+.contact > .container .content p{
     margin-top: 20px;
     font-size: 17px;
     max-width: 400px;
 }
 
-.contact .container .content div:nth-child(2){
-    display: flex;
-    align-items: center;
+.contact > .container .content > div {
+    width: 100%;
+    max-width: 400px;
 }
 
-.contact .container .content i{
-    font-size: 20px;
+.contact > .container .content div:nth-child(2){
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
-.contact .container .content a{
+
+.contact > .container .content i{
+    font-size: 25px;
+}
+.contact > .container .content a{
     font-size: 20px;
     color: white;
 }
@@ -2185,13 +2199,7 @@ footer .copyright a{
     /* #endregion */
 
     /* #region contact */
-    .contact .container .content {
-        align-items: center;
-    }
-    .contact .container .row{
-        display: flex;
-        justify-content: center;
-    }
+          
 
     /* #endregion */
 
