@@ -484,7 +484,6 @@ slider.addEventListener('touchmove', (e) => {
     // conexão com o banco de formulario
     const form = document.getElementById("form");
     const alertBox = document.getElementById("form-alert");
-    const scriptGoogle = "";
 
     form.addEventListener("submit", async (e) => 
       {
@@ -492,51 +491,36 @@ slider.addEventListener('touchmove', (e) => {
 
         showAlert("Por favor aguarde...");
 
-        const formData = new FormData(form);
-
-        //#region APPSHT
-          // try {
-          //   const req = await fetch("", {
-          //     method: "POST",
-          //     body: formData
-          //   });
-
-          //   const res = await req.json();
-
-          //   if (res.success === true) {
-          //     console.log("Mensagem gravada com sucesso!", "success");
-          //   }
-
-          // } catch (err) {
-          //   console.log("Ocorreu um erro ao tentar gravar na planilha.", "error");
-          // }
-        //#endregion
+        
+        const w3formData = new FormData(form);
 
         //CONEXÃO COM O WEB3FORMS
 
-        formData.append("access_key", "aa2cd0cc-7095-435b-905d-bc54c3ecd604");
+        w3formData.append("access_key", "aa2cd0cc-7095-435b-905d-bc54c3ecd604");
         
         const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
 
         if (!hCaptcha) {
             e.preventDefault();
-            alert("Please fill out captcha field")
+            alert("Por favor, preencha o campo captcha.")
             return
         }
 
+        let formOk = false;
+
         try {
-          // Envia para o FormSubmit manualmente
+          // Envia para o web3form manualmente
           const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
-            body: formData
+            body: w3formData
           });
 
           const result = await response.json();
 
           if (result.success === true) {
             showAlert("Mensagem enviada com sucesso! Entraremos em contato em breve.", "success");
-
-            form.reset();
+            formOk = true;
+            
           } else {
             showAlert("Ocorreu um erro ao enviar. Tente novamente mais tarde.", "error");
           }
@@ -544,8 +528,35 @@ slider.addEventListener('touchmove', (e) => {
         } catch {
           showAlert("Falha de conexão. Verifique sua internet e tente novamente.", "error");
         }
+        
+        //#region APPSHT
+        // if(formOk){
+        //   const gsformData = new FormData(form);
+          
+        //   try {
+        //     const req = await fetch("", {
+        //       method: "POST",
+        //       body: ""
+        //     });
 
+        //     const res = await req.json();
+
+        //     if (res.success === true) {
+        //       console.log("Mensagem gravada com sucesso!", "success");
+        //     }
+
+        //   } catch (err) {
+        //     console.log("Ocorreu um erro ao tentar gravar na planilha.", "error");
+        //   }
+        // }
+        //#endregion
+
+        if(formOk){
+          form.reset();
+        }
       });
+
+      
 
       
       // SHOW ALERT
