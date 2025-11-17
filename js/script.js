@@ -3,7 +3,6 @@ import { exchangeCatalog } from './replaceCatalog.js';
 const btnIconMobile = document.querySelector('.icon-menu-list');
 const menuList = document.getElementById('navbar-mobile');
 const navLinks = document.querySelectorAll('.list');
-const section = document.getElementsByTagName('section');
 
 btnIconMobile.addEventListener("click", () => {
   if (menuList.style.display == "none") {
@@ -39,7 +38,7 @@ function fecharMenuList(){
 
 window.addEventListener("resize", verificarJanela);
 menuList.addEventListener("click", fecharMenuList);
-//section.addEventListener("click", fecharMenuList);
+
 
 // #region ANIMAÇÃO DO CARROSSEL ========
     let count = 1;
@@ -453,7 +452,7 @@ slider.addEventListener('touchmove', (e) => {
 
 // #endregion
 
-// #region VALIDAÇÃO E MÁSCARAS ========
+// #region VALIDAÇÃO FORM E MÁSCARAS ========
 
   document.addEventListener("DOMContentLoaded", function () {
     const telefone = document.getElementById("telefone");
@@ -482,59 +481,84 @@ slider.addEventListener('touchmove', (e) => {
       );
     })
 
-    // mostrar showAlert do formulário
-  const form = document.getElementById("form");
-  const alertBox = document.getElementById("form-alert");
+    // conexão com o banco de formulario
+    const form = document.getElementById("form");
+    const alertBox = document.getElementById("form-alert");
+    const scriptGoogle = "";
 
-  form.addEventListener("submit", async (e) => 
-    {
-      e.preventDefault(); // impede o redirecionamento
+    form.addEventListener("submit", async (e) => 
+      {
+        e.preventDefault(); // impede o redirecionamento
 
-      showAlert("Por favor aguarde...");
+        showAlert("Por favor aguarde...");
 
-      const formData = new FormData(form);
-
-      formData.append("access_key", "aa2cd0cc-7095-435b-905d-bc54c3ecd604");
-      
-      const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
-
-      if (!hCaptcha) {
-          e.preventDefault();
-          alert("Please fill out captcha field")
-          return
-      }
+        const formData = new FormData(form);
 
 
-      try {
-        // Envia para o FormSubmit manualmente
-        const response = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: formData
-        });
+        try {
+          const req = await fetch("https://script.google.com/macros/s/AKfycbxKsCkGCHUNkggxWu8B4NAEOPWTZSAt3U8VU9xNziMAwEETuIEVGcaZVxR0kbjuvRM8eg/exec", {
+            method: "POST",
+            body: formData
+          });
 
-        const result = await response.json();
+          const res = await req.json();
 
-        if (result.success === true) {
-          showAlert("Mensagem enviada com sucesso! Entraremos em contato em breve.", "success");
-          form.reset();
-        } else {
-          showAlert("Ocorreu um erro ao enviar. Tente novamente mais tarde.", "error");
+          if (res.success === true) {
+            console.log("Mensagem gravada com sucesso!", "success");
+          }
+
+        } catch (err) {
+          console.log("Ocorreu um erro ao tentar gravar na planilha.", "error");
         }
-         
-      } catch {
-        showAlert("Falha de conexão. Verifique sua internet e tente novamente.", "error");
+
+
+        //CONEXÃO COM O WEB3FORMS
+
+        formData.append("access_key", "aa2cd0cc-7095-435b-905d-bc54c3ecd604");
+        
+        const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+        if (!hCaptcha) {
+            e.preventDefault();
+            alert("Please fill out captcha field")
+            return
+        }
+
+        try {
+          // Envia para o FormSubmit manualmente
+          const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+          });
+
+          const result = await response.json();
+
+          if (result.success === true) {
+            showAlert("Mensagem enviada com sucesso! Entraremos em contato em breve.", "success");
+
+            form.reset();
+          } else {
+            showAlert("Ocorreu um erro ao enviar. Tente novamente mais tarde.", "error");
+          }
+          
+        } catch {
+          showAlert("Falha de conexão. Verifique sua internet e tente novamente.", "error");
+        }
+
+      });
+
+      
+
+      // SHOW ALERT
+      function showAlert(message, type) {
+        alertBox.textContent = message;
+        alertBox.style.display = "block";
+        alertBox.className = "form-alert " + type;
+        setTimeout(() => (alertBox.style.display = "none"), 4000);
       }
+
+
     });
-
-    function showAlert(message, type) {
-      alertBox.textContent = message;
-      alertBox.style.display = "block";
-      alertBox.className = "form-alert " + type;
-      setTimeout(() => (alertBox.style.display = "none"), 4000);
-    }
-
-
-  });
 
 // #endregion
 
