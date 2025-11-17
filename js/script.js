@@ -3,6 +3,7 @@ import { exchangeCatalog } from './replaceCatalog.js';
 const btnIconMobile = document.querySelector('.icon-menu-list');
 const menuList = document.getElementById('navbar-mobile');
 const navLinks = document.querySelectorAll('.list');
+const section = document.getElementsByTagName('section');
 
 btnIconMobile.addEventListener("click", () => {
   if (menuList.style.display == "none") {
@@ -38,6 +39,7 @@ function fecharMenuList(){
 
 window.addEventListener("resize", verificarJanela);
 menuList.addEventListener("click", fecharMenuList);
+//section.addEventListener("click", fecharMenuList);
 
 // #region ANIMAÇÃO DO CARROSSEL ========
     let count = 1;
@@ -493,6 +495,14 @@ slider.addEventListener('touchmove', (e) => {
       const formData = new FormData(form);
 
       formData.append("access_key", "aa2cd0cc-7095-435b-905d-bc54c3ecd604");
+      
+      const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+      if (!hCaptcha) {
+          e.preventDefault();
+          alert("Please fill out captcha field")
+          return
+      }
 
 
       try {

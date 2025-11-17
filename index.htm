@@ -463,7 +463,7 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="element-overlayer"></div>
-            <div class="row content">
+            <div class="row reveal content">
                 <div>
                     <h1>Quer comprar nossos produtos para sua empresa?</h1>
                     <p>Preencha o formulário e nossa equipe comercial enviará o catálogo e as condições de compra.</p>
@@ -476,8 +476,8 @@
             </div>
 
             <div class="row container-form">
-                <form class="form" id="form">
-                    <input type="hidden" name="access_key" value="">
+                <form class="form reveal" id="form">
+                    <h1>Fórmulário de Contato</h1>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="nome">Nome:</label>
@@ -509,11 +509,8 @@
 
                     <!-- #region configurações extras -->
                     <input type="hidden" name="from_name" value="Reis Fruit">
+                    <div class="h-captcha" data-captcha="true"></div>
 
-                    <!-- `replyto` email will be the given value.  -->
-                    <input type="hidden" name="replyto" value="email" />
-
-                   
                     <!-- #endregion -->
 
                     <div id="form-alert" class="form-alert" style="display:none;"></div>
@@ -624,6 +621,7 @@
     <script src="./js/replaceCatalog.js" type="module"></script>
     <script src="./js/listFrutasCong.js" type="module"></script>
     <script src="./js/listLegumesCong.js" type="module"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
 
