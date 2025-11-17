@@ -494,23 +494,23 @@ slider.addEventListener('touchmove', (e) => {
 
         const formData = new FormData(form);
 
+        //#region APPSHT
+          // try {
+          //   const req = await fetch("", {
+          //     method: "POST",
+          //     body: formData
+          //   });
 
-        try {
-          const req = await fetch("https://script.google.com/macros/s/AKfycbxKsCkGCHUNkggxWu8B4NAEOPWTZSAt3U8VU9xNziMAwEETuIEVGcaZVxR0kbjuvRM8eg/exec", {
-            method: "POST",
-            body: formData
-          });
+          //   const res = await req.json();
 
-          const res = await req.json();
+          //   if (res.success === true) {
+          //     console.log("Mensagem gravada com sucesso!", "success");
+          //   }
 
-          if (res.success === true) {
-            console.log("Mensagem gravada com sucesso!", "success");
-          }
-
-        } catch (err) {
-          console.log("Ocorreu um erro ao tentar gravar na planilha.", "error");
-        }
-
+          // } catch (err) {
+          //   console.log("Ocorreu um erro ao tentar gravar na planilha.", "error");
+          // }
+        //#endregion
 
         //CONEXÃO COM O WEB3FORMS
 
@@ -548,7 +548,6 @@ slider.addEventListener('touchmove', (e) => {
       });
 
       
-
       // SHOW ALERT
       function showAlert(message, type) {
         alertBox.textContent = message;
