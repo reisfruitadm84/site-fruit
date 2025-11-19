@@ -48,7 +48,7 @@ p, li{
 a{
   color: white;
 }
-a:hover{
+main a:hover{
   text-decoration: underline;
 }
 
