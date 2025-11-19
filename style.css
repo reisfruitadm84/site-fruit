@@ -94,6 +94,7 @@ button{
     width: 100%;
     z-index: 99;
     position: sticky;
+    background-color: #000;
     top: 0;
 }
 
@@ -103,7 +104,6 @@ button{
     justify-content: space-between;
     padding: 5px 2rem;
     max-width: 1280px;
-    background-color: #000;
 }
 
 .header section .logo{
@@ -1959,6 +1959,22 @@ footer .copyright a{
     }
 }
 
+@keyframes effectDropdown{
+    0%{
+       height: 0; 
+       opacity: 0;
+    }
+    80%{
+        height: 35px;
+        opacity: 0;
+    }
+
+    100%{
+        height: 35px;
+        opacity: 1;
+    }
+}
+
 @keyframes moveFruta{
     0%{
         transform: translateY(0);
@@ -2077,8 +2093,14 @@ footer .copyright a{
 /* Tabletes */
 @media screen and (max-width: 768px){
     /* #region Header */
+    
+    .header{
+        background-color: none;
+    }
+    
     .header section{
         padding: 5px 0;
+        background-color: #000;
     }
 
     .header section .icon-menu-list{
@@ -2109,15 +2131,15 @@ footer .copyright a{
     }
   
     .header #navbar-mobile ul li{
-        height: 35px;
+        height: 0;
         list-style: none;
         cursor: pointer;
-        transform: translateX(-350px);
+        transform: translateX(0);
         display: flex;
         justify-content: center;
         align-items: center;
         padding-right: 10px;
-        
+        opacity: 0;
     }
     .header #navbar-mobile ul li:hover{
         background-color: var(--primary-color);
