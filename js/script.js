@@ -4,6 +4,7 @@ const btnIconMobile = document.querySelector('.icon-menu-list');
 const menuList = document.getElementById('navbar-mobile');
 const navLinks = document.querySelectorAll('.list');
 
+
 btnIconMobile.addEventListener("click", () => {
   if (menuList.style.display == "none") {
     menuList.style.display = "block";
@@ -572,4 +573,40 @@ slider.addEventListener('touchmove', (e) => {
 
 // #endregion
 
+document.addEventListener('DOMContentLoaded', function () {
+  
+  const elfsight = document.createElement("script");
+  elfsight.src = "https://elfsightcdn.com/platform.js";
+  elfsight.async = true;
+
+  elfsight.onload = function () {
+    
+
+    const observer = new MutationObserver( () => {
+      // const elemento = document.querySelector('.review .WidgetBackground__Content-sc-386b5057-2 > a');
+
+      const elemento = document.querySelector('a[href^="https://elfsight.com/google-reviews-widget/?utm_source=websites&utm_medium=clients&utm_content=google-reviews&utm_term=127.0.0.1&utm_campaign=free-widget"]');
+      
+      if(elemento){
+        console.log(elemento);
+
+        setTimeout(() => {
+          elemento.style.setProperty("display", "none", "important");
+          console.log(elemento.style.display);
+          
+        }, 1000)
+        
+        observer.disconnect();
+        
+
+      }
+      
+    });
+    
+    observer.observe(document.body, { childList: true, subtree: true})
+
+  }
+
+  document.head.appendChild(elfsight)
+});
 

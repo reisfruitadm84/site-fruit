@@ -1341,6 +1341,12 @@ button{
     color: var(--primary-color) !important;
 }
 
+.review .box-container .box .stars i{
+    color: var(--primary-color) !important;
+}
+
+
+
 /* #endregion */
 
 /* #region Address */
