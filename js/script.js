@@ -573,40 +573,40 @@ slider.addEventListener('touchmove', (e) => {
 
 // #endregion
 
-document.addEventListener('DOMContentLoaded', function () {
+// document.addEventListener('DOMContentLoaded', function () {
   
-  const elfsight = document.createElement("script");
-  elfsight.src = "https://elfsightcdn.com/platform.js";
-  elfsight.async = true;
+//   const elfsight = document.createElement("script");
+//   elfsight.src = "https://elfsightcdn.com/platform.js";
+//   elfsight.async = true;
 
-  elfsight.onload = function () {
+//   elfsight.onload = function () {
     
 
-    const observer = new MutationObserver( () => {
-      // const elemento = document.querySelector('.review .WidgetBackground__Content-sc-386b5057-2 > a');
+//     const observer = new MutationObserver( () => {
+//       // const elemento = document.querySelector('.review .WidgetBackground__Content-sc-386b5057-2 > a');
 
-      const elemento = document.querySelector('a[href^="https://elfsight.com/google-reviews-widget/?utm_source=websites&utm_medium=clients&utm_content=google-reviews&utm_term=127.0.0.1&utm_campaign=free-widget"]');
+//       const elemento = document.querySelector('a[href^="https://elfsight.com/google-reviews-widget/?utm_source=websites&utm_medium=clients&utm_content=google-reviews&utm_term=127.0.0.1&utm_campaign=free-widget"]');
       
-      if(elemento){
-        console.log(elemento);
+//       if(elemento){
+//         console.log(elemento);
 
-        setTimeout(() => {
-          elemento.style.setProperty("display", "none", "important");
-          console.log(elemento.style.display);
+//         setTimeout(() => {
+//           elemento.style.setProperty("display", "none", "important");
+//           console.log(elemento.style.display);
           
-        }, 2000)
+//         }, 2000)
         
-        observer.disconnect();
+//         observer.disconnect();
         
 
-      }
+//       }
       
-    });
+//     });
     
-    observer.observe(document.body, { childList: true, subtree: true})
+//     observer.observe(document.body, { childList: true, subtree: true})
 
-  }
+//   }
 
-  document.head.appendChild(elfsight)
-});
+//   document.head.appendChild(elfsight)
+// });
 
