@@ -594,7 +594,7 @@ document.addEventListener('DOMContentLoaded', function () {
           elemento.style.setProperty("display", "none", "important");
           console.log(elemento.style.display);
           
-        }, 1000)
+        }, 2000)
         
         observer.disconnect();
         
