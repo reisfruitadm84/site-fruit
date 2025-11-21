@@ -187,7 +187,7 @@ button{
 
 /* #region slide 1 */
 .slide1{
-    background-image: url(./img/banners/banner1920.jpg);
+    background-image: url(../img/banners/banner1920.jpg);
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -240,7 +240,7 @@ button{
 
 /* #region slide 2 */
 .slide2{
-    background-image: url(./img/banners/banner1.jpg);
+    background-image: url(../img/banners/banner1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -286,7 +286,7 @@ button{
 
 /* #region slide 3 */
 .slide3{
-    background-image: url(./img/banners/banner1.jpg);
+    background-image: url(../img/banners/banner1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -295,7 +295,7 @@ button{
 
 /* #region slide 4 */
 .slide4{
-    background-image: url(./img/banners/banner1.jpg);
+    background-image: url(../img/banners/banner1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -413,7 +413,7 @@ button{
     top: 0;
     left: 0;
     opacity: 0.4;
-    background-image: url(./img/pack/fundo\ floral\ 2-min.jpg);
+    background-image: url(../img/pack/fundo\ floral\ 2-min.jpg);
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -439,7 +439,7 @@ button{
 .about .background-image{
     width: 100%;
     height: 100%;
-    background-image: url(./img/pack/fundo\ floral\ 2-min.jpg);
+    background-image: url(../img/pack/fundo\ floral\ 2-min.jpg);
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -597,14 +597,12 @@ button{
     left: 0;
     opacity: 0.12;
     z-index: 0;
-    /* background-image: url(./img/pack/fundo\ floral\ 2-min.jpg); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: 200%;
 }
 
 .insticucional-values .grid-container .card-flex .background-card{
-    /* background-image: url(./img/pack/fundo\ floral\ 3\ png-min.png); */
     opacity: 0.2;
 }
 
@@ -772,7 +770,7 @@ button{
     width: 150px;
     height: 1500px;
     position: absolute;
-    background-image: url(./img/pack/elemento-amarelo1.png);
+    background-image: url(../img/pack/elemento-amarelo1.png);
     background-size: contain;
     background-repeat: repeat-y;
     background-position: center;
@@ -1523,7 +1521,7 @@ button{
     top: 0;
     left: 0;
     position: absolute;
-    background-image: url(./img/pack/fundo\ floral\ 3\ png-min.png);
+    background-image: url(../img/pack/fundo\ floral\ 3\ png-min.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -1540,7 +1538,7 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(./img/icons/down-arrow-white.png);
+    background-image: url(../img/icons/down-arrow-white.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1581,7 +1579,7 @@ button{
     position: absolute;
     top: 0;
     right: 2%; 
-    background-image: url(./img/pack/elemento-amarelo1.png);
+    background-image: url(../img/pack/elemento-amarelo1.png);
     background-size: cover;
     background-repeat: repeat-y;
     background-position: center;
@@ -1649,7 +1647,7 @@ button{
     position: absolute;
     width: 200px;
     height: 1200px;
-    background-image: url(./img/pack/elemento-amarelo1.png);
+    background-image: url(../img/pack/elemento-amarelo1.png);
     z-index: 0;
     opacity: 0.4;
     background-size: cover;
@@ -1808,7 +1806,7 @@ footer .background-image{
     width: 150px;
     height: 800px;
     position: absolute;
-    background-image: url(./img/pack/elemento-amarelo1.png);
+    background-image: url(../img/pack/elemento-amarelo1.png);
     background-size: contain;
     background-repeat: repeat-y;
     background-position: top;
@@ -2048,7 +2046,7 @@ footer .copyright a{
 /* Mobile */
 @media screen and (max-width: 480px){
     .home-container .slide1{
-        background-image: url(./img/banners/banner480b.jpg) !important;
+        background-image: url(../img/banners/banner480b.jpg) !important;
     }
     .home-container .slider .slide1 .content h1{
         font-size: clamp(25px, 6.5vw, 45px); /* responsivo sem quebrar */
@@ -2161,7 +2159,7 @@ footer .copyright a{
     
     /* #region slide 1 */
     .home-container .slider .slide1{
-        background-image: url(./img/banners/banner768.jpg) ;
+        background-image: url(../img/banners/banner768.jpg) ;
         background-position: center;
         background-size:cover;
         background-repeat: no-repeat;
@@ -2205,19 +2203,19 @@ footer .copyright a{
     /* #endregion */
     /* #region slide 2 */
     .slide2{
-        background-image: url(./img/banners/banner480.jpg);
+        background-image: url(../img/banners/banner480.jpg);
     }
     /* #endregion */
 
     /* #region slide 3 */
     .slide3{
-        background-image: url(./img/banners/banner480.jpg);
+        background-image: url(../img/banners/banner480.jpg);
     }
     /* #endregion */
 
     /* #region slide 4 */
     .slide4{
-        background-image: url(./img/banners/banner480.jpg);
+        background-image: url(../img/banners/banner480.jpg);
     }
     /* #endregion */
 
@@ -2286,7 +2284,7 @@ footer .copyright a{
 @media screen and (max-width: 1280px) {
     
     .home-container .slide1{
-        background-image: url(./img/banners/banner1024.jpg);
+        background-image: url(../img/banners/banner1024.jpg);
         
     }
 }
@@ -2295,7 +2293,7 @@ footer .copyright a{
 @media screen and (max-width: 1440px) {
   /* #region slide 1 */
     .slide1{
-        background-image: url(./img/banners/banner1440.jpg);
+        background-image: url(../img/banners/banner1440.jpg);
         
     }
     
