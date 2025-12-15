@@ -47,7 +47,7 @@ menuList.addEventListener("click", fecharMenuList);
 
     setInterval(function () {
     //nextImage();
-    }, 80000);
+    }, 800);
 
     function nextImage() {
     count++;
@@ -91,24 +91,33 @@ menuList.addEventListener("click", fecharMenuList);
 
     const localCarousel = document.getElementById("container-cards-carousel1");
     const localCarousel2 = document.getElementById("container-cards-carousel2");
+   
 
     function inserirClientes() {
     clientes.forEach((cliente) => {
         const cards = document.createElement("div");
-        cards.classList.add("card");
+        cards.classList.add("cardc");
 
         const templateCliente = `<img src="${cliente.img}" alt="logo-reisfruit">
                                     <h2>${cliente.nome}</h2>
                                     `;
 
         cards.innerHTML = templateCliente;
+
+        cards.addEventListener('mouseenter', () => {
+          pararFuncao(cliente);
+        })
+
+        cards.addEventListener('mouseleave', () => {
+          retomarFuncao(cliente);
+        })
 
         localCarousel.appendChild(cards);
     });
 
     clientes.forEach((cliente) => {
         const cards = document.createElement("div");
-        cards.classList.add("card");
+        cards.classList.add("cardc");
 
         const templateCliente = `<img src="${cliente.img}" alt="logo-reisfruit">
                                     <h2>${cliente.nome}</h2>
@@ -116,11 +125,31 @@ menuList.addEventListener("click", fecharMenuList);
 
         cards.innerHTML = templateCliente;
 
+        cards.addEventListener('mouseenter', () => {
+          pararFuncao(cliente);
+        })
+        cards.addEventListener('mouseleave', () => {
+          retomarFuncao(cliente);
+        })
+
         localCarousel2.appendChild(cards);
     });
     }
 
     inserirClientes();
+
+    
+    function retomarFuncao(cliente){
+      localCarousel.classList.remove('block');
+      localCarousel2.classList.remove('block');
+    }
+
+    function pararFuncao(cliente){
+      
+      localCarousel.classList.add('block');
+      localCarousel2.classList.add('block');
+    }
+  
 
 // ================ FIM CARDS PARA INSERIR NO CARROSSEL ===============
 // #endregion 

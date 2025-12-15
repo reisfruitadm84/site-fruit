@@ -692,11 +692,16 @@ button{
     justify-content: center;
     align-items: center;
     gap: 20px;
-    animation: spin 20s infinite linear;
+     animation: spin 20s infinite linear;
     -webkit-animation: spin 20s infinite linear;
+    animation-play-state: running;
     padding-right: 20px;
     flex-shrink: 0;
     white-space: nowrap;
+}
+
+.partner-customers .container-carousel .group.block{
+   animation-play-state: paused;
 }
 
 /* fallback para Safari < 14.1 */
@@ -711,7 +716,7 @@ button{
     opacity: 0.5;
 }
 
-.partner-customers .container-carousel .group .card{
+.partner-customers .container-carousel .group .cardc{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -726,18 +731,18 @@ button{
     min-width: 250px;
 }
 
-.partner-customers .container-carousel .group .card:hover *{
+.partner-customers .container-carousel .group .cardc:hover *{
     transform: scale(1.05);
     opacity: 1;
 }
 
-.partner-customers .container-carousel .group .card img{
+.partner-customers .container-carousel .group .cardc img{
     flex: 1;
     width: 100px;
     max-width: 100px;
 }
 
-.partner-customers .container-carousel .group .card h2{
+.partner-customers .container-carousel .group .cardc h2{
     flex: 1;
     width: 100%;
     text-align: center;
