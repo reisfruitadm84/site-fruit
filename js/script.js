@@ -46,8 +46,8 @@ menuList.addEventListener("click", fecharMenuList);
     document.getElementById("radio1").checked = true;
 
     setInterval(function () {
-    //nextImage();
-    }, 800);
+      nextImage();
+    }, 8000);
 
     function nextImage() {
     count++;
@@ -349,6 +349,185 @@ menuList.addEventListener("click", fecharMenuList);
 
 // #endregion
   
+// #region INSERIR AVALIAÇÕES ===========
+
+const nClientes = [
+  {
+    nome: "Carine",
+    urlImage: "https://lh3.googleusercontent.com/a/ACg8ocILV2Rnj41cdztXiIu4VqfvLA85fkJumXAgq5RsbN8qTAxEY0RU=s128-c0x00000000-cc-rp-mo-ba3",
+    quantidadeEstrelas: 5,
+    descricao: "Já comprei diversas vezes. Sempre fui muito bem atendida. Os produtos são todos excelentes. O custo/benefício é incrível. Desde o atendimento no whatsapp até a entrega todos são ótimos. Podem comprar, estes produtos são ótimos"
+  },
+  {
+    nome: "Van",
+    urlImage: "https://lh3.googleusercontent.com/a-/ALV-UjXiYut1iWLpvVPXm0v99s2WmZToPtdQgG3Y2v1c4mINAhr45YxHog=s128-c0x00000000-cc-rp-mo-ba3",
+    quantidadeEstrelas: 5,
+    descricao: "Hoje comprei bastante coisa, primeira vez que peço. Atendimento mto bom, entrega rápida e amei os produtos, tudo melhor do que eu esperava. Os produtos são de qualidade, bem embalados, e dá pra perceber que são MUITO bem feitos, bem melhor que os de mercado e tbm bem mais em conta. E não, não conheço ninguém do local, vim aqui elogiar porque merecem. Vou recomendar à todos que conheço. Sucesso à empresa! 👏🏻"
+  },
+  {
+    nome: "Maria",
+    urlImage: "https://lh3.googleusercontent.com/a-/ALV-UjVDHC_zXz2ATosghH2lCFxKH0MC0TXL9FUj-InE6NnV7AdDzO1URg=s128-c0x00000000-cc-rp-mo",
+    quantidadeEstrelas: 5,
+    descricao: "Eles são maravilhosos, os atendentes super prestativos, nota 10 em todos requisitos."
+  },
+  {
+    nome: "Rayane",
+    urlImage: "https://lh3.googleusercontent.com/a-/ALV-UjVGeG3ClpQpDOiS3UrIrTK9mO-pixgYM_NPgWvCqRDV3DyoKo4OFw=s128-c0x00000000-cc-rp-mo-ba4",
+    quantidadeEstrelas: 5,
+    descricao: "Produto de qualidade bem embalado, só tenho a reclamar do atendimento no WhatsApp, pessoa um pouco grosseira sem vontade de falar, não enviaram meu troco, colocaram o horário da entrega errado. Comprei novamente e o atendimento foi diferente, bem melhor."
+  }
+];
+
+const spaceReview1 = document.getElementById('container-carousel-review1');
+const spaceReview2 = document.getElementById('container-carousel-review2');
+const showReview = document.getElementById('show-review');
+const btnCloseReview = document.getElementById('close-review');
+const localShowReview = document.getElementById('container-show-review');
+
+function inserirAvaliacoes() {
+  nClientes.forEach((cliente) => {
+    const cards = document.createElement('div');
+    cards.classList.add('box');
+
+    const templateCardReview = `
+        <div class="container-user">
+            <div class="container-assessment">
+                <h3>${cliente.nome}</h3>
+                <div class="stars">  
+                  <i class='fa-solid fa-star' style='color: #ffffff;'></i>
+                  <i class='fa-solid fa-star' style='color: #ffffff;'></i>
+                  <i class='fa-solid fa-star' style='color: #ffffff;'></i>
+                  <i class='fa-solid fa-star' style='color: #ffffff;'></i>
+                  <i class='fa-solid fa-star' style='color: #ffffff;'></i>
+                </div>
+            </div>
+            <img class="user" src="${cliente.urlImage}" alt="foto-cliente">
+        </div>
+
+        <div class="container-message">
+          <p>${cliente.descricao}</p>
+        </div>                
+      </div>    
+    `
+
+    cards.innerHTML = templateCardReview;
+
+    
+    cards.addEventListener('mouseenter', () => {
+      pausarAvaliacao();
+    })
+    cards.addEventListener('mouseleave', () => {
+      retomarAvaliacao();
+    })
+    cards.addEventListener('click', () => {
+      aparecerAvaliacao(cliente);
+    })
+
+
+    spaceReview1.appendChild(cards);
+    
+  });
+
+  nClientes.forEach((cliente) => {
+    const cards = document.createElement('div');
+    cards.classList.add('box');
+
+    const templateCardReview = `
+        <div class="container-user">
+            <div class="container-assessment">
+                <h3>${cliente.nome}</h3>
+                <div class="stars">  
+                  <i class='fa-solid fa-star' style='color: #ffffff;'></i>
+                  <i class='fa-solid fa-star' style='color: #ffffff;'></i>
+                  <i class='fa-solid fa-star' style='color: #ffffff;'></i>
+                  <i class='fa-solid fa-star' style='color: #ffffff;'></i>
+                  <i class='fa-solid fa-star' style='color: #ffffff;'></i>
+                </div>
+            </div>
+            <img class="user" src="${cliente.urlImage}" alt="foto-cliente">
+        </div>
+
+        <div class="container-message">
+          <p>${cliente.descricao}</p>
+        </div>                
+      </div>    
+    `
+
+    cards.innerHTML = templateCardReview;
+
+    
+    cards.addEventListener('click', () => {
+      aparecerAvaliacao(cliente);
+    })
+    cards.addEventListener('mouseenter', () => {
+      pausarAvaliacao();
+    })
+    cards.addEventListener('mouseleave', () => {
+      retomarAvaliacao();
+    })
+
+    spaceReview2.appendChild(cards);
+    
+  })
+
+
+}
+
+inserirAvaliacoes();
+
+function aparecerAvaliacao(cliente){
+  localShowReview.innerHTML = "";
+
+  showReview.classList.add('active');
+
+  const cards = document.createElement('div');
+  cards.classList.add('box');
+  pausarAvaliacao();
+
+  const templateCardReview = `
+        <div class="container-user">
+            <div class="container-assessment">
+                <h3>${cliente.nome}</h3>
+                <div class="stars">  
+                  <i class='fa-solid fa-star' style='color: #ffffff;'></i>
+                  <i class='fa-solid fa-star' style='color: #ffffff;'></i>
+                  <i class='fa-solid fa-star' style='color: #ffffff;'></i>
+                  <i class='fa-solid fa-star' style='color: #ffffff;'></i>
+                  <i class='fa-solid fa-star' style='color: #ffffff;'></i>
+                </div>
+            </div>
+            <img class="user" src="${cliente.urlImage}" alt="foto-cliente">
+        </div>
+
+        <div class="container-message">
+          <p>${cliente.descricao}</p>
+        </div>                
+      </div>    
+  `
+
+  cards.innerHTML = templateCardReview;
+
+  localShowReview.appendChild(cards);
+}
+
+btnCloseReview.addEventListener('click', () => {
+  showReview.classList.remove('active')
+  retomarAvaliacao();
+});
+
+function pausarAvaliacao(){
+  spaceReview1.classList.add('block');
+  spaceReview2.classList.add('block');
+};
+
+function retomarAvaliacao(id){
+  
+  spaceReview1.classList.remove('block');
+  spaceReview2.classList.remove('block');
+};
+
+// #endregion
+
 // #region TROCAR LAYOUT DO CATÁLOGO ==========
 export const btnShowCatalogScreen = document.querySelector('.icon-screen');
 export const btnShowCatalogGrid = document.querySelector('.icon-grid');
