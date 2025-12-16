@@ -406,7 +406,8 @@ function inserirAvaliacoes() {
 
         <div class="container-message">
           <p>${cliente.descricao}</p>
-        </div>                
+        </div>       
+        <p class="btn-see-more">Leia Mais...</p>         
       </div>    
     `
 
@@ -449,7 +450,8 @@ function inserirAvaliacoes() {
 
         <div class="container-message">
           <p>${cliente.descricao}</p>
-        </div>                
+        </div>  
+        <p class="btn-see-more">Leia Mais...</p>              
       </div>    
     `
 

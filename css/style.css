@@ -1337,12 +1337,15 @@ button{
 }
 
 .review .box-container .box .container-message{
-    max-height: 110px;
+    max-height: 100px;
     padding: 3px;
     margin-top: 8px;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    overflow-y: hidden;
+}
+
+.review .box-container .box .btn-see-more{
+    background-color: none;
+    width: 100%;
 }
 
 .review .box-container .box .container-message::-webkit-scrollbar{
