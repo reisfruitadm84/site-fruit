@@ -1423,7 +1423,7 @@ button{
     border-radius: 10px;
     background-color: var(--white);
     position: relative;
-    max-height: 500px;
+ 
     min-height: 400px;
     width: 90%;
     max-width: 1200px;
