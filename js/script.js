@@ -418,7 +418,7 @@ function inserirAvaliacoes() {
       pausarAvaliacao();
     })
     cards.addEventListener('mouseleave', () => {
-      retomarAvaliacao();
+      retomarAvaliacao(2);
     })
     cards.addEventListener('click', () => {
       aparecerAvaliacao(cliente);
@@ -477,14 +477,19 @@ function inserirAvaliacoes() {
 
 inserirAvaliacoes();
 
+let estaBloqueado = false;
+
 function aparecerAvaliacao(cliente){
   localShowReview.innerHTML = "";
+  document.body.classList.add("no-scroll");
+  
 
   showReview.classList.add('active');
 
   const cards = document.createElement('div');
   cards.classList.add('box');
-  pausarAvaliacao();
+  pausarAvaliacao(1);
+  estaBloqueado = true;
 
   const templateCardReview = `
         <div class="container-user">
@@ -514,19 +519,34 @@ function aparecerAvaliacao(cliente){
 
 btnCloseReview.addEventListener('click', () => {
   showReview.classList.remove('active')
-  retomarAvaliacao();
+  estaBloqueado = false;
+  document.body.classList.remove("no-scroll");
+  retomarAvaliacao(1);
+ 
 });
 
-function pausarAvaliacao(){
+function pausarAvaliacao(id){
   spaceReview1.classList.add('block');
   spaceReview2.classList.add('block');
+ 
 };
 
+
 function retomarAvaliacao(id){
+ 
+  if(estaBloqueado){
+    desligarRolagem();
+    return
+  } else {
+    spaceReview1.classList.remove('block');
+    spaceReview2.classList.remove('block');
+  }
   
-  spaceReview1.classList.remove('block');
-  spaceReview2.classList.remove('block');
 };
+
+function desligarRolagem(){
+  document.body.classList.add("no-scroll");
+}
 
 // #endregion
 

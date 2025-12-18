@@ -31,6 +31,10 @@ html, body{
     position: relative;
 }
 
+.no-scroll{
+    overflow: hidden;
+}
+
 section{
     width: 100%;
     padding: 1rem 2rem;
@@ -2030,6 +2034,7 @@ footer .row .container2{
     display: flex;
     padding-top: 20px;
     min-width: 200px;
+    max-width: 20%;
 }
 
 footer .row .container2 .useful-links{
